@@ -1,0 +1,20 @@
+//
+// Global
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+	font-size: $text-fontSize-default;
+	font-family: $font-family-base;
+	background: $body-bg;
+  color: $text-color-default;
+  
+  // TODO: Create default body background image
+  background: url(http://hdwpro.com/wp-content/uploads/2017/01/Best-Nature-Image.jpg);
+
+}

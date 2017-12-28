@@ -1,0 +1,56 @@
+
+//
+// Navigation
+
+nav {
+  background: transparent;
+  color: $text-color-default;
+  background: rgba(0,0,0,.7);
+  background: -moz-linear-gradient(top, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 100%);
+
+  &.navbar {
+    padding: $space-default 0;
+  }
+
+  .navbar-brand {
+    color: lighten($text-color-default, 100%);
+  }
+
+  .nav-item {
+    cursor: pointer;
+    padding: $space-default;
+    @include transition();
+    @include round-corner-all();
+    
+    &:hover {
+      color: lighten($text-color-default, 100%);
+    }
+
+    .nav-item-title {
+      margin: 0;
+      font-weight: 700;
+    }
+    .nav-item-description {
+      margin: 0;
+      font-weight: 100;
+    }
+
+    &.active {
+      color: lighten($text-color-default, 100%);
+      background: rgba($color-highlighted, .5);
+    }
+
+    &.nav-item {
+      margin-left: $space-default;
+    }
+
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    
+  }
+  
+}

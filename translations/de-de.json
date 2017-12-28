@@ -1,0 +1,21 @@
+{
+    "app": {
+        "brand": {
+            "title": "Activities"
+        },
+        "navigation": {
+            "home": {
+                "title": "Suchen",
+                "description": "Finde eine Aktivität"
+            },
+            "today": {
+                "title": "Heute",
+                "description": "Was gibt es heute?"
+            },
+            "random": {
+                "title": "Zufall",
+                "description": "Suche eine zufällige Aktivität"
+            }
+        }
+    }
+}

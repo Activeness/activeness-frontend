@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container justify-content-between">
+        
+        {{#link-to 'index' class="navbar-brand"}}
+            {{t 'app.brand.title'}}
+        {{/link-to}}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigationContent" aria-controls="mainNavigationContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavigationContent">
+            
+            <ul class="navbar-nav">
+                {{#each items as |item|}}
+                    {{#link-to item.link class="nav-item" tagName="li"}}
+                        <p class="nav-item-title">{{t item.title}}</p>
+                        <p class="nav-item-description">{{t item.description}}</p>
+                    {{/link-to}}
+                {{/each}}
+            </ul>
+            
+            {{yield}}
+
+        </div>
+    </div>
+</nav>
