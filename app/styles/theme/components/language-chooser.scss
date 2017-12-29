@@ -1,0 +1,21 @@
+//
+// Language Chooser
+.language-chooser {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.3em;
+    background: $color-default;
+    padding: $space-default / 2 0;
+
+    .language-chooser-lang {
+        cursor: pointer;
+        
+        & ~ .language-chooser-lang {
+            margin-left: $space-default;
+        }
+
+    }
+
+}
