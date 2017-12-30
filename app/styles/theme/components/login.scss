@@ -8,14 +8,14 @@
         color: darken($text-color-default, 20%);
         font-size: $text-fontSize-default / 1.1;
         padding: $space-default / 5 $space-default;
-        @include border-transparent();
         @include transition();
+        @include round-corner-all();
 
         &:hover,
         &.active {
             color: lighten($text-color-default, 100%);
-            background: darken($border-color-default, $color-offset-default);
-            @include border-all();
+            background: rgba($color-highlighted, .5);
+            text-decoration: none;
         }
     }
 

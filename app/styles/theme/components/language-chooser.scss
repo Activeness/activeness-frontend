@@ -11,16 +11,16 @@
     .language-chooser-lang {
         cursor: pointer;
         padding: $space-default / 5;
-        @include border-transparent();
         @include transition();
+        @include round-corner-all();
 
         & ~ .language-chooser-lang {
             margin-left: $space-default;
         }
 
         &:hover {
-            background: darken($border-color-default, $color-offset-default);
-            @include border-all();
+            color: lighten($text-color-default, 100%);
+            background: rgba($color-highlighted, .5);
         }
         
     }
