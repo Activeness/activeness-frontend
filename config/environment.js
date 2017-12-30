@@ -19,6 +19,8 @@ module.exports = function(environment) {
     },
 
     googleFonts: [
+      'Open+Sans:300,400,700',
+      'Gudea:100,400,700',
       'PT+Sans:100,300,400,700'
     ],
 

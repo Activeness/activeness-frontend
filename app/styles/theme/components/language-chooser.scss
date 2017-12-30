@@ -1,21 +1,28 @@
+
 //
 // Language Chooser
+
 .language-chooser {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2.3em;
-    background: $color-default;
-    padding: $space-default / 2 0;
+
+    .container {
+        height: 2.3em;
+    }
 
     .language-chooser-lang {
         cursor: pointer;
-        
+        padding: $space-default / 5;
+        @include border-transparent();
+        @include transition();
+
         & ~ .language-chooser-lang {
             margin-left: $space-default;
         }
 
+        &:hover {
+            background: darken($border-color-default, $color-offset-default);
+            @include border-all();
+        }
+        
     }
 
 }

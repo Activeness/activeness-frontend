@@ -4,11 +4,6 @@ import { computed } from "@ember/object"
 import { inject as service } from "@ember/service";
 
 export default Component.extend({
-    
-    /**
-     * Defines the localizations service 'intl'
-     */
-    intl: service(),
 
     /**
      * Defines all main navigation items
@@ -32,36 +27,6 @@ export default Component.extend({
             description: "app.navigation.random.description",
             link: "random"
         }
-    ]),
-
-    locales: computed('intl.locales', function() {
-        return this.get('intl').get('locales').map((locale) => {
-            return {
-                locale: locale,
-                lang: locale.split('-')[1]
-            }
-        });
-    }),
-
-    currentLocale: computed('intl.locale', function() {
-        return this.get('intl').get('locale');
-    }),
-
-    currentLang: computed('intl.locale', function() {
-        return this.get('intl').get('locale')[0].split('-')[1];
-    }),
-
-    /**
-     * Defines all component related action methods
-     * 
-     * @property {object} actions
-     */
-    actions: {
-
-        setLocale(locale) {
-            this.get('intl').setLocale(locale.locale);
-        }
-
-    }
+    ])
 
 });

@@ -1,7 +1,7 @@
 
 $font-family-base: 'PT Sans', cursive;
 $brand-primary: rgb(0,226,255);
-$body-bg: #262727;
+$body-bg: #263838;
 
 //
 // Color Offsets
@@ -46,7 +46,7 @@ $text-color-danger:   lighten($color-danger, 50%);
 // Borders
 
 $border-width-default: 1px;
-$border-color-default: lighten($color-default, $color-offset-default * 13);
+$border-color-default: lighten($color-default, $color-offset-default * 2);
 $border-style-default: solid;
 $round-border-radius-default: 3px;
 

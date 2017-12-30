@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('today');
   this.route('random');
   this.route('login');
+  this.route('register');
 });
 
 export default Router;
