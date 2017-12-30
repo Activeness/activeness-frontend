@@ -15,6 +15,14 @@
             "random": {
                 "title": "Random",
                 "description": "Search a random activity"
+            },
+            "login": {
+                "title": "Login",
+                "description": ""
+            },
+            "register": {
+                "title": "Register",
+                "description": ""
             }
         }
     }

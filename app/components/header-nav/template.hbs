@@ -1,22 +1,32 @@
 <div class="language-chooser">
     <div class="container d-flex justify-content-center">
+
         {{#each locales as |locale|}}
             <span class="language-chooser-lang" {{action 'setLocale' locale}}>
                 {{world-flag locale.lang}}
             </span>
         {{/each}}
+
+        {{#link-to 'login' class="btn btn-link"}}
+            {{t 'app.navigation.login.title'}}
+        {{/link-to}}
+
     </div>
 </div>
 
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container justify-content-between">
-        
+
         {{#link-to 'index' class="navbar-brand"}}
             {{t 'app.brand.title'}}
         {{/link-to}}
 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigationContent" aria-controls="mainNavigationContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="mainNavigationContent">
-            
+
             {{yield}}
 
             <ul class="navbar-nav">
@@ -27,12 +37,8 @@
                     {{/link-to}}
                 {{/each}}
             </ul>
-            
-        </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavigationContent" aria-controls="mainNavigationContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        </div>
 
     </div>
 </nav>

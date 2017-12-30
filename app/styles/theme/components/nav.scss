@@ -9,49 +9,72 @@ nav {
   background: -moz-linear-gradient(top, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
   background: -webkit-linear-gradient(top, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 100%);
   background: linear-gradient(to bottom, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 100%);
-  
+
+  @include media-breakpoint-down(sm) {
+    &.navbar-expand-lg > .container {
+      padding-right: $space-default;
+      padding-left: $space-default;
+    }
+  }
+
   &.navbar {
     padding: $space-default 0;
     top: 2.3em;
   }
 
-  .navbar-brand {
-    color: lighten($text-color-default, 100%);
-  }
+  &.navbar-dark {
 
-  .nav-item {
-    cursor: pointer;
-    padding: $space-default;
-    @include transition();
-    @include round-corner-all();
-    
-    &:hover {
+    .navbar-brand {
       color: lighten($text-color-default, 100%);
     }
 
-    .nav-item-title {
-      margin: 0;
-      font-weight: 700;
-    }
-    .nav-item-description {
-      margin: 0;
-      font-weight: 100;
-    }
-
-    &.active {
+    .navbar-toggler {
       color: lighten($text-color-default, 100%);
       background: rgba($color-highlighted, .5);
     }
 
-    &.nav-item {
-      margin-left: $space-default;
+    .navbar-collapse.collapse.show {
+      @include transition();
+      margin-top: $space-default;
+
+      @include media-breakpoint-down(md) {
+      }
+    }
+
+    .nav-item {
+      cursor: pointer;
+      padding: $space-default;
+      @include transition();
+      @include round-corner-all();
+
+      &:hover {
+        color: lighten($text-color-default, 100%);
+      }
+
+      .nav-item-title {
+        margin: 0;
+        font-weight: 700;
+      }
+      .nav-item-description {
+        margin: 0;
+        font-weight: 100;
+      }
+
+      &.active {
+        color: lighten($text-color-default, 100%);
+        background: rgba($color-highlighted, .5);
+      }
+
+      & ~ .nav-item {
+        margin-left: $space-default;
+
+        @include media-breakpoint-down(md) {
+          margin-left: 0;
+        }
+      }
+
     }
 
   }
 
-
-  @include media-breakpoint-down(sm) {
-    
-  }
-  
 }

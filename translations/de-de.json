@@ -15,6 +15,14 @@
             "random": {
                 "title": "Zufall",
                 "description": "Suche eine zufällige Aktivität"
+            },
+            "login": {
+                "title": "Anmelden",
+                "description": ""
+            },
+            "register": {
+                "title": "Registrieren",
+                "description": ""
             }
         }
     }
