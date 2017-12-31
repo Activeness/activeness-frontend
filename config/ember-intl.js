@@ -15,7 +15,7 @@ module.exports = function(/* env */) {
     * @type {Array?}
     * @default "null"
     */
-    locales: ['de-de', 'en-us'],
+    locales: null,
 
     /**
     * baseLocale is used to determine if translation keys are missing from other locales.
@@ -26,7 +26,7 @@ module.exports = function(/* env */) {
     * @type {String?}
     * @default "null"
     */
-    baseLocale: null,
+    baseLocale: 'de-de',
 
     /**
     * autoPolyfill, when true will automatically inject the IntlJS polyfill

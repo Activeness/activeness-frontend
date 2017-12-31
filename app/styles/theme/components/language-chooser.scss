@@ -5,7 +5,7 @@
 .language-chooser {
 
     .container {
-        height: 2.3em;
+        height: 2.2em;
     }
 
     .language-chooser-lang {
@@ -13,16 +13,21 @@
         padding: $space-default / 5;
         @include transition();
         @include round-corner-all();
+        @include opacity(.5);
+
+        &.active {
+          @include opacity(1);
+        }
 
         & ~ .language-chooser-lang {
-            margin-left: $space-default;
+            margin-left: $space-default / 2;
         }
 
         &:hover {
             color: lighten($text-color-default, 100%);
             background: rgba($color-highlighted, .5);
         }
-        
+
     }
 
 }

@@ -7,17 +7,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 2.3em;
-    background: rgba($color-default, .85);
+    height: 2.2em;
+    background: rgba(darken($color-default, 100%), .8);
     border-bottom: 1px solid darken($color-default, 20%);
 
     .container {
-        height: 2.3em;
+        height: 2.2em;
 
         * ~ * {
             margin-left: $space-default;
         }
 
     }
-    
+
 }

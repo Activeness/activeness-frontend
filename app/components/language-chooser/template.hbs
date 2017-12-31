@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-center align-items-center">
 
     {{#each locales as |locale|}}
-        <span class="d-flex align-items-center language-chooser-lang" {{action 'setLocale' locale}}>
+        <span class="d-flex align-items-center language-chooser-lang {{if (eq locale.locale currentLocale) 'active' ''}}" {{action 'setLocale' locale}}>
             {{world-flag locale.lang}}
         </span>
     {{/each}}
-    
+
     {{yield}}
 
 </div>

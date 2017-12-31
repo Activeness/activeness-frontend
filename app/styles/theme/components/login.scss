@@ -3,11 +3,12 @@
 // Login
 
 .login {
-    
+
     a {
         color: darken($text-color-default, 20%);
         font-size: $text-fontSize-default / 1.1;
-        padding: $space-default / 5 $space-default;
+        line-height: .8em;
+        padding: $space-default / 2 $space-default;
         @include transition();
         @include round-corner-all();
 

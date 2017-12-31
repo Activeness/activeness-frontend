@@ -10,11 +10,11 @@
             },
             "today": {
                 "title": "Today",
-                "description": "What is there today?"
+                "description": "What's available today?"
             },
             "random": {
                 "title": "Random",
-                "description": "Search a random activity"
+                "description": "Show me a random activity"
             },
             "login": {
                 "title": "Login",
