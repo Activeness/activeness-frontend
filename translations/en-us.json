@@ -24,6 +24,7 @@
                 "title": "Register",
                 "description": ""
             }
-        }
+        },
+        "copyright": "Copyright &copy; 2018 - {year} | {brand}"
     }
 }

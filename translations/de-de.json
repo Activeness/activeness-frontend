@@ -24,6 +24,7 @@
                 "title": "Registrieren",
                 "description": ""
             }
-        }
+        },
+        "copyright": "Copyright © 2018 - {year}"
     }
 }
