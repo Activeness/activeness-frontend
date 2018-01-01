@@ -6,4 +6,29 @@ footer {
 	margin-top: 10em;
   background: $color-default;
   color: $text-color-default;
+
+  .footer-bottom {
+    padding: $space-default 0;
+    background: darken($color-default, $color-offset-default);
+    font-size: .9em;
+    
+    a {
+      color: $text-color-default;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.active {
+        color: lighten($text-color-default, 100%);
+      }
+
+      & ~ a {
+        margin-left: $space-default;
+      }
+
+    }
+
+  }
+
 }

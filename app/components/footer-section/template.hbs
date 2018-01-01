@@ -11,10 +11,20 @@
   {{yield}}
 </div>
 
-<div class="links">
-  <div class="container d-flex align-items-center">
-    {{#link-to 'index' class='copyright'}}
-      {{t 'app.copyright' '2018'}}
+<div class="footer-bottom">
+  <div class="container d-flex justify-content-end">
+    
+    {{#link-to 'index' class='copyright d-flex mr-auto'}}
+      {{t 'app.copyright' year=2018 brand=(t 'app.brand.title')}}
     {{/link-to}}
+
+    <div class="footer-navigation-links d-flex">
+      {{#each footerNavigationItems as |item|}}
+          {{#link-to item.link}}
+              {{t item.title}}
+          {{/link-to}}
+      {{/each}}
+    </div>
+
   </div>
 </div>

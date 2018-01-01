@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('random');
   this.route('login');
   this.route('register');
+  this.route('imprint');
+  this.route('dataprotection');
+  this.route('disclaimer');
 });
 
 export default Router;

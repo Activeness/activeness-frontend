@@ -1,7 +1,7 @@
 {
     "app": {
         "brand": {
-            "title": "Activities"
+            "title": "Freetime"
         },
         "navigation": {
             "home": {
@@ -23,8 +23,20 @@
             "register": {
                 "title": "Register",
                 "description": ""
+            },
+            "imprint": {
+                "title": "Imprint",
+                "description": ""
+            },
+            "dataprotection": {
+                "title": "Data Protection",
+                "description": ""
+            },
+            "disclaimer": {
+                "title": "Disclaimer",
+                "description": ""
             }
         },
-        "copyright": "Copyright &copy; 2018 - {year} | {brand}"
+        "copyright": "Copyright © 2018 - {year} | {brand}"
     }
 }
