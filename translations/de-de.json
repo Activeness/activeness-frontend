@@ -37,6 +37,10 @@
                 "description": ""
             }
         },
+        "main-search": {
+            "title": "Finde eine Idee für deine Freizeit",
+            "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit einem ..."
+        },
         "copyright": "Copyright © 2018 - {year} | {brand}",
         "newsletter": {
             "title": "Newsletter abbonieren",

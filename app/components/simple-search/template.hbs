@@ -1,0 +1,12 @@
+<div class="container form-inline d-flex justify-content-center">
+    
+    <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        {{x-select model=categories value=selectedCategory onSelect=(action 'selectCategory')}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    
+    
+    {{yield}}
+
+</div>

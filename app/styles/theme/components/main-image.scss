@@ -3,19 +3,16 @@
 // Main image
 
 .main-image {
-    min-height: 60em;
+    min-height: 50em;
     position: relative;
+    @include transition();
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         min-height: 20em;
     }
     
-    @include media-breakpoint-up(sm) {
-        min-height: 30em;
-    }
-    
-    @include media-breakpoint-up(md) {
-        min-height: 60em;
+    @include media-breakpoint-up(lg) {
+        min-height: 40em;
     }
     
     * {
@@ -25,7 +22,12 @@
         width: 100%;
         height: 100%;
         background-position: top center;
-        background-size: 100%;        
+        background-size: 100%;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-up(md) {
+            background-position: center;
+        }
     }
 
     .main-image-gradient {
