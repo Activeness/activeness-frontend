@@ -37,6 +37,12 @@
                 "description": ""
             }
         },
-        "copyright": "Copyright © 2018 - {year} | {brand}"
+        "copyright": "Copyright © 2018 - {year} | {brand}",
+        "newsletter": {
+            "title": "Newsletter abbonieren",
+            "information": "Möchten Sie über Ihre neuesten Nachrichten und Informationen auf dem Laufenden bleiben? Geben Sie Ihre E-Mail-Adresse ein, um sie Ihrer Mailingliste hinzuzufügen.",
+            "placeholder": "Ihre E-Mail Adresse",
+            "submit": "Newsletter Abbonieren"
+        }
     }
 }

@@ -1,7 +1,5 @@
 import Component from '@ember/component';
 import { A } from "@ember/array"
-import { computed } from "@ember/object"
-import { inject as service } from "@ember/service";
 
 export default Component.extend({
 

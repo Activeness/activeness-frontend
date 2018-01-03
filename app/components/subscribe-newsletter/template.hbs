@@ -1,0 +1,23 @@
+<div class="newsletter">
+  <div class="container d-flex justify-content-center">
+    
+    {{yield}}
+
+    <div class="row">
+        <div class="col">
+            <h2>{{t 'app.newsletter.title'}}</h2>
+            <p>{{t 'app.newsletter.information'}}</p>
+            <div class="input-group">
+                <span class="input-group-addon" id="subscribe-newsletter-field">@</span>
+                <input type="text" class="form-control" placeholder="{{t 'app.newsletter.placeholder'}}" aria-describedby="subscribe-newsletter-field">
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" {{action ''}}>
+                        {{t 'app.newsletter.submit'}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>

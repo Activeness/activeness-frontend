@@ -3,9 +3,19 @@
 // Footer
 
 footer {
-	margin-top: 10em;
+	margin-top: 30em;
   background: $color-default;
-  color: $text-color-default;
+  color: lighten($text-color-default, 100%);
+
+  .newsletter {
+
+    .container {
+      padding: $space-default 0;
+
+      
+    }
+
+  }
 
   .footer-bottom {
     padding: $space-default 0;

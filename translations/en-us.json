@@ -37,6 +37,12 @@
                 "description": ""
             }
         },
-        "copyright": "Copyright © 2018 - {year} | {brand}"
+        "copyright": "Copyright © 2018 - {year} | {brand}",
+        "newsletter": {
+            "title": "Newsletter Sign Up",
+            "information": "Want to keep up to date with all your latest news and information? Enter your email below to be added to your mailing list.",
+            "placeholder": "Your E-Mail Address",
+            "submit": "Subscribe"
+        }
     }
 }
