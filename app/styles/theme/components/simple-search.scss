@@ -7,11 +7,16 @@
     top:20em;
     left: 0;
     width: 100%;
+
+    .container {
+        box-shadow: 0 0 10em 2em #000;
+        padding: $space-default;
+    }
     
     .simple-search-title {
         font-size: 4em;
         font-weight: $text-weight-default;
-        line-height: .4em;
+        margin: 0;
         text-shadow: .02em .02em .03em #000;
     }
 
