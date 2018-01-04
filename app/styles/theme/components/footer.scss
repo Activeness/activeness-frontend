@@ -3,8 +3,7 @@
 // Footer
 
 footer {
-	// margin-top: 10em;
-  background: $color-default;
+	background: $color-default;
   color: lighten($text-color-default, 100%);
 
   .newsletter {
@@ -12,7 +11,7 @@ footer {
     .container {
       padding: $space-default 0;
 
-      
+
     }
 
   }
@@ -21,7 +20,7 @@ footer {
     padding: $space-default 0;
     background: darken($color-default, $color-offset-default);
     font-size: .9em;
-    
+
     a {
       color: $text-color-default;
 

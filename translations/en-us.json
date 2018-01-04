@@ -38,7 +38,7 @@
             }
         },
         "simple-search": {
-            "title": "Find your activity",
+            "title": "What do you want?",
             "information": "You are looking for an idea for your free time? How about ...",
             "submit": "Search Now",
             "categories": {

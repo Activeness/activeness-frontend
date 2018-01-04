@@ -38,8 +38,8 @@
             }
         },
         "simple-search": {
-            "title": "Finde deine Aktivität",
-            "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit einem ...",
+            "title": "Auf was hast du Lust?",
+            "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit ...",
             "submit": "Jetzt Suchen",
             "categories": {
                 "*": "In allen Kategorien",
