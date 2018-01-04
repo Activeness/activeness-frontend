@@ -1,5 +1,5 @@
 
-$font-family-base: 'PT Sans', cursive;
+$font-family-base: 'Roboto Condensed', cursive;
 $brand-primary: rgb(0,226,255);
 $body-bg: rgb(38,56,56);
 
@@ -33,6 +33,7 @@ $layout-color-default: $color-default;
 $text-fontFamily: "Helvetica Neue",Helvetica,Arial,sans-serif;
 $text-fontSize-default: .85rem;
 $text-lineHeight-default: 1rem;
+$text-weight-default: 300;
 
 $text-color-default:  lighten($color-default, 70%);
 $text-color-primary:  lighten($color-primary, 0%);

@@ -13,6 +13,7 @@ export default Component.extend({
      * @property {string} imgSrc
      * @default null
      */
-    imgSrc: 'https://static.pexels.com/photos/20974/pexels-photo.jpg'
+    // imgSrc: 'https://static.pexels.com/photos/20974/pexels-photo.jpg'
+    imgSrc: 'https://www.hdwallpapers.in/walls/nature_call-wide.jpg'
 
 });

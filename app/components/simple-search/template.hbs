@@ -1,12 +1,33 @@
-<div class="container form-inline d-flex justify-content-center">
+<div class="container">
     
-    <div class="form-group">
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        {{x-select model=categories value=selectedCategory onSelect=(action 'selectCategory')}}
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <h2 class="simple-search-title">{{t 'app.simple-search.title'}}</h2>
+    <p class="simple-search-information">{{t 'app.simple-search.information'}}</p>
+    
+    <div class="input-group">
+        
+        <div class="input-group-append">
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split simple-search-categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{selectedCategory.label}}
+            </button>
+            <div class="dropdown-menu">
+                {{#each categories as |category|}}
+                    <a class="dropdown-item" {{action 'selectCategory' category}}>
+                        {{category.label}}
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+        
+        {{input class="form-control simple-search-input" value=""}}
+
+        <div class="input-group-append">
+            <button class="btn btn-outline-primary simple-search-submit" {{action 'search'}}>
+                {{t 'app.simple-search.submit'}}
+            </button>
+        </div>
+        
     </div>
-    
-    
+
     {{yield}}
 
 </div>
