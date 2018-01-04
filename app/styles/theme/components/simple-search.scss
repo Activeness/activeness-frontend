@@ -4,13 +4,14 @@
 
 .simple-search {
     position: fixed;
-    top: 15em;
+    top:20em;
     left: 0;
     width: 100%;
     
     .simple-search-title {
-        font-size: 5em;
+        font-size: 4em;
         font-weight: $text-weight-default;
+        line-height: .4em;
         text-shadow: .02em .02em .03em #000;
     }
 
@@ -18,14 +19,29 @@
         font-size: 2em;
         font-weight: $text-weight-default;
         text-shadow: .02em .02em .03em #000;
+        margin-left: .2em;
     }
 
     .simple-search-categories {
-        background-color: rgba($color-default,.5);
+        background-color: rgba($color-primary,.5);
+        padding: $space-default;
+        border-color: $color-primary;
+    }
+
+    .show > .simple-search-categories {
+        background-color: rgba($color-primary, 1);
+    }
+
+    .simple-search-categories-list {
+        a {
+            cursor: pointer;
+        }
     }
 
     .simple-search-input {
-        background-color: rgba(255,255,255,.5);
+        background-color: rgba(255,255,255,.7);
+        border-color: $color-primary;
+        padding: $space-default;
         @include transition();
 
         &:focus {
@@ -34,7 +50,7 @@
     }
 
     .simple-search-submit {
-        
+        padding: $space-default;
     }
     
 }

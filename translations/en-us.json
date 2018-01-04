@@ -37,12 +37,13 @@
                 "description": ""
             }
         },
-        "main-search": {
-            "title": "Find your activity.",
+        "simple-search": {
+            "title": "Find your activity",
             "information": "You are looking for an idea for your free time? How about ...",
             "submit": "Search Now",
             "categories": {
-                "*": "In all categories"
+                "*": "In all categories",
+                "event": "Event"
             }
         },
         "copyright": "Copyright © 2018 - {year} | {brand}",

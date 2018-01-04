@@ -42,7 +42,8 @@
             "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit einem ...",
             "submit": "Jetzt Suchen",
             "categories": {
-                "*": "In allen Kategorien"
+                "*": "In allen Kategorien",
+                "event": "Event"
             }
         },
         "copyright": "Copyright © 2018 - {year} | {brand}",

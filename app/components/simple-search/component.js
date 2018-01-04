@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import { computed } from "@ember/object"
 import { inject as service } from '@ember/service';
+import { A } from '@ember/array';
 
 export default Component.extend({
 
@@ -15,22 +16,16 @@ export default Component.extend({
      */
     classNames: ['simple-search d-flex justify-content-center'],
 
-    didReceiveAttrs() {
-        this._super(...arguments);
-        this.set('categories', [
-            { value: '*', label: this.get('intl').t('app.simple-search.categories.*') },
-            { value: 'event', label: 'Event' }
-        ]);
-        this.set('selectedCategory', this.get('categories').get('firstObject'));
-    },
-
     /**
      * Defines a list of all available categories
      * 
      * @property {array} categories
      * @default null
      */
-    categories: null,
+    categories: A([
+        { value: '*', label: 'app.simple-search.categories.*' },
+        { value: 'event', label: 'app.simple-search.categories.event' }
+    ]),
 
     /**
      * Defines the selected category

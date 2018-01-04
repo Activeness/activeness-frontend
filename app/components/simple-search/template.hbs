@@ -1,18 +1,27 @@
 <div class="container">
     
-    <h2 class="simple-search-title">{{t 'app.simple-search.title'}}</h2>
-    <p class="simple-search-information">{{t 'app.simple-search.information'}}</p>
+    <h2 class="simple-search-title">
+        {{t 'app.simple-search.title'}}
+    </h2>
+
+    <p class="simple-search-information">
+        {{t 'app.simple-search.information'}}
+    </p>
     
     <div class="input-group">
         
         <div class="input-group-append">
             <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split simple-search-categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{selectedCategory.label}}
+                {{#if selectedCategory}}
+                    {{t selectedCategory.label}}
+                {{else}}
+                    {{t 'app.simple-search.categories.*'}}
+                {{/if}}
             </button>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu simple-search-categories-list">
                 {{#each categories as |category|}}
                     <a class="dropdown-item" {{action 'selectCategory' category}}>
-                        {{category.label}}
+                        {{t category.label}}
                     </a>
                 {{/each}}
             </div>
@@ -21,7 +30,7 @@
         {{input class="form-control simple-search-input" value=""}}
 
         <div class="input-group-append">
-            <button class="btn btn-outline-primary simple-search-submit" {{action 'search'}}>
+            <button class="btn btn-primary simple-search-submit" {{action 'search'}}>
                 {{t 'app.simple-search.submit'}}
             </button>
         </div>

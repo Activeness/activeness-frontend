@@ -16,7 +16,7 @@ nav {
       padding-left: $space-default;
     }
   }
-
+  
   &.navbar {
     padding: $space-default 0;
     top: 2.2em;
@@ -30,15 +30,12 @@ nav {
 
     .navbar-toggler {
       color: lighten($text-color-default, 100%);
-      background: rgba($color-highlighted, .5);
+      background: rgba($color-highlighted, 1);
     }
 
     .navbar-collapse.collapse.show {
       @include transition();
       margin-top: $space-default;
-
-      @include media-breakpoint-down(md) {
-      }
     }
 
     .nav-item {
@@ -62,7 +59,7 @@ nav {
 
       &.active {
         color: lighten($text-color-default, 100%);
-        background: rgba($color-highlighted, .5);
+        background: rgba($color-highlighted, 1);
       }
 
       & ~ .nav-item {
