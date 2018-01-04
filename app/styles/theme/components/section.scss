@@ -4,9 +4,5 @@ section {
 	& ~ section {
 		margin-top: $space-default * 6;
 	}
-
-	&.main-content {
-		background: lighten($color-default, 100%);
-	}
-
+	
 }

@@ -35,6 +35,7 @@
         background-color: rgba($color-primary,.5);
         padding: $space-default;
         border-color: $color-primary;
+        border-radius: 0;
     }
 
     .show > .simple-search-categories {
@@ -60,6 +61,7 @@
 
     .simple-search-submit {
         padding: $space-default;
+        border-radius: 0;
     }
     
 }
