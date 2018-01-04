@@ -20,6 +20,10 @@ nav {
   &.navbar {
     padding: $space-default 0;
     top: 2.2em;
+
+    @include media-breakpoint-down(md) {
+      background-color: darken(rgba($color-default,.9), 10%);
+    }
   }
 
   &.navbar-dark {

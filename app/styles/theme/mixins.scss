@@ -143,3 +143,11 @@
 	background: linear-gradient(to bottom,  $colorStart 0%,$colorEnd 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorStart', endColorstr='$colorEnd',GradientType=0 );
 }
+
+@mixin blur($blur: $default-blur) {
+	-webkit-filter: blur($blur);
+	-moz-filter: blur($blur);
+	-o-filter: blur($blur);
+	-ms-filter: blur($blur);
+	filter: blur($blur);
+}

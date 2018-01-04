@@ -24,6 +24,7 @@
         background-position: top center;
         background-size: 100%;
         background-repeat: no-repeat;
+        @include blur();
 
         @include media-breakpoint-up(md) {
             background-position: center;
