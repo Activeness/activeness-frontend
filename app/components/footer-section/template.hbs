@@ -1,10 +1,53 @@
 {{!--{{subscribe-newsletter}}--}}
 
-<div class="container">
+<div class="footer-content">
+  <div class="container">
 
-  ...
+    <div class="row">
+      <div class="col">
+        
+        <h4>{{t 'app.footer.latest-views'}}</h4>
 
-  {{yield}}
+        <div class="latest-activities">
+          {{#each latestActivityViews as |activity|}}
+            {{#link-to 'today' class="latest-activity"}}
+              <img src="{{activity.img}}" alt="{{activity.title}}" />
+              <div class="latest-activity-title">{{activity.title}}</div>
+              <div class="latest-activity-date">{{activity.date}}</div>
+            {{/link-to}}
+          {{/each}}
+        </div>
+
+      </div>
+
+      <div class="col">
+        ...
+      </div>
+      
+      <div class="col">
+        
+        <h4>{{t 'app.footer.contact'}}</h4>
+        <p>{{t 'app.contact.description'}}</p>
+
+        <p class="contact d-flex justify-content-start">
+          {{fa-icon 'address-card'}}
+          <div>
+            {{t 'app.contact.firstname'}} {{t 'app.contact.lastname'}}<br/>
+            {{t 'app.contact.street'}} {{t 'app.contact.houseno'}}<br/>
+            {{t 'app.contact.zip'}} {{t 'app.contact.city'}}<br/>
+            {{t 'app.contact.land'}}
+          </div>
+        </p>
+        <p>
+          {{fa-icon 'envelope'}}
+          <a href="mailto:{{t 'app.contact.email'}}">{{t 'app.contact.email'}}</a>
+        </p>
+
+      </div>
+    </div>
+
+    {{yield}}
+  </div>
 </div>
 
 <div class="footer-bottom">

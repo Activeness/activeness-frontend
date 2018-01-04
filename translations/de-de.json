@@ -46,12 +46,27 @@
                 "event": "Event"
             }
         },
+        "footer": {
+            "contact": "Kontakt",
+            "latest-views": "Zuletzt angesehen"
+        },
         "copyright": "Copyright © 2018 - {year} | {brand}",
         "newsletter": {
             "title": "Newsletter abbonieren",
             "information": "Möchten Sie über Ihre neuesten Nachrichten und Informationen auf dem Laufenden bleiben? Geben Sie Ihre E-Mail-Adresse ein, um sie Ihrer Mailingliste hinzuzufügen.",
             "placeholder": "Ihre E-Mail Adresse",
             "submit": "Newsletter Abbonieren"
+        },
+        "contact": {
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "firstname": "Mario",
+            "lastname": "Linz",
+            "street": "Triftgasse",
+            "houseno": "12",
+            "zip": "99094",
+            "city": "Erfurt-Molsdorf",
+            "email": "gelight@gmx.de",
+            "land": "Deutschland"
         }
     }
 }

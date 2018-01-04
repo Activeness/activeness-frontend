@@ -6,6 +6,7 @@
     min-height: 50em;
     position: relative;
     z-index: -1;
+    overflow: hidden;
     @include transition();
 
     @include media-breakpoint-down(md) {
