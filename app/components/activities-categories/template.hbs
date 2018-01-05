@@ -1,5 +1,5 @@
 {{#each categories as |category|}}
-    <a class="btn btn-outline-light" {{action 'search' category.id}}>
+    <a class="btn btn-primary" {{action 'search' category.id}}>
         {{fa-icon category.ico}}
         <span>{{t category.title}}</span>
     </a>

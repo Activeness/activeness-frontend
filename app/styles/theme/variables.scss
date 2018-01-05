@@ -3,7 +3,7 @@
 // Overwrite Basic Bootstrap Colors
 
 $font-family-base: 'Roboto Condensed', cursive;
-$primary: rgb(77, 110, 0);
+$primary: rgb(112, 130, 0);
 
 $body-bg: darken($primary, 0%);
 
@@ -50,7 +50,7 @@ $layout-color-default: $color-default;
 // Text
 
 $text-fontFamily: "Helvetica Neue",Helvetica,Arial,sans-serif;
-$text-fontSize-default: .9rem;
+$text-fontSize-default: .8rem;
 $text-lineHeight-default: 1rem;
 $text-weight-default: 300;
 
