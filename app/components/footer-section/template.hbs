@@ -5,23 +5,13 @@
 
     <div class="row">
       <div class="col">
-        
         <h4>{{t 'app.footer.latest-views'}}</h4>
-
-        <div class="latest-activities">
-          {{#each latestActivityViews as |activity|}}
-            {{#link-to 'today' class="latest-activity"}}
-              <img src="{{activity.img}}" alt="{{activity.title}}" />
-              <div class="latest-activity-title">{{activity.title}}</div>
-              <div class="latest-activity-date">{{activity.date}}</div>
-            {{/link-to}}
-          {{/each}}
-        </div>
-
+        {{latest-activities}}
       </div>
 
       <div class="col">
-        ...
+        <h4>{{t 'app.footer.categories'}}</h4>
+        {{activities-categories}}
       </div>
       
       <div class="col">

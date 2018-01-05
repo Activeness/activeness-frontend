@@ -48,7 +48,8 @@
         },
         "footer": {
             "contact": "Kontakt",
-            "latest-views": "Zuletzt angesehen"
+            "latest-views": "Zuletzt angesehen",
+            "categories": "Kategorien"
         },
         "copyright": "Copyright © 2018 - {year} | {brand}",
         "newsletter": {

@@ -48,7 +48,8 @@
         },
         "footer": {
             "contact": "Contact Us",
-            "latest-views": "Latest views"
+            "latest-views": "Latest views",
+            "categories": "Categories"
         },
         "copyright": "Copyright © 2018 - {year} | {brand}",
         "newsletter": {

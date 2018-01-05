@@ -1,0 +1,61 @@
+
+//
+// Latest Activities
+
+.latest-activities {
+    
+    .latest-activity {
+        position: relative;
+        display: block;
+        height: 6em;
+        padding: $space-default / 2;
+        overflow: hidden;
+        background: lighten($color-default, 3%);
+        @include transition();
+
+        .latest-activity-title,
+        .latest-activity-date {
+            margin-left: 5.5rem;
+        }
+
+        .latest-activity-title {
+            display: inline-block;
+            font-size: 1.1em;
+            max-height: 3em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0;
+        }
+        .latest-activity-date {
+            font-size: .8em;
+        }
+
+        .latest-activity-image {
+            display: inline-block;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            width: 6em;
+            height: 6em;
+            background-position: center;
+            background-size: 100%;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:hover {
+            background: lighten($color-default, 5%);
+
+            .latest-activity-image {
+                background-size: 140%;
+            }
+
+        }
+
+        & ~ .latest-activity {
+            margin-top: $space-default;
+        }
+
+    }
+
+}

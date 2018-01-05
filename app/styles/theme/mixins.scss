@@ -5,11 +5,11 @@
 
 //
 // Transitions
-@mixin transition($t: all, $s: 0.4s, $a: ease-in-out) {
-	-webkit-transition: $t $s $a;
-	-moz-transition: $t $s $a;
-	-o-transition: $t $s $a;
-	transition: $t $s $a;
+@mixin transition($t: all 0.4s ease-in-out) {
+	-webkit-transition: $t;
+	-moz-transition: $t;
+	-o-transition: $t;
+	transition: $t;
 }
 
 
