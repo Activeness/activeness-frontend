@@ -23,6 +23,7 @@ footer {
       border: 0;
       background: darken($color-default, 2%) !important;
       font-size: 1em;
+      margin-bottom: .2em;
 
       &:hover {
         color: lighten($color-default, 100%) !important;

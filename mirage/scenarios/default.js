@@ -1,9 +1,9 @@
-export default function(/* server */) {
+export default function(server) {
+  
+  // List of activities
+  server.createList('activity', 20);
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
-  */
+  // List of categories
+  server.createList('category', 2);
 
-  // server.createList('post', 10);
 }

@@ -1,10 +1,12 @@
 import Component from '@ember/component';
 import { A } from "@ember/array"
 import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 
     router: service(),
+    store: service(),
 
     /**
      * Defines the css class names for the component ember-view element
@@ -20,20 +22,9 @@ export default Component.extend({
      * @property {Ember.array} categories
      * @default []
      */
-    categories: A([
-        {
-            id: "music",
-            title: "app.categories.music.title",
-            description: "app.categories.music.description",
-            ico: "check"
-        },
-        {
-            id: "excursion",
-            title: "app.categories.excursion.title",
-            description: "app.categories.excursion.description",
-            ico: "check"
-        }
-    ]),
+    categories: computed('store', function() {
+        return this.get('store').findAll('category');
+    }),
 
     /**
      * Defines all component action methods
