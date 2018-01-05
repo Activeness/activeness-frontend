@@ -2,9 +2,11 @@
 //
 // Overwrite Basic Bootstrap Colors
 
+$primary: rgb(44, 173, 55);
+
 $font-family-base: 'Roboto Condensed', cursive;
-$brand-primary: $blue;
-$body-bg: $blue; // rgba(0,123,255,1);
+$brand-primary: $primary;
+$body-bg: $primary; // rgba(0,123,255,1);
 
 // $blue: $brand-primary;
 // $indigo:  #6610f2 !default;
