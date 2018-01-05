@@ -1,0 +1,11 @@
+
+//
+// Font Awesome Icons
+
+.fa {
+
+    & ~ * {
+        margin-left: $space-default;
+    }
+
+}

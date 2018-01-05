@@ -40,10 +40,20 @@
         "simple-search": {
             "title": "What do you want?",
             "information": "You are looking for an idea for your free time? How about ...",
-            "submit": "Search Now",
-            "categories": {
-                "*": "In all categories",
-                "event": "Event"
+            "submit": "Search Now"
+        },
+        "categories": {
+            "*": {
+                "title": "In all categories",
+                "description": "The search is not limited to any specific category."
+            },
+            "music": {
+                "title": "Music and Dance",
+                "description": ""
+            },
+            "excursion": {
+                "title": "Excursion",
+                "description": ""
             }
         },
         "footer": {

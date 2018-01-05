@@ -23,10 +23,10 @@ export default Component.extend({
      * @default null
      */
     categories: A([
-        { value: '*', label: 'app.simple-search.categories.*' },
-        { value: 'event', label: 'app.simple-search.categories.event' }
+        { value: '*', label: 'app.categories.*.title' },
+        { value: 'music', label: 'app.categories.music.title' }
     ]),
-
+    
     /**
      * Defines the selected category
      * 

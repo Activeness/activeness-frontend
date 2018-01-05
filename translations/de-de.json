@@ -38,12 +38,22 @@
             }
         },
         "simple-search": {
-            "title": "Auf was hast du Lust?",
+            "title": "Worauf hast du Lust?",
             "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit ...",
-            "submit": "Jetzt Suchen",
-            "categories": {
-                "*": "In allen Kategorien",
-                "event": "Event"
+            "submit": "Jetzt Suchen"
+        },
+        "categories": {
+            "*": {
+                "title": "In allen Kategorien",
+                "description": "Die Suche wird auf keine spezielle Kategorie eingeschränkt."
+            },
+            "music": {
+                "title": "Musik und Tanz",
+                "description": ""
+            },
+            "excursion": {
+                "title": "Ausflug",
+                "description": ""
             }
         },
         "footer": {

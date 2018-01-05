@@ -4,7 +4,7 @@
 
 .simple-search {
     position: absolute;
-    top: 20em;
+    top: 15em;
     left: 0;
     width: 100%;
     @include transition();
@@ -29,6 +29,10 @@
         font-weight: $text-weight-default;
         text-shadow: .02em .02em .03em #000;
         margin-left: .2em;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
     }
 
     .simple-search-categories {
