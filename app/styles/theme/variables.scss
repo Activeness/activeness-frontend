@@ -2,13 +2,12 @@
 //
 // Overwrite Basic Bootstrap Colors
 
-$primary: rgb(44, 173, 55);
-
 $font-family-base: 'Roboto Condensed', cursive;
-$brand-primary: $primary;
-$body-bg: $primary; // rgba(0,123,255,1);
+$primary: rgb(77, 110, 0);
 
-// $blue: $brand-primary;
+$body-bg: darken($primary, 0%);
+
+// $blue: $primary;
 // $indigo:  #6610f2 !default;
 // $purple:  #6f42c1 !default;
 // $pink:    #e83e8c !default;
@@ -34,12 +33,12 @@ $default-blur: .3em;
 $base-color: $body-bg;  // ( Grey )
 
 $color-default:	  	$base-color;   	  // Default ( Base )
-$color-primary:	  	$brand-primary;   // Primary
+$color-primary:	  	$primary;   // Primary
 $color-info:      	$color-default;		// Info
 $color-success:	  	$color-default;		// Success
 $color-warning:	  	$color-default;		// Warning
 $color-danger:    	$color-default;		// Danger
-$color-highlighted:	$brand-primary;
+$color-highlighted:	$primary;
 
 //
 // Layout Colors
@@ -51,7 +50,7 @@ $layout-color-default: $color-default;
 // Text
 
 $text-fontFamily: "Helvetica Neue",Helvetica,Arial,sans-serif;
-$text-fontSize-default: .85rem;
+$text-fontSize-default: .9rem;
 $text-lineHeight-default: 1rem;
 $text-weight-default: 300;
 
@@ -96,6 +95,6 @@ $shadow-weight: 0px;
 
 // Buttons
 
-$btn-primary-color: lighten($brand-primary, 100%);
-$btn-primary-bg: $brand-primary;
-$btn-primary-border: darken($brand-primary, 5%);
+$btn-primary-color: lighten($primary, 100%);
+$btn-primary-bg: $primary;
+$btn-primary-border: darken($primary, 5%);

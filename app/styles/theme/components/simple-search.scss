@@ -14,10 +14,11 @@
     }
     
     .simple-search-title {
-        font-size: 4em;
+        font-size: 7em;
         font-weight: $text-weight-default;
         margin: 0;
         text-shadow: .02em .02em .03em #000;
+        font-family: 'Bilbo';
 
         @include media-breakpoint-down(md) {
             display: none;
@@ -29,6 +30,7 @@
         font-weight: $text-weight-default;
         text-shadow: .02em .02em .03em #000;
         margin-left: .2em;
+        font-family: 'Bilbo';
 
         @include media-breakpoint-down(md) {
             display: none;

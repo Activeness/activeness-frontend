@@ -18,6 +18,15 @@ footer {
       color: lighten($color-default, 100%);
     }
 
+    &.btn-outline-light {
+      border: 1px solid lighten($color-default, 30%);
+
+      &:hover {
+        color: darken($color-default, 0%) !important;
+      }
+
+    }
+
   }
 
   .newsletter {
@@ -34,6 +43,7 @@ footer {
     h4 {
       color: lighten($color-default, 40%);
       margin-bottom: 1em;
+      font-weight: 100;
     }
 
     .fa + * {
@@ -51,9 +61,11 @@ footer {
     background: darken($color-default, $color-offset-default * 2);
     
     a {
+
       & ~ a {
         margin-left: $space-default;
       }
+
     }
 
   }
