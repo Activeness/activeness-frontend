@@ -13,7 +13,7 @@
         <div class="input-group-append">
             <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split simple-search-categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{#if selectedCategory}}
-                    {{t selectedCategory.label}}
+                    {{t selectedCategory.title}}
                 {{else}}
                     {{t 'app.categories.*.title'}}
                 {{/if}}
@@ -21,13 +21,13 @@
             <div class="dropdown-menu simple-search-categories-list">
                 {{#each categories as |category|}}
                     <a class="dropdown-item" {{action 'selectCategory' category}}>
-                        {{t category.label}}
+                        {{t category.title}}
                     </a>
                 {{/each}}
             </div>
         </div>
         
-        {{input class="form-control simple-search-input" value=""}}
+        {{input class="form-control simple-search-input" value=searchString}}
 
         <div class="input-group-append">
             <button class="btn btn-primary simple-search-submit" {{action 'search'}}>

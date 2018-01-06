@@ -4,6 +4,6 @@ export default function(server) {
   server.createList('activity', 20);
 
   // List of categories
-  server.createList('category', 2);
+  server.createList('category', 3);
 
 }

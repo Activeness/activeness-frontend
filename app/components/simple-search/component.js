@@ -1,11 +1,10 @@
 import Component from '@ember/component';
 import { computed } from "@ember/object"
 import { inject as service } from '@ember/service';
-import { A } from '@ember/array';
 
 export default Component.extend({
 
-
+    store: service(),
     intl: service(),
 
     /**
@@ -22,21 +21,15 @@ export default Component.extend({
      * @property {array} categories
      * @default null
      */
-    categories: A([
-        { value: '*', label: 'app.categories.*.title' },
-        { value: 'music', label: 'app.categories.music.title' }
-    ]),
-    
-    /**
-     * Defines the selected category
-     * 
-     * @property {array} selectedCategory
-     * @default null
-     */
-    categoriesListener: computed('categories', function() {
-        this.set('selectedCategory', this.get('categories').get('firstObject'));
-    }),
+    categories: computed('store', function() {
+        let categories = this.get('store').findAll('category');
+        
+        // Set the first category as selected category
+        this.set('selectedCategory', categories.get('firstObject'));
 
+        return categories;
+    }),
+    
     /**
      * Defines the selected category
      * 
@@ -48,10 +41,10 @@ export default Component.extend({
     /**
      * Defines the search string
      * 
-     * @property {array} searchstring
+     * @property {array} searchString
      * @default null
      */
-    searchstring: null,
+    searchString: null,
 
     /**
      * Defines all component action methods

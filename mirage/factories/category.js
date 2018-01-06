@@ -1,6 +1,7 @@
 import { Factory } from 'ember-cli-mirage';
 
 const categories = [
+    '*',
     'music', 
     'excursion'
 ];

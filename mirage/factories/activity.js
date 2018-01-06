@@ -1,9 +1,9 @@
-import { Factory/*, faker*/} from 'ember-cli-mirage';
+import { Factory, faker} from 'ember-cli-mirage';
 
-const categories = [
-    'music', 
-    'excursion'
-];
+// const categories = [
+//     'music', 
+//     'excursion'
+// ];
 
 export default Factory.extend({
     id(i) {
