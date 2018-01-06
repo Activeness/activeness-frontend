@@ -9,7 +9,7 @@ export default Component.extend({
 
     /**
      * Defines the css class names for the component ember-view element
-     * 
+     *
      * @property {array} classNames
      * @default null
      */
@@ -17,29 +17,28 @@ export default Component.extend({
 
     /**
      * Defines all available categories of all activities
-     * 
+     *
      * @property {Ember.array} categories
      * @default []
      */
     categories: computed('store', function() {
-        return this.get('store').findAll('category');/*
-        .then((categories) => {
-            categories.filter((category) => {
-                return (category.get('title').indexOf('*') === -1);
-            })
-        });*/
+      return this.get('store').findAll('category').then((categories) => {
+        categories.filter((category) => {
+          return (category.get('title').indexOf('*') === -1);
+        });
+      });
     }),
 
     /**
      * Defines all component action methods
-     * 
+     *
      * @property {object} actions
      */
     actions: {
 
         /**
          * Trigger the activities search by category
-         * 
+         *
          * @method search
          */
         search(category) {

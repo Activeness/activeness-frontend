@@ -3,7 +3,7 @@
 // Latest Activities
 
 .latest-activities {
-    
+
     .latest-activity {
         position: relative;
         display: block;
@@ -40,6 +40,7 @@
             height: 6em;
             background-position: center;
             background-size: 100%;
+            background-repeat: no-repeat;
             @include transition(all 0.3s ease-in-out);
         }
 

@@ -1,7 +1,7 @@
 import { Factory, faker} from 'ember-cli-mirage';
 
 // const categories = [
-//     'music', 
+//     'music',
 //     'excursion'
 // ];
 
@@ -16,5 +16,5 @@ export default Factory.extend({
         return faker.lorem.text();
     },
     ico: 'check',
-    img: 'https://www.nordevent.de/files/content/Eventlocations/Hamburg/Penthouse-Elb-Panorama/Bildergalerie-Elb-Panorama/EP-1.jpg'
+    img: faker.image.nature()
 });
