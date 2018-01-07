@@ -5,6 +5,7 @@ import { inject as service } from '@ember/service';
 export default Component.extend({
 
     store: service(),
+    router: service(),
     intl: service(),
 
     /**
@@ -71,7 +72,12 @@ export default Component.extend({
          * @method search
          */
         search() {
-            //...
+            let searchParams = {
+              category: this.get('selectedCategory.id'),
+              search: this.get('searchString')
+            };
+
+            this.get('router').transitionTo('activities', { queryParams: searchParams });
         }
 
     }

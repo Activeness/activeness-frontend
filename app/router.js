@@ -14,8 +14,8 @@ Router.map(function() {
   this.route('imprint');
   this.route('dataprotection');
   this.route('disclaimer');
-  this.route('search');
   this.route('activity');
+  this.route('activities');
 });
 
 export default Router;
