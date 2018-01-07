@@ -44,7 +44,7 @@
         },
         "categories": {
             "*": {
-                "title": "In all categories",
+                "title": "All categories",
                 "description": "The search is not limited to any specific category."
             },
             "music": {
