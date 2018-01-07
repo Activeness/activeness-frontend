@@ -8,12 +8,12 @@ export default Component.extend({
 
     /**
      * Defines the list of the latest viewed activities
-     * 
+     *
      * @property {array} latestActivityViews
      * @default null
      */
     latestActivityViews: computed('store', function() {
-        return this.get('store').findAll('activity');
+        return this.get('store').query('activity', { amount: 3 });
     })
 
 });

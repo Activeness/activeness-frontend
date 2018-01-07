@@ -30,7 +30,7 @@ module.exports = function(environment) {
       'font-src': "'self' fonts.gstatic.com",
       'style-src': "'self' fonts.googleapis.com"
     },
-    
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -44,6 +44,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    };
     ENV.host = 'http://localhost:4200';
     ENV.namespace = 'api';
   }
