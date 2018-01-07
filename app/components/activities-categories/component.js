@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 import { computed } from '@ember/object';
+import RSVP, { Promise } from 'rsvp';
 
 export default Component.extend({
 
@@ -22,11 +23,32 @@ export default Component.extend({
      * @default []
      */
     categories: computed('store', function() {
+      // return this.get('store').findAll('category');
+
       return this.get('store').findAll('category').then((categories) => {
-        categories.filter((category) => {
-          return (category.get('title').indexOf('*') === -1);
+        return this.get('store').filter('categories', (category) => {
+          debugger;
+          return category.get('title').indexOf('*') === -1;
         });
       });
+
+      /*
+      .then((categories) => {
+
+        return new Promise((resolve) => {
+          let filteredCategories = [];
+
+          categories.filter((category) => {
+            if (category.get('title').indexOf('*') === -1) {
+              filteredCategories.push(category);
+            }
+          });
+
+          resolve(filteredCategories);
+        });
+
+      });
+      */
     }),
 
     /**

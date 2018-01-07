@@ -1,5 +1,5 @@
 <div class="container">
-    
+
     <h2 class="simple-search-title">
         {{t 'app.simple-search.title'}}
     </h2>
@@ -7,9 +7,9 @@
     <p class="simple-search-information">
         {{t 'app.simple-search.information'}}
     </p>
-    
+
     <div class="input-group">
-        
+
         <div class="input-group-append">
             <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split simple-search-categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{#if selectedCategory}}
@@ -26,7 +26,7 @@
                 {{/each}}
             </div>
         </div>
-        
+
         {{input class="form-control simple-search-input" value=searchString}}
 
         <div class="input-group-append">
@@ -34,7 +34,7 @@
                 {{t 'app.simple-search.submit'}}
             </button>
         </div>
-        
+
     </div>
 
     {{yield}}

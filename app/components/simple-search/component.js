@@ -9,7 +9,7 @@ export default Component.extend({
 
     /**
      * Defines the component css class for the ember-view element
-     * 
+     *
      * @property {array} classNames
      * @default null
      */
@@ -17,22 +17,24 @@ export default Component.extend({
 
     /**
      * Defines a list of all available categories
-     * 
+     *
      * @property {array} categories
      * @default null
      */
     categories: computed('store', function() {
-        let categories = this.get('store').findAll('category');
-        
-        // Set the first category as selected category
-        this.set('selectedCategory', categories.get('firstObject'));
 
-        return categories;
+      // Get all available categories from server
+      let categories = this.get('store').findAll('category');
+
+      // Set the first category as selected category
+      this.set('selectedCategory', categories.get('firstObject'));
+
+      return categories;
     }),
-    
+
     /**
      * Defines the selected category
-     * 
+     *
      * @property {array} selectedCategory
      * @default null
      */
@@ -40,7 +42,7 @@ export default Component.extend({
 
     /**
      * Defines the search string
-     * 
+     *
      * @property {array} searchString
      * @default null
      */
@@ -48,14 +50,14 @@ export default Component.extend({
 
     /**
      * Defines all component action methods
-     * 
+     *
      * @property {object} actions
      */
     actions: {
 
         /**
          * Select a category for search
-         * 
+         *
          * @method selectCategory
          * @param {object} category
          */
@@ -65,7 +67,7 @@ export default Component.extend({
 
         /**
          * Search activities by simple search
-         * 
+         *
          * @method search
          */
         search() {
