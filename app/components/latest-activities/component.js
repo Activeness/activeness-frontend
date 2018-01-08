@@ -12,8 +12,6 @@ export default Component.extend({
      * @property {array} latestActivityViews
      * @default null
      */
-    latestActivityViews: computed('store', function() {
-        return this.get('store').query('activity', { amount: 3 });
-    })
+    latestActivityViews: null
 
 });

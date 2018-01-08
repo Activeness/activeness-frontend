@@ -4,5 +4,11 @@ section {
 	& ~ section {
 		margin-top: $space-default * 6;
 	}
+
+	.section-light {
+		background-color: $light;
+		color: darken($text-color-default, $color-offset-default * 15);
+		padding: $space-default * 3 0;
+	}
 	
 }
