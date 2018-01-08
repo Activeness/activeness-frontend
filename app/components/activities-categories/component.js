@@ -1,7 +1,8 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
 import { computed } from '@ember/object';
-// import RSVP, { Promise } from 'rsvp';
+import RSVP, { Promise } from 'rsvp';
+import DS from 'ember-data';
 
 export default Component.extend({
 
@@ -23,7 +24,16 @@ export default Component.extend({
      * @default []
      */
     categories: computed('store', function() {
-        return this.get('store').findAll('category');
+        return DS.PromiseArray.create({
+            promise: new Promise((resolve)=> {
+                this.get('store').findAll('category').then((categories)=>{
+                    let filteredCategories = categories.filter((category)=>{
+                        return category.get('title').indexOf('*') === -1;
+                    });
+                    resolve(filteredCategories);
+                })
+            })
+        });
     }),
 
     /**
