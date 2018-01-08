@@ -95,16 +95,16 @@
 //
 // Shadow
 
-@mixin shadow($l: $shadow-pos-left, $t: $shadow-pos-top, $s: $shadow-size, $w: $shadow-weight, $c: $shadow-color-default) {
-	-webkit-box-shadow: $l $t $s $w $c;
-	box-shadow: $l $t $s $w $c;
-	-moz-box-shadow: $l $t $s $w $c;
+@mixin shadow($v: $shadow-default) {
+	-webkit-box-shadvw: $v;
+	box-shadow: $v;
+	-moz-box-shadow: $v;
 }
 
-@mixin innerShadow($l: $shadow-pos-left, $t: $shadow-pos-top, $s: $shadow-size, $c: $shadow-color-default) {
-	-webkit-box-shadow: inset $l $t $s $c;
-	box-shadow: inset  $l $t $s $c;
-	-moz-box-shadow: inset $l $t $s $c;
+@mixin innerShadow($v: $shadow-default) {
+	-webkit-box-shadow: inset $v;
+	box-shadow: inset  $v;
+	-moz-box-shadow: inset $v;
 }
 
 

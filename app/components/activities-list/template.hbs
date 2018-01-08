@@ -1,9 +1,8 @@
 {{#each activities as |activity|}}
-    <div>
-        {{#link-to 'activity' (query-params id=activity.id) class="activity-item"}}
-            {{activity.title}}
-        {{/link-to}}
-    </div>
+    {{#link-to 'activity' (query-params id=activity.id) class="activity d-flex justify-content-start"}}
+        <div class="activity-image" style="background-image: url({{activity.img}});"></div>
+        <div class="activity-title">{{activity.title}}</div>
+    {{/link-to}}
 {{/each}}
 
 {{yield}}

@@ -1,0 +1,38 @@
+
+//
+// Activity - List Item
+
+.activities-list {
+    
+    .activity {
+        position: relative;
+        display: block;
+        background-color: lighten($light, $color-offset-default);
+        height: 8em;
+        overflow: hidden;
+        color: darken($light, $color-offset-default * 10);
+        @include shadow(0 .1em .2em rgba(0,0,0,.2));
+        @include transition();
+
+        .activity-image {
+            width: 8em;
+            height: 8em;
+            background-size: 100%;
+            background-position: center;
+            @include transition(all 0.3s ease-in-out);
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            .activity-image {
+                background-size: 140%;
+            }
+        }
+
+        & ~ .activity {
+            margin-top: $space-default;
+        }
+    }
+
+}

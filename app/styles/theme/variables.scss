@@ -86,11 +86,7 @@ $transition-time-default: .2s;
 //
 // Shadow
 
-$shadow-color-default: rgba(0, 0, 0, .4);
-$shadow-size: $space-default;
-$shadow-pos-left: 0px;
-$shadow-pos-top: 0px;
-$shadow-weight: 0px;
+$shadow-default: 0 0 $space-default rgba(0, 0, 0, .4);
 
 
 // Buttons
