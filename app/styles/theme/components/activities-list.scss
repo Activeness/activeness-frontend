@@ -48,15 +48,18 @@
 
             .activity-date-day {
                 text-align: center;
-                font-size: 7em;
-                line-height: .8em;
+                font-size: 10em;
+                line-height: .5em;
                 font-weight: 400;
+                font-family: 'Bilbo';
+                margin-bottom: .1em;
             }
 
             .activity-date-month {
                 text-align: center;
                 font-size: 3em;
                 font-weight: 300;
+                font-family: 'Bilbo';
             }
 
         }

@@ -9,6 +9,9 @@ export default Factory.extend({
     id(i) {
         return `${i}`;
     },
+    version() {
+        return 1;
+    },
     active() {
         return Math.random() >= 0.5;
     },
@@ -20,6 +23,9 @@ export default Factory.extend({
     },
     description() {
         return faker.lorem.text();
+    },
+    organizer() {
+        return faker.company.companyName();
     },
     ico: 'check',
     img: faker.image.nightlife(),

@@ -5,7 +5,7 @@
                 {{format-date activity.date day='2-digit'}}
             </div>
             <div class="activity-date-month">
-                {{format-date activity.date month='short'}}
+                {{format-date activity.date month='long'}}
             </div>
         </div>
         <div class="activity-image" style="background-image: url({{activity.img}});"></div>
@@ -14,7 +14,7 @@
                 {{activity.title}}
             </div>
             <div class="activity-organizer">
-                {{activity.title}}
+                {{activity.organizer}}
             </div>
         </div>
     {{/link-to}}
