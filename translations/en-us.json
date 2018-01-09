@@ -54,6 +54,54 @@
             "excursion": {
                 "title": "Excursion",
                 "description": ""
+            },
+            "event": {
+                "title": "Event",
+                "description": ""
+            },
+            "opening": {
+                "title": "Opening",
+                "description": ""
+            },
+            "food": {
+                "title": "Food",
+                "description": ""
+            },
+            "relaxation": {
+                "title": "Relaxation",
+                "description": ""
+            },
+            "dance": {
+                "title": "Dance",
+                "description": ""
+            },
+            "family": {
+                "title": "Family",
+                "description": ""
+            },
+            "guides": {
+                "title": "Guides",
+                "description": ""
+            },
+            "culture": {
+                "title": "Culture",
+                "description": ""
+            },
+            "exhibition": {
+                "title": "Exhibition",
+                "description": ""
+            },
+            "market": {
+                "title": "Market",
+                "description": ""
+            },
+            "meetup": {
+                "title": "Meetup",
+                "description": ""
+            },
+            "others": {
+                "title": "Others",
+                "description": ""
             }
         },
         "footer": {

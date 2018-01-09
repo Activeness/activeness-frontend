@@ -7,7 +7,7 @@ import { Factory, faker} from 'ember-cli-mirage';
 
 export default Factory.extend({
     id(i) {
-        return `${i}`;
+        return `activity_${i}`;
     },
     version() {
         return 1;
@@ -27,8 +27,9 @@ export default Factory.extend({
     organizer() {
         return faker.company.companyName();
     },
-    ico: 'check',
-    img: faker.image.nightlife(),
+    img() {
+        return faker.image.nightlife();
+    },
     reservation() {
         return Math.random() >= 0.5;
     }

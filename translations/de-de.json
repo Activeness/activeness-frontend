@@ -54,6 +54,54 @@
             "excursion": {
                 "title": "Ausflug",
                 "description": ""
+            },
+            "event": {
+                "title": "Veranstaltung",
+                "description": ""
+            },
+            "opening": {
+                "title": "Eröffnung",
+                "description": ""
+            },
+            "food": {
+                "title": "Essen",
+                "description": ""
+            },
+            "relaxation": {
+                "title": "Entspannung",
+                "description": ""
+            },
+            "dance": {
+                "title": "Tanz",
+                "description": ""
+            },
+            "family": {
+                "title": "Familie",
+                "description": ""
+            },
+            "guides": {
+                "title": "Führungen",
+                "description": ""
+            },
+            "culture": {
+                "title": "Kultur",
+                "description": ""
+            },
+            "exhibition": {
+                "title": "Ausstellung",
+                "description": ""
+            },
+            "market": {
+                "title": "Markt",
+                "description": ""
+            },
+            "meetup": {
+                "title": "Meetup",
+                "description": ""
+            },
+            "others": {
+                "title": "Sonstiges",
+                "description": ""
             }
         },
         "footer": {

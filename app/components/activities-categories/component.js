@@ -38,7 +38,7 @@ export default Component.extend({
          * @method search
          */
         search(category) {
-            this.get('router').transitionTo('activities',  { queryParams: { category: category }});
+            this.get('router').transitionTo('activities',  { queryParams: { categoryId: category.id }});
         }
 
     }
