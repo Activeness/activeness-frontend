@@ -6,7 +6,7 @@ export default Route.extend({
 
     model() {
         return RSVP.hash({
-            activities: this.get('store').query('activity', { amount: 20 })
+            activities: this.get('store').query('activity', { amount: 5 })
         });
     }
 

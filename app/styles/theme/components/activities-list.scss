@@ -5,28 +5,70 @@
 .activities-list {
     
     .activity {
+        $activity-size: 13em;
+
         position: relative;
         display: block;
         background-color: lighten($light, $color-offset-default);
-        height: 8em;
+        background: -moz-linear-gradient(-20deg, lighten($light, $color-offset-default * 2) 0%, darken($light, $color-offset-default) 100%);
+        background: -webkit-linear-gradient(-20deg, lighten($light, $color-offset-default * 2) 0%, darken($light, $color-offset-default) 100%);
+        background: linear-gradient(110deg, lighten($light, $color-offset-default * 2) 0%, darken($light, $color-offset-default) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 );
+        height: $activity-size;
         overflow: hidden;
         color: darken($light, $color-offset-default * 10);
         @include shadow(0 .1em .2em rgba(0,0,0,.2));
         @include transition();
 
+        .activity-information {
+            margin: $space-default * 2 0 0 $space-default * 2;
+            
+            .activity-title {
+                font-size: 1.8em;
+                font-weight: 400;
+            }
+
+        }
+
         .activity-image {
-            width: 8em;
-            height: 8em;
-            background-size: 100%;
+            width: $activity-size;
+            height: $activity-size;
+            background-size: auto 100%;
             background-position: center;
             @include transition(all 0.3s ease-in-out);
         }
 
+        .activity-date {
+            width: $activity-size;
+            height: $activity-size;
+            background-size: 100%;
+            background-color: $primary;
+            color: lighten($light, $color-offset-default);
+            padding: $space-default * 2;
+
+            .activity-date-day {
+                text-align: center;
+                font-size: 7em;
+                line-height: .8em;
+                font-weight: 400;
+            }
+
+            .activity-date-month {
+                text-align: center;
+                font-size: 3em;
+                font-weight: 300;
+            }
+
+        }
+
         &:hover {
             text-decoration: none;
+            margin: 0 $space-default;
+            background: darken($light, 50%);
+            color: lighten($light, 0%);
 
             .activity-image {
-                background-size: 140%;
+                background-size: auto 140%;
             }
         }
 

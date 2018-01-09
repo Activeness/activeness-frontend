@@ -1,9 +1,0 @@
-{{#each activities as |activity|}}
-    <div>
-        {{#link-to 'activity' (query-params id=activity.id) class="activity-item"}}
-            {{activity.title}}
-        {{/link-to}}
-    </div>
-{{/each}}
-
-{{yield}}

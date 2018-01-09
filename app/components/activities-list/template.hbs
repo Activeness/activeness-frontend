@@ -1,7 +1,22 @@
 {{#each activities as |activity|}}
     {{#link-to 'activity' (query-params id=activity.id) class="activity d-flex justify-content-start"}}
+        <div class="activity-date">
+            <div class="activity-date-day">
+                {{format-date activity.date day='2-digit'}}
+            </div>
+            <div class="activity-date-month">
+                {{format-date activity.date month='short'}}
+            </div>
+        </div>
         <div class="activity-image" style="background-image: url({{activity.img}});"></div>
-        <div class="activity-title">{{activity.title}}</div>
+        <div class="activity-information">
+            <div class="activity-title">
+                {{activity.title}}
+            </div>
+            <div class="activity-organizer">
+                {{activity.title}}
+            </div>
+        </div>
     {{/link-to}}
 {{/each}}
 
