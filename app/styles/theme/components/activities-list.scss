@@ -75,9 +75,11 @@
             }
         }
 
-        & ~ .activity {
-            margin-top: $space-default;
-        }
     }
 
+    // TODO: Maybe improve the activities list HTML structure
+    > * ~ * {
+        margin-top: $space-default;
+    }
+    
 }

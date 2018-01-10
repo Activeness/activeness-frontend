@@ -8,11 +8,17 @@ export default function() {
 
   this.get('/activities', (schema, request) => {
     let amount = request.queryParams.amount;
+    
     if (amount) {
       return schema.activities.all().slice(0,amount);
+    }else if (request.queryParams) {
+      return schema.activities.where(request.queryParams);
     }else{
       return schema.activities.all();
     }
+
+    return { activities: [] };
+
   });
 
   this.get('/categories', (schema/*, request*/) => {
