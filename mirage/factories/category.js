@@ -21,11 +21,5 @@ const categories = [
 export default Factory.extend({
     id(i) {
         return categories[i];
-    },
-    title(i) {
-        return 'app.categories.' + categories[i] + '.title';
-    },
-    description(i) {
-        return 'app.categories.' + categories[i] + '.description';
     }
 });

@@ -1,21 +1,21 @@
 import { Factory, faker} from 'ember-cli-mirage';
 
-const categories = [
-    'music',
-    'excursion',
-    'event',
-    'opening',
-    'food',
-    'relaxation',
-    'dance',
-    'family',
-    'guides',
-    'culture',
-    'exhibition',
-    'market',
-    'meetup',
-    'others'
-];
+// const categories = [
+//     'music',
+//     'excursion',
+//     'event',
+//     'opening',
+//     'food',
+//     'relaxation',
+//     'dance',
+//     'family',
+//     'guides',
+//     'culture',
+//     'exhibition',
+//     'market',
+//     'meetup',
+//     'others'
+// ];
 
 export default Factory.extend({
     id(i) {
@@ -27,12 +27,8 @@ export default Factory.extend({
     active() {
         return Math.random() >= 0.5;
     },
-    categoryId() {
-        return categories[Math.floor( Math.random() * categories.length )];
-    },
-    // categories() {
-    //     return { categories: [] };
-    // },
+    // categoryies() {},
+    // organizer() {},
     date() {
         return faker.date.future();
     },
@@ -42,12 +38,21 @@ export default Factory.extend({
     description() {
         return faker.lorem.text();
     },
-    organizer() {
-        return faker.company.companyName();
-    },
     img() {
         return faker.image.nightlife();
     },
+    // address() {},
+    action() {
+
+    },
+    sport() {},
+    // suitabilities() {},
+    // costs() {},
+    // langs() {},
+    rating() {
+      return 3;
+    },
+    // comments() {},
     reservation() {
         return Math.random() >= 0.5;
     }
