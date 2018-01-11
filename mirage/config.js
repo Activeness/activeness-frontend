@@ -1,4 +1,28 @@
 import ENV from '../config/environment';
+import Mirage from 'ember-cli-mirage';
+
+/**
+ * Generate a new token string
+ * 
+ * @returns {string} token
+ */
+function generateToken() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+/**
+ * Defines the header data for all routes
+ */
+function getResponseHeaderData() {
+  return {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'authentication-token': generateToken()
+  };
+}
 
 export default function() {
 
@@ -6,13 +30,16 @@ export default function() {
   this.namespace = '/' + ENV.namespace;  // make this `/api`, for example, if your API is namespaced
   // this.timing = 400;  // delay for each request, automatically set to 0 during testing
 
+
+  // ===== Activities =====
+
   this.get('/activities', (schema, request) => {
     let amount = request.queryParams.amount;
 
     if (amount) {
       return schema.activities.all().slice(0,amount);
     }else if (request.queryParams) {
-      return schema.activities.all().filter((activity) => {
+      return schema.activities.all().filter((/*activity*/) => {
         // ...
       });
     }else{
@@ -21,8 +48,11 @@ export default function() {
 
   });
 
+  
+  // ===== Categories =====
+  
   this.get('/categories', (schema/*, request*/) => {
-    return schema.categories.all();
+    return new Mirage.Response(200, getResponseHeaderData(), schema.categories.all());
   });
-
+  
 }

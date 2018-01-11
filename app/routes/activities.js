@@ -4,7 +4,7 @@ import RSVP from 'rsvp';
 export default Route.extend({
 
     queryParams: {
-        categoryId: {
+        cid: {
             refreshModel: true
         }
     },

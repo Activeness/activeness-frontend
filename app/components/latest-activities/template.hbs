@@ -4,7 +4,7 @@
         {{#link-to 'today' class="latest-activity"}}
             <div class="latest-activity-image" style="background-image: url({{activity.img}});"></div>
             <p class="latest-activity-title">{{activity.title}}</p>
-            <p class="latest-activity-date">{{activity.date}}</p>
+            <p class="latest-activity-date">{{format-date activity.date}}</p>
         {{/link-to}}
     {{/each}}
     

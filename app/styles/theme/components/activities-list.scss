@@ -9,11 +9,7 @@
 
         position: relative;
         display: block;
-        background-color: lighten($light, $color-offset-default);
-        background: -moz-linear-gradient(-20deg, lighten($light, $color-offset-default * 2) 0%, darken($light, $color-offset-default) 100%);
-        background: -webkit-linear-gradient(-20deg, lighten($light, $color-offset-default * 2) 0%, darken($light, $color-offset-default) 100%);
-        background: linear-gradient(110deg, lighten($light, $color-offset-default * 2) 0%, darken($light, $color-offset-default) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=1 );
+        background-color: lighten($light, 100%);
         height: $activity-size;
         overflow: hidden;
         color: darken($light, $color-offset-default * 10);
@@ -67,7 +63,7 @@
         &:hover {
             text-decoration: none;
             margin: 0 $space-default;
-            background: darken($light, 50%);
+            background: lighten($color-default, 5%) !important;
             color: lighten($light, 0%);
 
             .activity-image {
