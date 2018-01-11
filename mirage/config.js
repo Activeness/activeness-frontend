@@ -12,7 +12,9 @@ export default function() {
     if (amount) {
       return schema.activities.all().slice(0,amount);
     }else if (request.queryParams) {
-      return schema.activities.where(request.queryParams);
+      return schema.activities.all().filter((activity) => {
+        // ...
+      });
     }else{
       return schema.activities.all();
     }

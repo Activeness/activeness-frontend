@@ -11,7 +11,7 @@ export default Route.extend({
 
     model(transition) {
         return RSVP.hash({
-            activities: this.get('store').query('activity', { categoryId: transition.categoryId })
+            activities: this.get('store').query('activity', { cid: transition.cid })
         });
     }
 
