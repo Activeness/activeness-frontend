@@ -1,22 +1,5 @@
 import { Factory, faker} from 'ember-cli-mirage';
 
-// const categories = [
-//     'music',
-//     'excursion',
-//     'event',
-//     'opening',
-//     'food',
-//     'relaxation',
-//     'dance',
-//     'family',
-//     'guides',
-//     'culture',
-//     'exhibition',
-//     'market',
-//     'meetup',
-//     'others'
-// ];
-
 export default Factory.extend({
     id(i) {
         return `activity_${i}`;
@@ -27,8 +10,8 @@ export default Factory.extend({
     active() {
         return Math.random() >= 0.5;
     },
-    // categoryies() {},
-    // organizer() {},
+    // categoryies() {},  // How the relation to "category" ????
+    // organizer() {},    // Relation needed
     date() {
         return faker.date.future();
     },
@@ -41,18 +24,20 @@ export default Factory.extend({
     img() {
         return faker.image.nightlife();
     },
-    // address() {},
+    // address() {},      // Relation needed
     action() {
-
+      return Math.random() >= 0.5;
     },
-    sport() {},
-    // suitabilities() {},
-    // costs() {},
-    // langs() {},
+    sport() {
+      return Math.random() >= 0.5;
+    },
+    // suitabilities() {},  // Relation needed
+    // costs() {},          // Relation needed
+    // langs() {},          // Relation needed
     rating() {
       return 3;
     },
-    // comments() {},
+    // comments() {},       // Relation needed
     reservation() {
         return Math.random() >= 0.5;
     }
