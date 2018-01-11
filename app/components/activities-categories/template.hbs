@@ -1,8 +1,7 @@
 {{#each categories as |category|}}
     <a class="btn btn-primary" {{action 'search' category}}>
         {{fa-icon category.ico}}
-        <span>{{category.id}}</span>
-        {{!--<span>{{t category.title}}</span>--}}
+        <span>{{t category.title}}</span>
     </a>
 {{/each}}
 

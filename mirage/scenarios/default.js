@@ -7,6 +7,6 @@ export default function(server) {
   server.createList('activity', 200);
 
   // List of categories (max 15)
-  // server.createList('category', 15);
+  server.createList('category', 15);
 
 }
