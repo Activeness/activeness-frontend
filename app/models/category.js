@@ -2,11 +2,11 @@ import DS from 'ember-data';
 import { computed } from '@ember/object';
 
 export default DS.Model.extend({
-    
+
     name: DS.attr('string'),
 
-    activity: DS.belongsTo('activity'),
-    
+    activity: DS.belongsTo('activity', { inverse: 'categories'}),
+
     title: computed('id', function() {
         return 'app.categories.' + this.get('name') + '.title'
     }),

@@ -1,4 +1,4 @@
-import { Factory, faker } from 'ember-cli-mirage';
+import { Factory, faker, trait } from 'ember-cli-mirage';
 
 export default Factory.extend({
     id(i) {
@@ -10,10 +10,6 @@ export default Factory.extend({
     active() {
         return faker.random.boolean();
     },
-    categories() {
-        return [];
-    },  // Relation needed
-    // organizer() {},    // Relation needed
     date() {
         return faker.date.future();
     },
@@ -26,29 +22,16 @@ export default Factory.extend({
     img() {
         return faker.image.nightlife();
     },
-    // address() {},      // Relation needed
     action() {
       return faker.random.boolean();
     },
     sport() {
       return faker.random.boolean();
     },
-    // suitabilities() {},  // Relation needed
-    // costs() {},          // Relation needed
-    // langs() {},          // Relation needed
     rating() {
       return 3;
     },
-    // comments() {},       // Relation needed
     reservation() {
         return faker.random.boolean();
-    },
-    
-    // afterCreate(activity, server) {
-    //     server.create('category', { activity });
-    // }
-    // afterCreate(activity, server) {
-    //     server.createList('category', 3, { activity });
-    // }
-
+    }
 });

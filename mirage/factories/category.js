@@ -1,4 +1,4 @@
-import { Factory, association } from 'ember-cli-mirage';
+import { Factory/*, trait*/ } from 'ember-cli-mirage';
 
 const categories = [
     '*',
