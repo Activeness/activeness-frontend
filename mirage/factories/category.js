@@ -1,4 +1,4 @@
-import { Factory } from 'ember-cli-mirage';
+import { Factory, association } from 'ember-cli-mirage';
 
 const categories = [
     '*',
@@ -20,6 +20,9 @@ const categories = [
 
 export default Factory.extend({
     id(i) {
-        return categories[i];
+        return `${i}`;
+    },
+    name() {
+        return categories[Math.floor(Math.random() * 14) + 1];
     }
 });

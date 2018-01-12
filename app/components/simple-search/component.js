@@ -78,6 +78,22 @@ export default Component.extend({
             };
 
             this.get('router').transitionTo('activities', { queryParams: searchParams });
+        },
+
+        /**
+         * Search activities by category
+         *
+         * @method shortCategorySearch
+         */
+        shortCategorySearch(category) {
+            this.set('selectedCategory', category);
+            
+            let searchParams = {
+              category: category.get('id'),
+              search: this.get('searchString')
+            };
+            
+            this.get('router').transitionTo('activities', { queryParams: searchParams });
         }
 
     }

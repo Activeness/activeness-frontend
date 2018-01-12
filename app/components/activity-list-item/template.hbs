@@ -15,6 +15,13 @@
         <div class="activity-organizer">
             {{activity.organizer}}
         </div>
+        <div class="activity-categories">
+            {{activity.categories}}<br/>
+            {{activity.categories.length}}
+            {{#each activity.categories as |category|}}
+                {{category.id}} - {{category.name}}, 
+            {{/each}}
+        </div>
     </div>
     {{yield}}
 {{/link-to}}

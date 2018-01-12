@@ -69,5 +69,17 @@
         padding: $space-default;
         border-radius: 0;
     }
+
+    .simple-search-categories-search {
+        
+        .btn {
+            margin-top: $space-default / 2;
+
+            &:hover {
+                background-color: rgba($color-primary, 1);
+            }
+        }
+
+    }
     
 }
