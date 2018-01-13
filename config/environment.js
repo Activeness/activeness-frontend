@@ -45,13 +45,13 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     ENV['ember-cli-mirage'] = {
-      enabled: true,
+      enabled: false,
       timing: 2000,
       server: {
         "logging": true
       }
     };
-    ENV.host = 'http://localhost:4200';
+    ENV.host = 'http://localhost:4201';
     ENV.namespace = 'api';
   }
 
