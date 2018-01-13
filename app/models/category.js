@@ -5,7 +5,7 @@ export default DS.Model.extend({
 
     name: DS.attr('string'),
 
-    activity: DS.belongsTo('activity', { inverse: 'categories'}),
+    activity: DS.belongsTo('activity', { inverse: 'category'}),
 
     title: computed('id', function() {
         return 'app.categories.' + this.get('name') + '.title'

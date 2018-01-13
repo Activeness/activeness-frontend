@@ -1,5 +1,9 @@
-{{#each activities as |activity|}}
+{{#if activities.isPending}}
+  {{t 'app.rest.loading.activities'}}
+{{else}}
+  {{#each activities as |activity|}}
     {{activity-list-item activity=activity}}
-{{/each}}
+  {{/each}}
+{{/if}}
 
 {{yield}}

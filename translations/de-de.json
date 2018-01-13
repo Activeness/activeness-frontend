@@ -1,5 +1,12 @@
 {
     "app": {
+        "rest": {
+          "loading": {
+            "activiies": "Veranstaltungen werden geladen...",
+            "categories": "Verfügbare Kategorien werden geladen...",
+            "organizer": "Verfügbare Organisatoren werden geladen..."
+          }
+        },
         "brand": {
             "title": "Freizeit"
         },

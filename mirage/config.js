@@ -3,7 +3,7 @@ import Mirage from 'ember-cli-mirage';
 
 /**
  * Generate a new token string
- * 
+ *
  * @returns {string} token
  */
 function generateToken() {
@@ -28,7 +28,7 @@ export default function() {
 
   this.urlPrefix = ENV.host; // make this `http://localhost:8080`, for example, if your API is on a different server
   this.namespace = '/' + ENV.namespace;  // make this `/api`, for example, if your API is namespaced
-  // this.timing = 400;  // delay for each request, automatically set to 0 during testing
+  // this.timing = 2000;  // delay for each request, automatically set to 0 during testing
 
 
   // ===== Activities =====
@@ -48,11 +48,11 @@ export default function() {
 
   });
 
-  
+
   // ===== Categories =====
-  
+
   this.get('/categories', (schema/*, request*/) => {
     return new Mirage.Response(200, getResponseHeaderData(), schema.categories.all());
   });
-  
+
 }

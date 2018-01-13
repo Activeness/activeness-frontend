@@ -16,10 +16,13 @@
             {{activity.organizer}}
         </div>
         <div class="activity-categories">
-            {{activity.categories.length}}
-            {{#each activity.categories as |category|}}
-                {{category.id}} - {{category.name}},
-            {{/each}}
+            {{#if activity.categories.isPending}}
+              {{t 'app.rest.loading.categories'}}
+            {{else}}
+              {{#each activity.categories as |category|}}
+                  {{category.id}} - {{category.name}},
+              {{/each}}
+            {{/if}}
         </div>
     </div>
     {{yield}}

@@ -8,6 +8,14 @@
         {{t 'app.simple-search.information'}}
     </p>
 
+    <div class="simple-search-categories-search">
+        {{#each categories as |category|}}
+            <a class="btn btn-link" {{action 'shortCategorySearch' category}}>
+                {{fa-icon category.ico}}
+                <span>{{t category.title}}</span>
+            </a>
+        {{/each}}
+    </div>
     <div class="input-group">
 
         <div class="input-group-append">
@@ -37,14 +45,6 @@
 
     </div>
 
-    <div class="simple-search-categories-search">
-        {{#each categories as |category|}}
-            <a class="btn btn-link" {{action 'shortCategorySearch' category}}>
-                {{fa-icon category.ico}}
-                <span>{{t category.title}}</span>
-            </a>
-        {{/each}}
-    </div>
 
     {{yield}}
 

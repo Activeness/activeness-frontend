@@ -46,7 +46,7 @@ module.exports = function(environment) {
 
     ENV['ember-cli-mirage'] = {
       enabled: true,
-      timing: 400,
+      timing: 2000,
       server: {
         "logging": true
       }

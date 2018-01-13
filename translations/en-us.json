@@ -1,6 +1,13 @@
 {
     "app": {
-        "brand": {
+      "rest": {
+        "loading": {
+          "activiies": "Loading activities...",
+          "categories": "Loading categories...",
+          "organizer": "Loading organizer..."
+        }
+      },
+      "brand": {
             "title": "Freetime"
         },
         "navigation": {
