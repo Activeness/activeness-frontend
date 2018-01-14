@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-// import { computed } from "@ember/object"
+import { computed } from "@ember/object"
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
@@ -22,7 +22,7 @@ export default Component.extend({
      * @property {array} categories
      * @default null
      */
-    categories: null,/*computed('store', function() {
+    categories: computed('store', function() {
 
       // Get all available categories from server
       let categories = this.get('store').findAll('category');
@@ -31,7 +31,7 @@ export default Component.extend({
       this.set('selectedCategory', categories.get('firstObject'));
 
       return categories;
-    })*/
+    }),
 
     /**
      * Defines the selected category

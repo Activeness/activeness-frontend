@@ -3,7 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
     version: DS.attr('number'),
     active: DS.attr('boolean'),
-    categories: DS.hasMany('category', { async: true/*, inverse: 'activity'*/ }),
+    categories: DS.hasMany('category', { async: true, inverse: 'activity' }),
     // organizer: DS.belongsTo('organizer', { async: true }),
     date: DS.attr('date'),
     title: DS.attr('string'),
