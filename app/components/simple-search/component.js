@@ -73,7 +73,7 @@ export default Component.extend({
          */
         search() {
             let searchParams = {
-              category: this.get('selectedCategory.id'),
+              cid: this.get('selectedCategory.id'),
               search: this.get('searchString')
             };
 
