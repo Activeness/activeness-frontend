@@ -1,24 +1,17 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
+let service;
+
 moduleForComponent('header-nav', 'Integration | Component | header nav', {
-  integration: true
+  integration: true,
+  setup() {
+    service = this.container.lookup('service:intl');
+    service.setLocale('de-de');
+  }
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{header-nav}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#header-nav}}
-      template block text
-    {{/header-nav}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('.navbar.fixed-top').length, 1);
 });

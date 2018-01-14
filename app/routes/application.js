@@ -9,7 +9,7 @@ export default Route.extend({
     beforeModel() {
         return this.get('intl').setLocale('de-de');
     },
-    
+
     model() {
         return RSVP.hash({
             latestActivityViews: this.get('store').query('activity', { amount: 3 }),
