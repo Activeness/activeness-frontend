@@ -47,9 +47,10 @@ footer {
     
     h4 {
       color: lighten($color-default, 40%);
-      margin-bottom: 1em;
+      margin-bottom: $space-default / 2;
       font-weight: 100;
-      font-size: 1.2em;
+      font-size: 3em;
+      font-family: $font-family-primary;
     }
 
     .fa + * {
