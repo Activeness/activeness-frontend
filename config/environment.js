@@ -29,7 +29,7 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
       'style-src': "'self' fonts.googleapis.com",
-      'connect-src': "'self' http://localhost:4201"
+      'connect-src': ["http://localhost:4201"]
     },
 
     APP: {

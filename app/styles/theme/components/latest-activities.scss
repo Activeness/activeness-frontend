@@ -45,7 +45,7 @@
         }
 
         &:hover {
-            background: lighten($color-default, 5%);
+            background: lighten($primary, 0%);
 
             .latest-activity-image {
                 background-size: 140%;
