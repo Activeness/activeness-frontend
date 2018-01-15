@@ -7,6 +7,7 @@
     position: relative;
     z-index: -1;
     overflow: hidden;
+    background-color: $primary;
     @include transition();
 
     @include media-breakpoint-down(md) {
@@ -27,6 +28,7 @@
         background-size: 100%;
         background-repeat: no-repeat;
         @include blur();
+        @include opacity(.5);
 
         @include media-breakpoint-up(md) {
             background-position: center;

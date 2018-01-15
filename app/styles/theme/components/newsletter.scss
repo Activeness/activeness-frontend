@@ -1,0 +1,21 @@
+
+//
+// Subscribe newsletter form
+
+.newsletter {
+    background-color: $primary;
+    padding: $space-default 0;
+    text-align: center;
+
+    .input-group-text {
+        background-color: $color-default;
+        color: lighten($text-color-default, 100%);
+        border: 1px solid $color-default;
+    }
+
+    h2 {
+        font-family: 'Bilbo';
+        font-size: 4em;
+    }
+
+}
