@@ -52,7 +52,7 @@ module.exports = function(environment) {
         "logging": true
       }
     };
-    ENV.host = 'http://localhost:4201';
+    ENV.host = 'http://localhost:4200';
     ENV.namespace = 'api';
   }
 
