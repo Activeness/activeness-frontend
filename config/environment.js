@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'Open+Sans:300,400,700',
       'Gudea:100,400,700',
       'Roboto+Condensed:100,300,400,700',
-      'Bilbo:100,300,400,700'
+      'Caveat:100,300,400,700'
     ],
 
     // Set or update content security policies
@@ -46,7 +46,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     ENV['ember-cli-mirage'] = {
-      enabled: true,
+      enabled: false,
       timing: 2000,
       server: {
         "logging": true

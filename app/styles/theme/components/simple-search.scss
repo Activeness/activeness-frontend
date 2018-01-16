@@ -15,7 +15,8 @@
     }
 
     .simple-search-title {
-        font-size: 7em;
+        font-size: 5em;
+        // text-transform: uppercase;
         line-height: 1em;
         font-weight: $text-weight-default;
         margin: 0;
@@ -29,7 +30,8 @@
     }
 
     .simple-search-information {
-        font-size: 3em;
+        font-size: 2em;
+        // text-transform: uppercase;
         font-weight: $text-weight-default;
         text-shadow: .02em .02em .03em #000;
         margin: 0 0 1em .2em;
@@ -41,7 +43,7 @@
     }
 
     .simple-search-categories {
-        background-color: rgba($color-primary,.5);
+        background-color: rgba($color-default, 1);
         padding: $space-default;
         border-color: $color-primary;
         border-radius: 0;
@@ -59,7 +61,7 @@
 
     .simple-search-input {
         background-color: rgba(255,255,255,.7);
-        border-color: $color-primary;
+        border: 1px solid $color-primary;
         padding: $space-default;
         @include transition();
 
