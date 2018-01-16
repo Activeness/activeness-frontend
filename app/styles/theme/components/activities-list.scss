@@ -17,11 +17,22 @@
         @include transition();
 
         .activity-information {
-            margin: $space-default * 2 0 0 $space-default * 2;
+            margin: $space-default 0 0 $space-default * 2;
 
             .activity-title {
                 font-size: 1.6em;
                 font-weight: 400;
+            }
+
+            .activity-categories {
+                margin-top: $space-default;
+
+                .btn {
+                    padding: 0 .5em;
+                    font-weight: 100;
+                    color: lighten($light, $color-offset-default);
+                }
+
             }
 
         }
@@ -62,9 +73,7 @@
 
         &:hover {
             text-decoration: none;
-            margin: 0 $space-default;
-            background: lighten($color-default, 5%) !important;
-            color: lighten($light, 0%);
+            @include shadow(0 .1em .2em rgba(0,0,0,.8));
 
             .activity-image {
                 background-size: auto 140%;

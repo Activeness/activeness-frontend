@@ -10,6 +10,9 @@ export default Factory.extend({
     active() {
         return faker.random.boolean();
     },
+    categories() {
+      return [1,2,8];
+    },
     date() {
         return faker.date.future();
     },

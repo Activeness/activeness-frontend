@@ -3,20 +3,13 @@
 // Overwrite Basic Bootstrap Colors
 
 $font-family-base: 'Roboto Condensed', cursive;
+$font-family-primary: 'Bilbo';
+
 $primary: rgb(112, 130, 0);
+$dark: rgb(64,70,64);
 
-$body-bg: darken($primary, 0%);
-
-// $blue: $primary;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #e83e8c !default;
-// $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
-// $yellow:  #ffc107 !default;
-// $green:   #28a745 !default;
-// $teal:    #20c997 !default;
-// $cyan:    #17a2b8 !default;
+$body-bg: lighten(rgb(95, 95, 95), 0%);
+$body-bg: $dark;
 
 //
 // Color Offsets

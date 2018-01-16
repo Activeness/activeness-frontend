@@ -73,7 +73,7 @@ export default Component.extend({
          */
         search() {
             let searchParams = {
-              category: this.get('selectedCategory.id'),
+              cid: this.get('selectedCategory.id'),
               search: this.get('searchString')
             };
 
@@ -87,13 +87,7 @@ export default Component.extend({
          */
         shortCategorySearch(category) {
             this.set('selectedCategory', category);
-            
-            let searchParams = {
-              category: category.get('id'),
-              search: this.get('searchString')
-            };
-            
-            this.get('router').transitionTo('activities', { queryParams: searchParams });
+            this.send('search');
         }
 
     }
