@@ -22,17 +22,14 @@ export default Component.extend({
      * @property {array} categories
      * @default null
      */
-    categories: computed('store', function() {
+    categories: null,
 
-      // Get all available categories from server
-      let categories = this.get('store').findAll('category');
+    /**
+     * Defines a list with filtered categories without *
+     * 
+     */
 
-      // Set the first category as selected category
-      this.set('selectedCategory', categories.get('firstObject'));
-
-      return categories;
-    }),
-
+     
     /**
      * Defines the selected category
      *

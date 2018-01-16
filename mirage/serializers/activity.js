@@ -1,5 +1,6 @@
 import ApplicationSerializer from './application';
 
 export default ApplicationSerializer.extend({
-  include: ['categories']
+  // include: ['categories']
+  serializeIds: 'always'
 });

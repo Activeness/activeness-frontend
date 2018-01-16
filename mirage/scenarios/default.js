@@ -22,6 +22,7 @@ export default function(server) {
     
     // Generate a new activity and set the new array of categories
     server.create('activity', { categories: randomCategoriesSelection });
+    // server.create('activity', { categories: [1,4,9] });
   }
 
 }
