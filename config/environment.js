@@ -21,15 +21,15 @@ module.exports = function(environment) {
     googleFonts: [
       'Open+Sans:300,400,700',
       'Gudea:100,400,700',
-      'Roboto+Condensed:100,300,400,700',
-      'Caveat:100,300,400,700'
+      'Source+Sans+Pro:100,300,400,700',
+      'Bilbo:100,300,400,700'
     ],
 
     // Set or update content security policies
     contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
       'style-src': "'self' fonts.googleapis.com",
-      'connect-src': ["http://localhost:4201"]
+      'connect-src': ["'self'", "http://localhost:4201"]
     },
 
     APP: {

@@ -22,7 +22,8 @@ export default Factory.extend({
     id(i) {
         return `${i}`;
     },
-    name() {
-        return categories[Math.floor(Math.random() * 14) + 1];
+    name(i) {
+        // return categories[Math.floor(Math.random() * 14) + 1];
+        return categories[i];
     }
 });

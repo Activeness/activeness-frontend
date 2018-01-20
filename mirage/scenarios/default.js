@@ -6,25 +6,23 @@ export default function(server) {
   // List of categories (max 15 available!!!)
   let categories = server.createList('category', 15);
 
+  let activitiesCount = Math.floor(Math.random() * 100);
+
   // Generate a list of activities with relations to categories
-  for (let i=0; i < categories.length; i++) {
+  for (let i=0; i < activitiesCount; i++) {
 
     let randomCategoriesSelection = [];
-    let categoriesCount = Math.floor(Math.random() * 15);
-    let activitiesCount = Math.floor(Math.random() * 10);
+    let categoriesCount = Math.floor(Math.random() * (categories.length - 1));
 
-    // Count of activities to generate
-    for (let ac=0; ac < activitiesCount; ac++) {
-
-      // Count of categories to generate
-      for (let cc=0; cc < categoriesCount; cc++) {
-        randomCategoriesSelection.push( categories[Math.floor(Math.random() * 15)] );
-      }
-
-      // Generate a new activity and set the new array of categories
-      server.create('activity', { categories: randomCategoriesSelection });
+    // Count of categories to assign to the activity
+    for (let ac=0; ac < categoriesCount; ac++) {
+      let index = Math.floor(Math.random() * (categories.length - 1));
+      randomCategoriesSelection.push( categories[index] );
     }
-
+    
+    // Generate a new activity and set the new array of categories
+    server.create('activity', { categories: randomCategoriesSelection });
+    // server.create('activity', { categories: [1,4,9] });
   }
 
 }

@@ -7,7 +7,7 @@
     top: 15em;
     left: 0;
     width: 100%;
-    mix-blend-mode: luminosity;
+    
     @include transition();
 
     @include media-breakpoint-down(md) {
@@ -43,7 +43,7 @@
     }
 
     .simple-search-categories {
-        background-color: rgba($color-default, 1);
+        background-color: rgba($color-primary,1);
         padding: $space-default;
         border-color: $color-primary;
         border-radius: 0;
@@ -60,8 +60,8 @@
     }
 
     .simple-search-input {
-        background-color: rgba(255,255,255,.7);
-        border: 1px solid $color-primary;
+        background-color: rgba(255,255,255,1);
+        border-color: $color-primary;
         padding: $space-default;
         @include transition();
 
