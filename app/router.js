@@ -14,7 +14,7 @@ Router.map(function() {
   this.route('imprint');
   this.route('dataprotection');
   this.route('disclaimer');
-  this.route('activity');
+  this.route('activity', { path: '/activity/:activity_id' });
   this.route('activities');
 });
 

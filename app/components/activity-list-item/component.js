@@ -32,6 +32,10 @@ export default Component.extend({
           };
 
           this.get('router').transitionTo('activities', { queryParams: searchParams });
+      },
+
+      openActivityDetails(activity_id) {
+        this.get('router').transitionTo('activity', activity_id);
       }
 
   }

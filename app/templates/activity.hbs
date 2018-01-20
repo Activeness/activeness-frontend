@@ -1,1 +1,41 @@
-{{outlet}}
+<div class="activity-details">
+
+    <section class="activity-header" style="background-image: url({{model.img}})">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="activity-organizer-logo-section">
+                        <img class="activity-organizer-logo" src="https://cdn.merchantmaverick.com/wp-content/uploads/2015/04/trello-logo-blue.png" alt="" />
+                    </div>
+                    <div class="activity-title">
+                        <h1>{{model.title}}</h1>
+                    </div>
+                    <div>
+                        <div class="activity-date">
+                            {{format-date model.date day='2-digit' month='long'}} - {{format-time model.date hour='2-digit' minute='2-digit'}}
+                        </div>
+                    </div>
+                    <div class="activity-categories">
+                        {{#if model.categories.isPending}}
+                            {{t 'app.rest.loading.categories'}}
+                        {{else}}
+                            {{#each model.categories as |category|}}
+                                <a class="btn btn-primary" {{action 'searchByCategory' category}}>
+                                    {{category.name}}
+                                </a>
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            ...
+            {{outlet}}
+        </div>
+    </section>
+
+</div>

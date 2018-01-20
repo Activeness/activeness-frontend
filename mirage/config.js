@@ -48,6 +48,10 @@ export default function() {
 
   });
 
+  this.get('/activities/:activity_id', ({ activities }, request) => {
+    return activities.find(request.params.activity_id);
+  });
+
 
   // ===== Categories =====
 

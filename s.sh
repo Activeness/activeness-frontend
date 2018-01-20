@@ -9,5 +9,5 @@ rm -r tmp
 echo "deleting /vendor"
 rm -r vendor
 
-echo "starting 'ember server --proxy http://localhost:4201'"
-ember server --proxy http://localhost:4201
+echo "starting 'ember server --proxy http://localhost:4300'"
+ember server --proxy http://localhost:4300

@@ -1,0 +1,53 @@
+
+//
+// Activity
+
+.activity-details {
+    
+    .activity-header {
+        min-height: 50em;
+        padding-top: 12em;
+        background-position: top center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+        .activity-organizer-logo-section {
+            display: inline-block;
+            padding: $space-default; 
+            background-color: rgba(darken($color-default, $color-offset-default * 4), .8);
+            margin-bottom: $space-default * 4;
+            height: 10em;
+            
+            .activity-organizer-logo {
+                height: 100%;
+            }
+        }
+        
+        .activity-title {
+            h1 {
+                display: inline-block;
+                padding: 0 $space-default / 2; 
+                background-color: rgba($color-default, .6);
+                text-shadow: .1em .1em #000;
+            }
+        }
+        
+        .activity-date {
+            display: inline-block;
+            padding: 0 $space-default; 
+            background-color: rgba($color-default, .6);
+            font-size: 1.7em;
+            text-shadow: .1em .1em #000;
+            margin-bottom: $space-default * 2;
+        }
+
+        .activity-categories {
+            display: inline-block;
+            padding: $space-default $space-default; 
+            background-color: rgba($color-default, .6);
+            
+        }
+
+    }
+
+}
