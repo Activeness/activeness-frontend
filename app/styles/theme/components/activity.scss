@@ -48,6 +48,36 @@
             
         }
 
+        .activity-header-aditional-information {
+            float: right;
+            text-align: right;
+            margin-top: 23em;
+            
+            .activity-dayuntildate {
+                display: inline-block;
+                padding: 0 $space-default; 
+                background-color: rgba($color-default, .6);
+                margin-bottom: $space-default / 2;
+                font-size: 1.4em;
+    
+                span {
+                    font-size: 2em;
+                }
+            }
+
+            .activity-rating {
+                padding: 0 $space-default; 
+                background-color: rgba($color-default, .6);
+                margin-bottom: $space-default / 2;
+                font-size: 2em;
+                text-align: center;
+
+                .fa ~ .fa {
+                    margin-left: $space-default / 2;
+                }
+            }
+        }
+
     }
 
 }

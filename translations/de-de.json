@@ -10,6 +10,9 @@
         "brand": {
             "title": "Freizeit"
         },
+        "activity": {
+            "daysUntilDate": "Findet in <span>{days}</span> Tagen statt."
+        },
         "navigation": {
             "home": {
                 "title": "Suchen",
