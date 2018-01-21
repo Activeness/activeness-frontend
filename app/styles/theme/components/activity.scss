@@ -5,11 +5,12 @@
 .activity-details {
     
     .activity-header {
-        min-height: 50em;
+        min-height: 48em;
         padding-top: 12em;
         background-position: top center;
         background-size: 100%;
         background-repeat: no-repeat;
+        background-blend-mode: saturation;
         
         .activity-organizer-logo-section {
             display: inline-block;
@@ -58,10 +59,13 @@
                 padding: 0 $space-default; 
                 background-color: rgba($color-default, .6);
                 margin-bottom: $space-default / 2;
-                font-size: 1.4em;
+                font-size: 1.6em;
+                white-space: nowrap;
+                line-height: 2em;
     
                 span {
-                    font-size: 2em;
+                    font-size: 3em;
+                    font-family: $font-family-primary;
                 }
             }
 

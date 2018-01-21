@@ -1,0 +1,67 @@
+<div class="activity-details">
+
+    <div class="activity-header" style="background-image: url({{activity.img}})">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="activity-organizer-logo-section">
+                        <img class="activity-organizer-logo" src="https://slucare.edu/style/resources/slucare-preferred-logo.png" alt="" />
+                    </div>
+                    <div class="activity-title">
+                        <h1>{{activity.title}}</h1>
+                    </div>
+                    <div>
+                        <div class="activity-date">
+                            {{format-date activity.date day='2-digit' month='long' year="numeric"}} - {{format-time activity.date hour='2-digit' minute='2-digit'}}
+                        </div>
+                    </div>
+                    <div class="activity-categories">
+                        {{#if activity.categories.isPending}}
+                            {{t 'app.rest.loading.categories'}}
+                        {{else}}
+                            {{#each activity.categories as |category|}}
+                                <a class="btn btn-primary" {{action 'searchByCategory' category}}>
+                                    {{category.name}}
+                                </a>
+                            {{/each}}
+                        {{/if}}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="activity-header-aditional-information">
+                        <div class="activity-dayuntildate">
+                            <p>{{t 'app.activity.daysUntilDate' days=daysUntilDate htmlSafe=true}}</p>
+                        </div>
+                        {{#if activity.rating}}
+                            <div class="activity-rating">
+                                {{#each ratingStars as |star|}}
+                                    {{#if star}}
+                                        {{fa-icon 'star'}}
+                                    {{else}}
+                                        {{fa-icon 'star-o'}}
+                                    {{/if}}
+                                {{/each}}
+                            </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>{{t 'app.activity.activityIn' brand=(t 'app.brand.title') city="Test"}}</h3>
+                    <p>{{activity.description}}</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>{{t 'app.activity.additionalInformation'}}</h3>
+                </div>
+            </div>
+            {{yield}}
+        </div>
+    </section>
+
+</div>

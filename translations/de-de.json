@@ -11,7 +11,9 @@
             "title": "Freizeit"
         },
         "activity": {
-            "daysUntilDate": "Findet in <span>{days}</span> Tagen statt."
+            "daysUntilDate": "Findet in <span>{days}</span> Tagen statt.",
+            "additionalInformation": "Zusätzliche Informationen",
+            "activityIn": "{brand} in {city}"
         },
         "navigation": {
             "home": {

@@ -20,7 +20,8 @@ export default Factory.extend({
         return faker.lorem.sentence();
     },
     description() {
-        return faker.lorem.text();
+        let text = faker.lorem.lines(40);
+        return text;
     },
     img() {
         return faker.image.nightlife();

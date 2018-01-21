@@ -11,7 +11,9 @@
             "title": "Freetime"
         },
         "activity": {
-            "daysUntilDate": "Takes place in <span>{days}</span> days."
+            "daysUntilDate": "Takes place in <span>{days}</span> days.",
+            "additionalInformation": "Additional Information",
+            "activityIn": "{brand} in {city}"
         },
         "navigation": {
             "home": {

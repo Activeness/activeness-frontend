@@ -1,11 +1,11 @@
 <div class="latest-activities">
     
     {{#each latestActivityViews as |activity|}}
-        {{#link-to 'today' class="latest-activity"}}
+        <a {{action 'openActivityDetails' activity.id}} class="latest-activity">
             <div class="latest-activity-image" style="background-image: url({{activity.img}});"></div>
             <p class="latest-activity-title">{{activity.title}}</p>
             <p class="latest-activity-date">{{format-date activity.date}}</p>
-        {{/link-to}}
+        </a>
     {{/each}}
     
     {{yield}}
