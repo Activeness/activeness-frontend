@@ -22,7 +22,7 @@
             {{else}}
               {{#each activity.categories as |category|}}
                 <a class="btn btn-secondary" {{action 'searchByCategory' category}}>
-                  {{category.name}}
+                  {{t category.title}}
                 </a>
               {{/each}}
             {{/if}}

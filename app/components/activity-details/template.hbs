@@ -21,17 +21,18 @@
                         {{else}}
                             {{#each activity.categories as |category|}}
                                 <a class="btn btn-primary" {{action 'searchByCategory' category}}>
-                                    {{category.name}}
+                                    {{t category.title}}
                                 </a>
                             {{/each}}
                         {{/if}}
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-4">
                     <div class="activity-header-aditional-information">
                         <div class="activity-dayuntildate">
                             <p>{{t 'app.activity.daysUntilDate' days=daysUntilDate htmlSafe=true}}</p>
                         </div>
+                        {{!--
                         {{#if activity.rating}}
                             <div class="activity-rating">
                                 {{#each ratingStars as |star|}}
@@ -43,6 +44,7 @@
                                 {{/each}}
                             </div>
                         {{/if}}
+                        --}}
                     </div>
                 </div>
             </div>

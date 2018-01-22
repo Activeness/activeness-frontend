@@ -7,11 +7,15 @@
     .activity-header {
         min-height: 48em;
         padding-top: 12em;
-        background-position: top center;
+        background-position: center;
         background-size: 100%;
         background-repeat: no-repeat;
         background-blend-mode: saturation;
         
+        @include media-breakpoint-down(lg) {
+            background-size: auto 100%;
+        }
+
         .activity-organizer-logo-section {
             display: inline-block;
             padding: $space-default; 
@@ -47,16 +51,25 @@
             padding: $space-default $space-default; 
             background-color: rgba($color-default, .6);
             
+            @include media-breakpoint-down(lg) {
+                margin-bottom: $space-default;
+            }
         }
 
         .activity-header-aditional-information {
             float: right;
             text-align: right;
             margin-top: 23em;
-            
+
+            @include media-breakpoint-down(md) {
+                float: none;
+                text-align: left;
+                margin-top: -2em;
+            }
+
             .activity-dayuntildate {
                 display: inline-block;
-                padding: 0 $space-default; 
+                padding: $space-default $space-default 0 $space-default; 
                 background-color: rgba($color-default, .6);
                 margin-bottom: $space-default / 2;
                 font-size: 1.6em;
