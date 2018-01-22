@@ -1,0 +1,100 @@
+
+//
+// Activity
+
+.activity-details {
+    
+    .activity-header {
+        min-height: 48em;
+        padding-top: 12em;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-blend-mode: saturation;
+        
+        @include media-breakpoint-down(lg) {
+            background-size: auto 100%;
+        }
+
+        .activity-organizer-logo-section {
+            display: inline-block;
+            padding: $space-default * 1.5; 
+            background-color: rgba(darken($color-default, 100%), .8);
+            margin-bottom: $space-default * 4;
+            height: 10em;
+            
+            .activity-organizer-logo {
+                height: 100%;
+            }
+        }
+        
+        .activity-title {
+            h1 {
+                display: inline-block;
+                padding: 0 $space-default / 2; 
+                background-color: rgba(darken($color-default, 100%), .6);
+                text-shadow: .1em .1em #000;
+            }
+        }
+        
+        .activity-date {
+            display: inline-block;
+            padding: 0 $space-default; 
+            background-color: rgba(darken($color-default, 100%), .6);
+            font-size: 1.7em;
+            text-shadow: .1em .1em #000;
+            margin-bottom: $space-default * 2;
+        }
+
+        .activity-categories {
+            display: inline-block;
+            padding: $space-default $space-default; 
+            background-color: rgba(darken($color-default, 100%), .6);
+            
+            @include media-breakpoint-down(lg) {
+                margin-bottom: $space-default;
+            }
+        }
+
+        .activity-header-aditional-information {
+            float: right;
+            text-align: right;
+            margin-top: 23em;
+
+            @include media-breakpoint-down(md) {
+                float: none;
+                text-align: left;
+                margin-top: -2em;
+            }
+
+            .activity-dayuntildate {
+                display: inline-block;
+                padding: $space-default $space-default 0 $space-default; 
+                background-color: rgba(darken($color-default, 100%), .6);
+                margin-bottom: $space-default / 2;
+                font-size: 1.6em;
+                white-space: nowrap;
+                line-height: 2em;
+    
+                span {
+                    font-size: 3em;
+                    font-family: $font-family-primary;
+                }
+            }
+
+            .activity-rating {
+                padding: 0 $space-default; 
+                background-color: rgba(darken($color-default, 100%), .6);
+                margin-bottom: $space-default / 2;
+                font-size: 2em;
+                text-align: center;
+
+                .fa ~ .fa {
+                    margin-left: $space-default / 2;
+                }
+            }
+        }
+
+    }
+
+}

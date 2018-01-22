@@ -1,4 +1,4 @@
-{{#link-to 'activity' (query-params id=activity.id) class="activity d-flex justify-content-start"}}
+<a {{action 'openActivityDetails' activity.id}} class="activity d-flex justify-content-start">
     <div class="activity-date">
         <div class="activity-date-day">
             {{format-date activity.date day='2-digit'}}
@@ -22,11 +22,11 @@
             {{else}}
               {{#each activity.categories as |category|}}
                 <a class="btn btn-secondary" {{action 'searchByCategory' category}}>
-                  {{category.name}}
+                  {{t category.title}}
                 </a>
               {{/each}}
             {{/if}}
         </div>
     </div>
     {{yield}}
-{{/link-to}}
+</a>

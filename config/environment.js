@@ -49,7 +49,7 @@ module.exports = function(environment) {
       enabled: false,
       timing: 2000,
       server: {
-        "logging": true
+        "logging": false
       }
     };
     ENV.host = 'http://localhost:4200';
