@@ -1,51 +1,53 @@
 <div class="container">
+    <div class="simple-search-content">
 
-    <h2 class="simple-search-title">
-        {{t 'app.simple-search.title'}}
-    </h2>
+        <h2 class="simple-search-title">
+            {{t 'app.simple-search.title'}}
+        </h2>
 
-    <p class="simple-search-information">
-        {{t 'app.simple-search.information'}}
-    </p>
+        <p class="simple-search-information">
+            {{t 'app.simple-search.information'}}
+        </p>
 
-    <div class="simple-search-categories-search">
-        {{#each categories as |category|}}
-            <a class="btn btn-link" {{action 'shortCategorySearch' category}}>
-                {{fa-icon category.ico}}
-                <span>{{t category.title}}</span>
-            </a>
-        {{/each}}
-    </div>
-    <div class="input-group">
+        <div class="simple-search-categories-search">
+            {{#each categories as |category|}}
+                <a class="btn btn-link" {{action 'shortCategorySearch' category}}>
+                    {{fa-icon category.ico}}
+                    <span>{{t category.title}}</span>
+                </a>
+            {{/each}}
+        </div>
+        <div class="input-group">
 
-        <div class="input-group-append">
-            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split simple-search-categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{#if selectedCategory}}
-                    {{t selectedCategory.title}}
-                {{else}}
-                    {{t 'app.categories.*.title'}}
-                {{/if}}
-            </button>
-            <div class="dropdown-menu simple-search-categories-list">
-                {{#each categories as |category|}}
-                    <a class="dropdown-item" {{action 'selectCategory' category}}>
-                        {{t category.title}}
-                    </a>
-                {{/each}}
+            <div class="input-group-append">
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split simple-search-categories" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{#if selectedCategory}}
+                        {{t selectedCategory.title}}
+                    {{else}}
+                        {{t 'app.categories.*.title'}}
+                    {{/if}}
+                </button>
+                <div class="dropdown-menu simple-search-categories-list">
+                    {{#each categories as |category|}}
+                        <a class="dropdown-item" {{action 'selectCategory' category}}>
+                            {{t category.title}}
+                        </a>
+                    {{/each}}
+                </div>
             </div>
+
+            {{input class="form-control simple-search-input" value=searchString}}
+
+            <div class="input-group-append">
+                <button class="btn btn-primary simple-search-submit" {{action 'search'}}>
+                    {{t 'app.simple-search.submit'}}
+                </button>
+            </div>
+
         </div>
 
-        {{input class="form-control simple-search-input" value=searchString}}
 
-        <div class="input-group-append">
-            <button class="btn btn-primary simple-search-submit" {{action 'search'}}>
-                {{t 'app.simple-search.submit'}}
-            </button>
-        </div>
+        {{yield}}
 
     </div>
-
-
-    {{yield}}
-
 </div>

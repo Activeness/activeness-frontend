@@ -7,11 +7,15 @@
     top: 15em;
     left: 0;
     width: 100%;
-    
     @include transition();
 
     @include media-breakpoint-down(md) {
         top: 10em;
+    }
+
+    .simple-search-content {
+        background: rgba(0,0,0,.5);
+        padding: $space-default * 2;
     }
 
     .simple-search-title {
@@ -77,7 +81,8 @@
       margin-bottom: $space-default / 2;
 
         .btn {
-
+            font-weight: $text-weight-default;
+            
             &:hover {
                 background-color: rgba($color-primary, 1);
             }

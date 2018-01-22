@@ -2,4 +2,4 @@
 @rd /q/s dist
 @rd /q/s vendor
 
-ember server --proxy http://localhost:4201
+ember server --proxy http://localhost:4300

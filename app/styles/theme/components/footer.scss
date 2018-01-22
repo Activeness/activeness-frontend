@@ -24,6 +24,7 @@ footer {
       background: darken($color-default, 2%) !important;
       font-size: 1em;
       margin-bottom: .2em;
+      font-weight: $text-weight-default;
 
       &:hover {
         color: lighten($color-default, 100%) !important;

@@ -11,7 +11,7 @@
     @include transition();
 
     @include media-breakpoint-down(md) {
-        min-height: 20em;
+        min-height: 35em;
     }
     
     @include media-breakpoint-up(lg) {
@@ -27,11 +27,16 @@
         background-position: top center;
         background-size: 100%;
         background-repeat: no-repeat;
-        @include blur();
-        @include opacity(.7);
+        @include blur(0em);
+        @include opacity(.9);
+
+        @include media-breakpoint-down(md) {
+            background-size: auto 100%;
+        }
 
         @include media-breakpoint-up(md) {
             background-position: center;
+            background-size: 100% auto;
         }
     }
 
