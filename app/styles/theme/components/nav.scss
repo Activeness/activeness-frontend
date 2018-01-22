@@ -3,14 +3,13 @@
 // Navigation
 
 nav {
-  // background: transparent;
-  background: darken($color-default, $color-offset-default * 2);
+  background: transparent;
   color: $text-color-default;
   background: rgba(0,0,0,.7);
   background: -moz-linear-gradient(top, rgba(0,0,0,.7) 0%, rgba(0,0,0,0) 100%);
   background: -webkit-linear-gradient(top, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 100%);
   background: linear-gradient(to bottom, rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 100%);
-
+  
   @include media-breakpoint-down(sm) {
     &.navbar-expand-lg > .container {
       padding-right: $space-default;
@@ -19,12 +18,9 @@ nav {
   }
   
   &.navbar {
+    background: darken(rgba($color-default,.95), $color-offset-default * 3);
     padding: $space-default 0;
     top: 2.2em;
-
-    @include media-breakpoint-down(md) {
-      background-color: darken(rgba($color-default,.9), 10%);
-    }
   }
 
   &.navbar-dark {
