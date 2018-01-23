@@ -111,6 +111,10 @@
                 "title": "Meetup",
                 "description": ""
             },
+            "sport": {
+                "title": "Sport",
+                "description": ""
+            },
             "others": {
                 "title": "Sonstiges",
                 "description": ""
