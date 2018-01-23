@@ -31,6 +31,9 @@ export default Factory.extend({
   country() {
     return faker.address.country();
   },
+  countryCode() {
+    return "DE";//faker.address.countryCode();
+  },
   latitude() {
     return faker.address.latitude();
   },

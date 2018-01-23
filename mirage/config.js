@@ -59,4 +59,15 @@ export default function() {
     return new Mirage.Response(200, getResponseHeaderData(), schema.categories.all());
   });
 
+
+  // ===== Addresses =====
+
+  this.get('/addresses', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.addresses.all());
+  });
+
+  this.get('/addresses/:address_id', ({ addresses }, request) => {
+    return addresses.find(request.params.address_id);
+  });
+  
 }

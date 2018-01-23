@@ -1,7 +1,7 @@
 export default function(server) {
 
   // List of addresses
-  // server.createList('address', 20);
+  let addresses = server.createList('address', 20);
 
   // List of categories (max 15 available!!!)
   let categories = server.createList('category', 15);
@@ -19,7 +19,10 @@ export default function(server) {
       randomCategoriesSelection.push( categories[index] );
     }
     // Generate a new activity and set the new array of categories
-    server.create('activity', { categories: randomCategoriesSelection });
+    server.create('activity', { 
+      categories: randomCategoriesSelection,
+      addresses: [addresses[Math.floor(Math.random() * (addresses.length - 1))]]
+    });
   }
 
 }

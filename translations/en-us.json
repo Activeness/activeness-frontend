@@ -13,7 +13,10 @@
         "activity": {
             "daysUntilDate": "Takes place in <span>{days}</span> days.",
             "additionalInformation": "Additional Information",
-            "activityIn": "{brand} in {city}"
+            "activityIn": "{brand} in {city}",
+            "addresses": "Address of the event",
+            "description": "Description",
+            "organizer": "Organizer"
         },
         "navigation": {
             "home": {
