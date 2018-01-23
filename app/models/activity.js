@@ -10,7 +10,7 @@ export default DS.Model.extend({
     description: DS.attr('string'),                             // Description
     img: DS.attr('string'),                                     // Image of the activity
     address: DS.hasMany('address', { async: true }),            // Where
-    place: DS.hasMany('place', { async: true }),                // Indoor, Outdoor
+    places: DS.hasMany('place', { async: true }),               // Indoor, Outdoor
     action: DS.attr('boolean'),
     sport: DS.attr('boolean'),
     suitabilities: DS.hasMany('suitability', { async: true }),  // Suitabilities
