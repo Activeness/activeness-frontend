@@ -11,7 +11,7 @@ export default Factory.extend({
         return faker.random.boolean();
     },
     categories() {
-      return [1,2,8];
+      return [];
     },
     date() {
         return faker.date.future();

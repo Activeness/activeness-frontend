@@ -1,7 +1,8 @@
 import DS from 'ember-data';
-// import address from './address';
+import address from './address';
 
-export default DS.Model.extend({
-// export default address.extend({
+export default address.extend({
+    
+    activity: DS.belongsTo('activity', { async: true })
 
 });

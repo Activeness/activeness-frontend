@@ -20,10 +20,9 @@ const categories = [
 
 export default Factory.extend({
     id(i) {
-        return `${i}`;
+        return `category_${i}`;
     },
     name(i) {
-        // return categories[Math.floor(Math.random() * 14) + 1];
         return categories[i];
     }
 });
