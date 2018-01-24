@@ -1,9 +1,11 @@
 export default function(server) {
 
+  // List of addresses
+  let addresses = server.createList('address', 5);
+  
   // List of organizers
-  let organizers = server.createList('organizer', 20);
-  let addresses = server.createList('address', 20);
-
+  let organizers = server.createList('organizer', 10);
+  
   // List of categories (max 15 available!!!)
   let categories = server.createList('category', 15);
   
@@ -19,15 +21,14 @@ export default function(server) {
       let index = Math.floor(Math.random() * (categories.length - 1));
       randomCategoriesSelection.push( categories[index] );
     }
-
-    let organizerSelection = [organizers[Math.floor(Math.random() * (organizers.length - 1))]];
-    console.log(organizerSelection);
-
+    
     // Generate a new activity and set the new array of categories
     server.create('activity', { 
       categories: randomCategoriesSelection,
+      organizers: [organizers[Math.floor(Math.random() * (organizers.length - 1))]],
       addresses: [addresses[Math.floor(Math.random() * (addresses.length - 1))]]
     });
+
   }
 
 }

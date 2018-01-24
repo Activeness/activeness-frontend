@@ -69,5 +69,16 @@ export default function() {
   this.get('/addresses/:address_id', ({ addresses }, request) => {
     return addresses.find(request.params.address_id);
   });
+
+
+  // ===== Organizers =====
+
+  this.get('/organizers', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.organizers.all());
+  });
+
+  this.get('/organizers/:organizer_id', ({ organizers }, request) => {
+    return organizers.find(request.params.organizer_id);
+  });
   
 }

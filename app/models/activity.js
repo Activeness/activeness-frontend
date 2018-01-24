@@ -14,7 +14,7 @@ export default DS.Model.extend({
     action: DS.attr('boolean'),
     sport: DS.attr('boolean'),
     suitabilities: DS.hasMany('suitability', { async: true }),  // Suitabilities
-    languages: DS.hasMany('language', { async: true }),             // Language
+    languages: DS.hasMany('language', { async: true }),         // Language
     costs: DS.hasMany('cost', { async: true }),                 // Costs
     reservation: DS.attr('boolean')
 });

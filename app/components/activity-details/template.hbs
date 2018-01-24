@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-
+                    
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
@@ -85,7 +85,17 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.organizer'}}</h4>
-                            ...
+
+                            {{#if activity.organizers.isPending}}
+                                {{t 'app.rest.loading.organizer'}}
+                            {{else}}
+                                {{activity.organizers}}<br/>
+                                {{activity.organizers.length}}<br/>
+                                {{#each activity.organizers as |organizer|}}
+                                    {{address-formatter address=organizer}}
+                                {{/each}}
+                            {{/if}}
+
                         </div>
                     </div>
 
