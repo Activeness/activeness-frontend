@@ -59,15 +59,20 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
-                            {{#each activity.addresses as |address|}}
-                                {{address-formatter address=address}}
-                            {{/each}}
+                            {{#if activity.addresses.isPending}}
+                                {{t 'app.rest.loading.addresses'}}
+                            {{else}}
+                                {{#each activity.addresses as |address|}}
+                                    {{address-formatter address=address}}
+                                {{/each}}
+                            {{/if}}
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.description'}}</h4>
+                            <p><strong>{{activity.title}}</strong></p>
                             <p>{{activity.description}}</p>
                         </div>
                     </div>
@@ -78,19 +83,21 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
-                            ...
+                            {{#unless activity.places.isPending}}
+                                {{#each activity.places as |place|}}
+                                    {{place-information place=place}}
+                                {{/each}}
+                            {{/unless}}
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.organizer'}}</h4>
-
+                            
                             {{#if activity.organizers.isPending}}
                                 {{t 'app.rest.loading.organizer'}}
                             {{else}}
-                                {{activity.organizers}}<br/>
-                                {{activity.organizers.length}}<br/>
                                 {{#each activity.organizers as |organizer|}}
                                     {{address-formatter address=organizer}}
                                 {{/each}}

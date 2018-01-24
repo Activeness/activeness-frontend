@@ -4,6 +4,7 @@
           "loading": {
             "activiies": "Veranstaltungen werden geladen...",
             "categories": "Verfügbare Kategorien werden geladen...",
+            "addresses": "Adresse der Veranstaltung wird geladen...",
             "organizer": "Verfügbare Organisatoren werden geladen..."
           }
         },
@@ -16,7 +17,9 @@
             "activityIn": "{brand} in {city}",
             "addresses": "Adresse der Veranstaltung",
             "description": "Beschreibung",
-            "organizer": "Veranstalter"
+            "organizer": "Veranstalter",
+            "indoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung in einem Gebäude statt.",
+            "outdoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung unter freiem Himmel statt."
         },
         "navigation": {
             "home": {
