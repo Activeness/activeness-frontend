@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('organizer', 'Unit | Model | organizer', {
+moduleForModel('promoter', 'Unit | Model | promoter', {
   // Specify the other units that are required for this test.
   needs: []
 });

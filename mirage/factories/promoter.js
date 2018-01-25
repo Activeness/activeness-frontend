@@ -3,6 +3,6 @@ import addressFactory from './address';
 
 export default addressFactory.extend({
     id(i) {
-        return `organizer_${i}`;
+        return `promoter_${i}`;
     }
 });

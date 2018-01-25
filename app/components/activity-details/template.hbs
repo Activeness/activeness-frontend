@@ -93,13 +93,12 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.organizer'}}</h4>
-                            
-                            {{#if activity.organizers.isPending}}
-                                {{t 'app.rest.loading.organizer'}}
+                            <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
+                            {{#if activity.promoters.isPending}}
+                                {{t 'app.rest.loading.promoter'}}
                             {{else}}
-                                {{#each activity.organizers as |organizer|}}
-                                    {{address-formatter address=organizer}}
+                                {{#each activity.promoters as |promoter|}}
+                                    {{address-formatter address=promoter}}
                                 {{/each}}
                             {{/if}}
 

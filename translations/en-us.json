@@ -5,7 +5,7 @@
             "activiies": "Loading activities...",
             "categories": "Loading categories...",
             "addresses": "Loading event address...",
-            "organizer": "Loading organizer..."
+            "promoter": "Loading promoter..."
             }
         },
         "brand": {
@@ -17,9 +17,9 @@
             "activityIn": "{brand} in {city}",
             "addresses": "Address of the event",
             "description": "Description",
-            "organizer": "Organizer",
-            "indoor": "According to the organizer, this event takes place in a building.",
-            "outdoor": "According to the organizer, this event takes place open air."
+            "promoter": "Promoter",
+            "indoor": "According to the promoter, this event takes place in a building.",
+            "outdoor": "According to the promoter, this event takes place open air."
         },
         "navigation": {
             "home": {

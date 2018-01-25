@@ -59,6 +59,10 @@ export default function() {
     return new Mirage.Response(200, getResponseHeaderData(), schema.categories.all());
   });
 
+  this.get('/categories/:category_id', ({ categories }, request) => {
+    return categories.find(request.params.category_id);
+  });
+
 
   // ===== Addresses =====
 
@@ -71,17 +75,6 @@ export default function() {
   });
 
 
-  // ===== Organizers =====
-
-  this.get('/organizers', (schema/*, request*/) => {
-    return new Mirage.Response(200, getResponseHeaderData(), schema.organizers.all());
-  });
-
-  this.get('/organizers/:organizer_id', ({ organizers }, request) => {
-    return organizers.find(request.params.organizer_id);
-  });
-
-
   // ===== Places =====
 
   this.get('/places', (schema/*, request*/) => {
@@ -91,5 +84,17 @@ export default function() {
   this.get('/places/:place_id', ({ places }, request) => {
     return places.find(request.params.place_id);
   });
+
   
+  // ===== Promoters =====
+
+  this.get('/promoters', (schema/*, request*/) => {
+    debugger;
+    return new Mirage.Response(200, getResponseHeaderData(), schema.promoters.all());
+  });
+
+  this.get('/promoters/:promoter_id', ({ promoters }, request) => {
+    return promoters.find(request.params.promoter_id);
+  });
+
 }

@@ -4,7 +4,7 @@ export default DS.Model.extend({
     version: DS.attr('number'),
     active: DS.attr('boolean'),
     categories: DS.hasMany('category', { async: true }),        // Categories
-    organizers: DS.hasMany('organizer', { async: true }),       // Organizer
+    promoters: DS.hasMany('promoter', { async: true }),         // Promoters
     date: DS.attr('date'),                                      // When
     title: DS.attr('string'),                                   // Title
     description: DS.attr('string'),                             // Description
