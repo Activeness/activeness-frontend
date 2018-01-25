@@ -10,6 +10,8 @@ export default DS.Model.extend({
   companyName: DS.attr('string'),
   postOfficeBox: DS.attr('string'),
   country: DS.attr('string'),
+  countryCode: DS.attr('string'),
+  language: DS.attr('string'),
   latitude: DS.attr('string'),
   longitude: DS.attr('string')
 });

@@ -14,7 +14,7 @@ export default Factory.extend({
     return faker.address.streetName();
   },
   houseNo() {
-    return 1;
+    return faker.random.number() + faker.random.alphaNumeric();
   },
   zip() {
     return faker.address.zipCode();
@@ -30,6 +30,9 @@ export default Factory.extend({
   },
   country() {
     return faker.address.country();
+  },
+  countryCode() {
+    return "DE";//faker.address.countryCode();
   },
   latitude() {
     return faker.address.latitude();

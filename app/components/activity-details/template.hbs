@@ -55,11 +55,55 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3>{{t 'app.activity.activityIn' brand=(t 'app.brand.title') city="Test"}}</h3>
-                    <p>{{activity.description}}</p>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
+                            {{#if activity.addresses.isPending}}
+                                {{t 'app.rest.loading.addresses'}}
+                            {{else}}
+                                {{#each activity.addresses as |address|}}
+                                    {{address-formatter address=address}}
+                                {{/each}}
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{t 'app.activity.description'}}</h4>
+                            <p><strong>{{activity.title}}</strong></p>
+                            <p>{{activity.description}}</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="col-md-4">
-                    <h3>{{t 'app.activity.additionalInformation'}}</h3>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
+                            {{#unless activity.places.isPending}}
+                                {{#each activity.places as |place|}}
+                                    {{place-information place=place}}
+                                {{/each}}
+                            {{/unless}}
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
+                            {{#if activity.promoters.isPending}}
+                                {{t 'app.rest.loading.promoter'}}
+                            {{else}}
+                                {{#each activity.promoters as |promoter|}}
+                                    {{address-formatter address=promoter}}
+                                {{/each}}
+                            {{/if}}
+                        </div>
+                    </div>
+
                 </div>
             </div>
             {{yield}}

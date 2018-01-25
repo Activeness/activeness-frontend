@@ -1,0 +1,27 @@
+
+//
+// Card
+
+.card {
+
+    .card-title {
+        font-size: 1.4em;
+    }
+
+    .card-body {
+        padding: $space-default;
+    }
+
+}
+
+.section-light {
+
+    .card {
+        background-color: rgba(lighten($light, $color-offset-default), .5);
+        
+        & ~ .card {
+            margin-top: $space-default;
+        }
+    }
+
+}

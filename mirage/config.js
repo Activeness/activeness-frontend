@@ -59,4 +59,42 @@ export default function() {
     return new Mirage.Response(200, getResponseHeaderData(), schema.categories.all());
   });
 
+  this.get('/categories/:category_id', ({ categories }, request) => {
+    return categories.find(request.params.category_id);
+  });
+
+
+  // ===== Addresses =====
+
+  this.get('/addresses', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.addresses.all());
+  });
+
+  this.get('/addresses/:address_id', ({ addresses }, request) => {
+    return addresses.find(request.params.address_id);
+  });
+
+
+  // ===== Places =====
+
+  this.get('/places', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.places.all());
+  });
+
+  this.get('/places/:place_id', ({ places }, request) => {
+    return places.find(request.params.place_id);
+  });
+
+  
+  // ===== Promoters =====
+
+  this.get('/promoters', (schema/*, request*/) => {
+    debugger;
+    return new Mirage.Response(200, getResponseHeaderData(), schema.promoters.all());
+  });
+
+  this.get('/promoters/:promoter_id', ({ promoters }, request) => {
+    return promoters.find(request.params.promoter_id);
+  });
+
 }

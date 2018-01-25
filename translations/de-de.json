@@ -4,7 +4,8 @@
           "loading": {
             "activiies": "Veranstaltungen werden geladen...",
             "categories": "Verfügbare Kategorien werden geladen...",
-            "organizer": "Verfügbare Organisatoren werden geladen..."
+            "addresses": "Adresse der Veranstaltung wird geladen...",
+            "promoter": "Verfügbare Organisatoren werden geladen..."
           }
         },
         "brand": {
@@ -13,7 +14,12 @@
         "activity": {
             "daysUntilDate": "Findet in <span>{days}</span> Tagen statt.",
             "additionalInformation": "Zusätzliche Informationen",
-            "activityIn": "{brand} in {city}"
+            "activityIn": "{brand} in {city}",
+            "addresses": "Adresse der Veranstaltung",
+            "description": "Beschreibung",
+            "promoter": "Veranstalter",
+            "indoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung in einem Gebäude statt.",
+            "outdoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung unter freiem Himmel statt."
         },
         "navigation": {
             "home": {

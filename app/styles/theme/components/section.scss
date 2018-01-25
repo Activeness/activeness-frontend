@@ -6,7 +6,7 @@ section {
 	}
 
 	.section-light {
-		background-color: $light;
+		background-color: darken($light, $color-offset-default * 2);
 		color: darken($text-color-default, $color-offset-default * 15);
 		padding: $space-default * 3 0;
 	}
