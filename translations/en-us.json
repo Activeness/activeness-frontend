@@ -20,7 +20,8 @@
             "promoter": "Promoter",
             "indoor": "According to the promoter, this event takes place in a building.",
             "outdoor": "According to the promoter, this event takes place open air.",
-            "moreThenOneAddress": "The event takes place at several locations at the same time."
+            "moreThenOneAddress": "The event takes place at several locations at the same time.",
+            "moreThenOnePromoters": "This event will be done by more than one organizer."
         },
         "navigation": {
             "home": {

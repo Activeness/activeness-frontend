@@ -4,22 +4,22 @@ export default function(server) {
   let activities = server.createList('activity', 3);
   
   // List of addresses
-  let addresses = server.createList('address', 5);
+  // let addresses = server.createList('address', 5);
   
   // List of categories (max 15 available!!!)
-  let categories = server.createList('category', 15);
+  // let categories = server.createList('category', 15);
   
   // List of places
-  let places = server.createList('place', 2);
+  // let places = server.createList('place', 2);
   
   // List of promoters
-  let promoters = server.createList('promoter', 20);
+  // let promoters = server.createList('promoter', 20);
   
   for (let i=0; i < activities.length; i++) {
     activities[i].update({
       categories: server.createList('category', 1 + Math.round(Math.random() * 5)),
       addresses: server.createList('address', 1 + Math.round(Math.random() * 1)),
-      // promoter: server.createList('address', 1 + Math.round(Math.random() * 1)),
+      promoters: server.createList('promoter', 1 + Math.round(Math.random() * 1)),
       places: server.createList('place', 1 + Math.round(Math.random() * 1))
     });
   }

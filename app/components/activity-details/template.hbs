@@ -109,6 +109,9 @@
                             {{#if activity.promoters.isPending}}
                                 {{t 'app.rest.loading.promoter'}}
                             {{else}}
+                                {{#if (gt activity.promoters.length 1)}}
+                                    <p class="alert alert-info">{{t 'app.activity.moreThenOnePromoters'}}</p>
+                                {{/if}}
                                 {{#each activity.promoters as |promoter|}}
                                     {{address-formatter address=promoter}}
                                 {{/each}}
