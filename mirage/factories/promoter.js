@@ -2,7 +2,7 @@
 import addressFactory from './address';
 
 export default addressFactory.extend({
-    id(i) {
+        id(i) {
         return `promoter_${i}`;
     }
 });

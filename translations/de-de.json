@@ -19,7 +19,8 @@
             "description": "Beschreibung",
             "promoter": "Veranstalter",
             "indoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung in einem Gebäude statt.",
-            "outdoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung unter freiem Himmel statt."
+            "outdoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung unter freiem Himmel statt.",
+            "moreThenOneAddress": "Die Veranstaltung findet an mehreren Standorten gleichzeitig statt."
         },
         "navigation": {
             "home": {

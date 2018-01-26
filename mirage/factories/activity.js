@@ -37,5 +37,13 @@ export default Factory.extend({
     },
     reservation() {
         return faker.random.boolean();
-    }
+    }/*,
+
+
+    afterCreate(activity, server) {
+        activity.update({ 
+            categories: server.createList('category', 5)
+        });
+    }*/
+
 });

@@ -23,6 +23,7 @@ export default Factory.extend({
         return `category_${i}`;
     },
     name(i) {
-        return categories[i];
+        // return categories[i];
+        return categories[(1 + Math.round(Math.random() * (categories.length - 2)))];
     }
 });

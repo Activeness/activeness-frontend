@@ -37,19 +37,19 @@ export default function() {
     let amount = request.queryParams.amount;
 
     if (amount) {
-      return schema.activities.all().slice(0,amount);
+      return new Mirage.Response(200, getResponseHeaderData(), schema.activities.all().slice(0,amount));
     }else if (request.queryParams) {
-      return schema.activities.all().filter((/*activity*/) => {
+      return new Mirage.Response(200, getResponseHeaderData(), schema.activities.all().filter((/*activity*/) => {
         // ...
-      });
+      }));
     }else{
-      return schema.activities.all();
+      return new Mirage.Response(200, getResponseHeaderData(), schema.activities.all());
     }
 
   });
 
   this.get('/activities/:activity_id', ({ activities }, request) => {
-    return activities.find(request.params.activity_id);
+    return new Mirage.Response(200, getResponseHeaderData(), activities.find(request.params.activity_id));
   });
 
 
@@ -60,7 +60,7 @@ export default function() {
   });
 
   this.get('/categories/:category_id', ({ categories }, request) => {
-    return categories.find(request.params.category_id);
+    return new Mirage.Response(200, getResponseHeaderData(), categories.find(request.params.category_id));
   });
 
 
@@ -71,7 +71,7 @@ export default function() {
   });
 
   this.get('/addresses/:address_id', ({ addresses }, request) => {
-    return addresses.find(request.params.address_id);
+    return new Mirage.Response(200, getResponseHeaderData(), addresses.find(request.params.address_id));
   });
 
 
@@ -82,19 +82,18 @@ export default function() {
   });
 
   this.get('/places/:place_id', ({ places }, request) => {
-    return places.find(request.params.place_id);
+    return new Mirage.Response(200, getResponseHeaderData(), places.find(request.params.place_id));
   });
 
   
   // ===== Promoters =====
 
   this.get('/promoters', (schema/*, request*/) => {
-    debugger;
     return new Mirage.Response(200, getResponseHeaderData(), schema.promoters.all());
   });
 
   this.get('/promoters/:promoter_id', ({ promoters }, request) => {
-    return promoters.find(request.params.promoter_id);
+    return new Mirage.Response(200, getResponseHeaderData(), promoters.find(request.params.promoter_id));
   });
 
 }

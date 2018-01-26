@@ -15,11 +15,12 @@
             "daysUntilDate": "Takes place in <span>{days}</span> days.",
             "additionalInformation": "Additional Information",
             "activityIn": "{brand} in {city}",
-            "addresses": "Address of the event",
+            "addresses": "Location of the event",
             "description": "Description",
             "promoter": "Promoter",
             "indoor": "According to the promoter, this event takes place in a building.",
-            "outdoor": "According to the promoter, this event takes place open air."
+            "outdoor": "According to the promoter, this event takes place open air.",
+            "moreThenOneAddress": "The event takes place at several locations at the same time."
         },
         "navigation": {
             "home": {
