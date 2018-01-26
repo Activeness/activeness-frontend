@@ -91,9 +91,14 @@
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
                             {{#unless activity.places.isPending}}
-                                {{#each activity.places as |place|}}
-                                    {{place-information place=place}}
-                                {{/each}}
+                                <ul>
+                                    {{#each activity.places as |place|}}
+                                        <li>
+                                            {{fa-icon 'info-circle'}}
+                                            {{place-information place=place}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
                             {{/unless}}
                         </div>
                     </div>

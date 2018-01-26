@@ -9,3 +9,18 @@
     }
 
 }
+
+//
+// List
+
+ul  {
+    
+    .fa {
+
+        & ~ * {
+            margin-left: $space-default / 2;
+        }
+    
+    }
+    
+}

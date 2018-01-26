@@ -11,6 +11,10 @@
         background-size: 100%;
         background-repeat: no-repeat;
         background-blend-mode: saturation;
+
+        [class^="col"] ~ [class^="col"] {
+            border-top: 0;
+        }
         
         @include media-breakpoint-down(lg) {
             background-size: auto 100%;
@@ -64,7 +68,7 @@
             @include media-breakpoint-down(md) {
                 float: none;
                 text-align: left;
-                margin-top: -2em;
+                margin-top: -3em;
             }
 
             .activity-dayuntildate {

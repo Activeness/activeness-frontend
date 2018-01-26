@@ -10,6 +10,7 @@ export default Factory.extend({
         return `place_${i}`;
     },
     name(i) {
-        return places[i];
+        // return places[i];
+        return places[(Math.round(Math.random() * (places.length - 1)))];
     }
 });
