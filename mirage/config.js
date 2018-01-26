@@ -96,4 +96,15 @@ export default function() {
     return new Mirage.Response(200, getResponseHeaderData(), promoters.find(request.params.promoter_id));
   });
 
+  
+  // ===== suitabilities =====
+
+  this.get('/suitabilities', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.suitabilities.all());
+  });
+
+  this.get('/suitabilities/:suitability_id', ({ suitabilities }, request) => {
+    return new Mirage.Response(200, getResponseHeaderData(), suitabilities.find(request.params.suitability_id));
+  });
+
 }

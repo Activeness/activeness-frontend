@@ -90,6 +90,17 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
+                            {{#unless activity.suitabilities.isPending}}
+                                <ul>
+                                    <li><strong>{{t 'app.activity.suitabilities.label'}}</strong></li>
+                                    {{#each activity.suitabilities as |suitability|}}
+                                        <li>
+                                            {{fa-icon 'user'}}
+                                            {{suitability-information suitability=suitability}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/unless}}
                             {{#unless activity.places.isPending}}
                                 <ul>
                                     {{#each activity.places as |place|}}

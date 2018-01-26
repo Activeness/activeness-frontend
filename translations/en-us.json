@@ -21,7 +21,14 @@
             "indoor": "According to the promoter, this event takes place in a building.",
             "outdoor": "According to the promoter, this event takes place open air.",
             "moreThenOneAddress": "The event takes place at several locations at the same time.",
-            "moreThenOnePromoters": "This event will be done by more than one organizer."
+            "moreThenOnePromoters": "This event will be done by more than one organizer.",
+            "suitabilities": {
+                "label": "Suitable for:",
+                "children": "Children",
+                "adults": "Adults",
+                "families": "Families",
+                "pensioner": "Pensioner"
+            }
         },
         "navigation": {
             "home": {
@@ -121,6 +128,10 @@
             },
             "sport": {
                 "title": "Sports",
+                "description": ""
+            },
+            "technology": {
+                "title": "Technology",
                 "description": ""
             },
             "others": {

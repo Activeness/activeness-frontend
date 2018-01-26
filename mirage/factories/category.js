@@ -15,6 +15,7 @@ const categories = [
     'exhibition',
     'market',
     'meetup',
+    'technology',
     'others'
 ];
 
@@ -22,8 +23,7 @@ export default Factory.extend({
     id(i) {
         return `category_${i}`;
     },
-    name(i) {
-        // return categories[i];
+    name() {
         return categories[(1 + Math.round(Math.random() * (categories.length - 2)))];
     }
 });
