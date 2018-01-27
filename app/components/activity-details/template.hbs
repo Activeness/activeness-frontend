@@ -119,7 +119,7 @@
                             <h4 class="card-title">{{t 'app.activity.costs.label'}}</h4>
                             {{#unless activity.costs.isPending}}
                                 <ul>
-                                    {{#if (gt activity.promoters.length 1)}}
+                                    {{#if (gt activity.costs.length 1)}}
                                         <li class="alert alert-info">{{t 'app.activity.moreThenOneCosts'}}</li>
                                     {{/if}}
                                     {{#each activity.costs as |cost|}}
