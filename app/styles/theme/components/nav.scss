@@ -17,6 +17,15 @@ nav {
     }
   }
   
+  ul {
+    
+    &.navbar-nav {
+      li ~ li {
+        margin: 0;
+      }
+    }
+
+  }
   &.navbar {
     background: darken(rgba($color-default,.95), $color-offset-default * 3);
     padding: $space-default 0;
