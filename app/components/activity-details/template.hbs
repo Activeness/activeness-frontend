@@ -116,6 +116,25 @@
 
                     <div class="card">
                         <div class="card-body">
+                            <h4 class="card-title">{{t 'app.activity.costs.label'}}</h4>
+                            {{#unless activity.costs.isPending}}
+                                <ul>
+                                    {{#if (gt activity.promoters.length 1)}}
+                                        <li class="alert alert-info">{{t 'app.activity.moreThenOneCosts'}}</li>
+                                    {{/if}}
+                                    {{#each activity.costs as |cost|}}
+                                        <li>
+                                            {{fa-icon 'check'}}
+                                            {{costs-information cost=cost}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/unless}}
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
                             <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
                             {{#if activity.promoters.isPending}}
                                 {{t 'app.rest.loading.promoter'}}

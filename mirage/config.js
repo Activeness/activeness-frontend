@@ -97,7 +97,7 @@ export default function() {
   });
 
   
-  // ===== suitabilities =====
+  // ===== Suitabilities =====
 
   this.get('/suitabilities', (schema/*, request*/) => {
     return new Mirage.Response(200, getResponseHeaderData(), schema.suitabilities.all());
@@ -105,6 +105,17 @@ export default function() {
 
   this.get('/suitabilities/:suitability_id', ({ suitabilities }, request) => {
     return new Mirage.Response(200, getResponseHeaderData(), suitabilities.find(request.params.suitability_id));
+  });
+
+  
+  // ===== Costs =====
+
+  this.get('/costs', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.costs.all());
+  });
+
+  this.get('/costs/:cost_id', ({ costs }, request) => {
+    return new Mirage.Response(200, getResponseHeaderData(), costs.find(request.params.cost_id));
   });
 
 }
