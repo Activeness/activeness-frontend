@@ -12,6 +12,7 @@
             "title": "Freetime"
         },
         "activity": {
+            "multilingual": "The event is international and is conducted in several languages.",
             "daysUntilDate": "Takes place in <span>{days}</span> days.",
             "additionalInformation": "Additional Information",
             "activityIn": "{brand} in {city}",

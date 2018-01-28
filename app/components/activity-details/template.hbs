@@ -55,8 +55,8 @@
                 <div class="col">
                     
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
                             {{#if activity.addresses.isPending}}
                                 {{t 'app.rest.loading.addresses'}}
                             {{else}}
@@ -77,8 +77,8 @@
                     </div>
 
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.description'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.description'}}</h4>
                             <p><strong>{{activity.title}}</strong></p>
                             <p>{{activity.description}}</p>
                         </div>
@@ -88,8 +88,9 @@
                 <div class="col-md-4">
                     
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
+                            
                             {{#unless activity.suitabilities.isPending}}
                                 <ul>
                                     <li><strong>{{t 'app.activity.suitabilities.label'}}</strong></li>
@@ -101,6 +102,7 @@
                                     {{/each}}
                                 </ul>
                             {{/unless}}
+                            
                             {{#unless activity.places.isPending}}
                                 <ul>
                                     {{#each activity.places as |place|}}
@@ -111,12 +113,15 @@
                                     {{/each}}
                                 </ul>
                             {{/unless}}
+
+                            {{language-list languages=activity.languages}}
+
                         </div>
                     </div>
 
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.costs.label'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.costs.label'}}</h4>
                             {{#unless activity.costs.isPending}}
                                 <ul>
                                     {{#if (gt activity.costs.length 1)}}
@@ -134,8 +139,8 @@
                     </div>
 
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
                             {{#if activity.promoters.isPending}}
                                 {{t 'app.rest.loading.promoter'}}
                             {{else}}

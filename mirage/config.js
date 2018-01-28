@@ -118,4 +118,15 @@ export default function() {
     return new Mirage.Response(200, getResponseHeaderData(), costs.find(request.params.cost_id));
   });
 
+  
+  // ===== Luangages =====
+
+  this.get('/languages', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.languages.all());
+  });
+
+  this.get('/languages/:language_id', ({ languages }, request) => {
+    return new Mirage.Response(200, getResponseHeaderData(), languages.find(request.params.language_id));
+  });
+
 }

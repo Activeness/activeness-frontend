@@ -10,7 +10,8 @@ export default function(server) {
       promoters: server.createList('promoter', 1 + Math.round(Math.random() * 1)),
       places: server.createList('place', 1 + Math.round(Math.random() * 1)),
       costs: server.createList('cost', 1 + Math.round(Math.random() * 3)),
-      suitabilities: server.createList('suitability', 1 + Math.round(Math.random() * 3))
+      suitabilities: server.createList('suitability', 1 + Math.round(Math.random() * 3)),
+      languages: server.createList('language', 1 + Math.round(Math.random() * 5))
     });
   }
   
