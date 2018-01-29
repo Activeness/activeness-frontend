@@ -1,4 +1,4 @@
-import { Factory, faker } from 'ember-cli-mirage';
+import { Factory, faker/*, trait*/ } from 'ember-cli-mirage';
 
 export default Factory.extend({
   id(i) {
@@ -39,5 +39,12 @@ export default Factory.extend({
   },
   longitude() {
     return faker.address.longitude();
+  },
+
+  afterCreate(address, server) {
+    address.update({
+      contacts: server.createList('contact', 1 + Math.round(Math.random() * 5))
+    })
   }
+
 });

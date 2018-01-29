@@ -13,5 +13,6 @@ export default DS.Model.extend({
   countryCode: DS.attr('string'),
   language: DS.attr('string'),
   latitude: DS.attr('string'),
-  longitude: DS.attr('string')
+  longitude: DS.attr('string'),
+  contacts: DS.hasMany('contact', { async: true })    // Contacts
 });

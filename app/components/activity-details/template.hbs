@@ -122,11 +122,14 @@
                     <div class="card">
                         <h4 class="card-title">{{t 'app.activity.costs.label'}}</h4>
                         <div class="card-body">
+                            {{#if activity.reservation}}
+                                <p class="alert alert-info">{{t 'app.activity.reservationNeeded'}}</p>
+                            {{/if}}
                             {{#unless activity.costs.isPending}}
+                                {{#if (gt activity.costs.length 1)}}
+                                    <p class="alert alert-info">{{t 'app.activity.moreThenOneCosts'}}</p>
+                                {{/if}}
                                 <ul>
-                                    {{#if (gt activity.costs.length 1)}}
-                                        <li class="alert alert-info">{{t 'app.activity.moreThenOneCosts'}}</li>
-                                    {{/if}}
                                     {{#each activity.costs as |cost|}}
                                         <li>
                                             {{fa-icon 'check'}}

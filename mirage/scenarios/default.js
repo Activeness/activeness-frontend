@@ -6,7 +6,9 @@ export default function(server) {
   for (let i=0; i < activities.length; i++) {
     activities[i].update({
       categories: server.createList('category', 1 + Math.round(Math.random() * 5)),
-      addresses: server.createList('address', 1 + Math.round(Math.random() * 1)),
+      addresses: server.createList('address', 1 + Math.round(Math.random() * 1)/*, {
+        contacts: server.createList('contact', Math.round(Math.random() * 5))
+      }*/),
       promoters: server.createList('promoter', 1 + Math.round(Math.random() * 1)),
       places: server.createList('place', 1 + Math.round(Math.random() * 1)),
       costs: server.createList('cost', 1 + Math.round(Math.random() * 3)),
