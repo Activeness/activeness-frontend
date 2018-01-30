@@ -1,0 +1,27 @@
+
+//
+// Address
+
+address {
+
+    .contact {
+        
+        .contact-facebook,
+        .contact-xing,
+        .contact-twitter,
+        .contact-linkedin,
+        .contact-email {
+            
+            .fa {
+                font-size: 3em;
+
+                & ~ .fa {
+                    margin-left: $space-default / 2;
+                }
+            }
+
+        }
+
+    }
+
+}

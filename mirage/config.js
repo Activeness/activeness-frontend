@@ -129,4 +129,15 @@ export default function() {
     return new Mirage.Response(200, getResponseHeaderData(), languages.find(request.params.language_id));
   });
 
+  
+  // ===== Contacts =====
+
+  this.get('/contacts', (schema/*, request*/) => {
+    return new Mirage.Response(200, getResponseHeaderData(), schema.contacts.all());
+  });
+
+  this.get('/contacts/:contact_id', ({ contacts }, request) => {
+    return new Mirage.Response(200, getResponseHeaderData(), contacts.find(request.params.contact_id));
+  });
+
 }

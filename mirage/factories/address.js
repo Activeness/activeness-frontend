@@ -43,7 +43,7 @@ export default Factory.extend({
 
   afterCreate(address, server) {
     address.update({
-      contacts: server.createList('contact', 1 + Math.round(Math.random() * 5))
+      contacts: server.createList('contact', Math.round(Math.random() * 5))
     })
   }
 
