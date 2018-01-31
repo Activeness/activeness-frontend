@@ -4,9 +4,11 @@
         <div><span class="address-street">{{address.street}}</span> <span class="address-houseNo">{{address.houseno}}</span></div>
         <div><span class="address-zip">{{address.zip}}</span> <span class="address-city">{{address.city}}</span></div>
         <div><span class="address-country">{{address.country}}</span></div>
-        {{#each address.contacts as |contact|}}
-            {{contact-information contact=contact}}
-        {{/each}}
+        <div class="contact-information">
+            {{#each address.contacts as |contact|}}
+                {{contact-information contact=contact}}
+            {{/each}}
+        </div>
     </address>
 {{/if}}
 

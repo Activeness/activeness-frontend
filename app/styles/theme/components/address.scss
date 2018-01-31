@@ -4,24 +4,29 @@
 
 address {
 
-    .contact {
-        
-        .contact-facebook,
-        .contact-xing,
-        .contact-twitter,
-        .contact-linkedin,
-        .contact-email {
-            
-            .fa {
-                font-size: 3em;
+    .contact-information {
 
-                & ~ .fa {
-                    margin-left: $space-default / 2;
+        .contact {
+            display: inline-block;
+
+            & ~ .contact {
+                margin-left: $space-default / 2;
+            }
+
+            [class^="contact-"] {
+                
+                .fa {
+                    font-size: 3em;
+
+                    & ~ .fa {
+                        margin-left: $space-default / 2;
+                    }
                 }
+
             }
 
         }
-
+    
     }
 
 }
