@@ -24,6 +24,6 @@ export default Component.extend({
             this.get('router').transitionTo('activity', activity_id);
         }
 
-  }
+    }
 
 });

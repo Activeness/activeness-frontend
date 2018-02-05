@@ -80,10 +80,28 @@
             }
         }
 
+        &.activity-tile {
+            $activity-size: 30em;
+            
+            width: 30%;
+            height: $activity-size;
+            
+            .activity-image {
+                width: 100%;
+                height: 20em;
+                background-size: 100%;
+            }
+
+        }
+
+    }
+
+    [class^="row"] ~ [class^="row"] {
+        margin-top: $space-default;
     }
 
     // TODO: Maybe improve the activities list HTML structure
-    > * ~ * {
+    .activities-list-item ~ * {
         margin-top: $space-default;
     }
 

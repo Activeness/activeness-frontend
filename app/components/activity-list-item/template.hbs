@@ -1,4 +1,6 @@
-<a {{action 'openActivityDetails' activity.id}} class="activity d-flex justify-content-start">
+<a {{action 'openActivityDetails' activity.id}} 
+    class="activity {{if showAsList 'activity-tile'}} d-flex justify-content-start {{if showAsList 'flex-column'}}"
+>
     <div class="activity-date">
         <div class="activity-date-day">
             {{format-date activity.date day='2-digit'}}

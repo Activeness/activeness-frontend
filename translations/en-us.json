@@ -78,6 +78,10 @@
             "information": "You are looking for an idea for your free time? How about ...",
             "submit": "Search Now"
         },
+        "searchResults": {
+            "showAllFilters": "Show all filter options",
+            "hideAllFilters": "Hide all filter options"
+        },
         "categories": {
             "*": {
                 "title": "All categories",

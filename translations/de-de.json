@@ -78,6 +78,10 @@
             "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit ...",
             "submit": "Jetzt Suchen"
         },
+        "searchResults": {
+            "showAllFilters": "Alle Filter anzeigen",
+            "hideAllFilters": "Alle Filter ausblenden"
+        },
         "categories": {
             "*": {
                 "title": "Alle Kategorien",
