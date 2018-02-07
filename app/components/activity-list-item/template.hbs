@@ -1,6 +1,7 @@
 <a {{action 'openActivityDetails' activity.id}} 
-    class="activity {{if showAsList 'activity-tile'}} d-flex justify-content-start {{if showAsList 'flex-column'}}"
+    class="activity d-flex justify-content-start {{if showAsList 'activity-tile flex-column' 'flex-row'}}"
 >
+    
     <div class="activity-date">
         <div class="activity-date-day">
             {{format-date activity.date day='2-digit'}}
@@ -30,5 +31,7 @@
             {{/if}}
         </div>
     </div>
+    
     {{yield}}
+
 </a>

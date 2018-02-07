@@ -4,104 +4,128 @@
 
 .activities-list {
 
-    .activity {
-        $activity-size: 11em;
+    .activities-list-items:not(.flex-row) {
 
-        position: relative;
-        display: block;
-        background-color: lighten($light, 100%);
-        height: $activity-size;
-        overflow: hidden;
-        color: darken($light, $color-offset-default * 10);
-        @include shadow(0 .1em .2em rgba(0,0,0,.2));
-        @include transition();
+        &.tiles {
 
-        .activity-information {
-            margin: $space-default 0 0 $space-default * 2;
+            .activities-list-item {
+                width: 30%;
+            }
+        }
 
-            .activity-title {
-                font-size: 1.6em;
-                font-weight: 400;
+        .activities-list-item {
+            
+            & ~ .activities-list-item {
+                margin-top: $space-default;
             }
 
-            .activity-categories {
-                margin-top: $space-default;
+        }
 
-                .btn {
-                    padding: 0 .5em;
-                    font-weight: 100;
-                    color: lighten($light, $color-offset-default);
+    }
+    
+    .activities-list-item {
+        
+        .activity {
+            $activity-size: 11em;
+
+            position: relative;
+            display: block;
+            background-color: lighten($light, 100%);
+            height: $activity-size;
+            overflow: hidden;
+            color: darken($light, $color-offset-default * 10);
+            @include shadow(0 .1em .2em rgba(0,0,0,.2));
+            @include transition();
+
+            .activity-information {
+                margin: $space-default 0 0 $space-default * 2;
+
+                .activity-title {
+                    font-size: 1.6em;
+                    font-weight: 400;
+                }
+
+                .activity-categories {
+                    margin-top: $space-default;
+
+                    .btn {
+                        padding: 0 .5em;
+                        font-weight: 100;
+                        color: lighten($light, $color-offset-default);
+                    }
+
+                }
+
+            }
+
+            .activity-image {
+                width: $activity-size;
+                height: $activity-size;
+                background-size: auto 100%;
+                background-position: center;
+                @include transition(all 0.3s ease-in-out);
+            }
+
+            .activity-date {
+                width: $activity-size;
+                height: $activity-size;
+                background-size: 100%;
+                background-color: $primary;
+                color: lighten($light, $color-offset-default);
+
+                .activity-date-day {
+                    text-align: center;
+                    font-size: 8em;
+                    line-height: .5em;
+                    font-weight: 400;
+                    font-family: 'Bilbo';
+                    margin-top: .2em;
+                    margin-bottom: .1em;
+                }
+
+                .activity-date-month {
+                    text-align: center;
+                    font-size: 3em;
+                    font-weight: 300;
+                    font-family: 'Bilbo';
+                }
+
+            }
+
+            &:hover {
+                text-decoration: none;
+                @include shadow(0 .1em .2em rgba(0,0,0,.8));
+
+                .activity-image {
+                    background-size: auto 140%;
+                }
+            }
+
+            &.activity-tile {
+                $activity-size: 30em;
+                height: $activity-size;
+                
+                .activity-date {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                }
+
+                .activity-image {
+                    width: 100%;
+                    height: $activity-size;
+                    background-size: 100%;
                 }
 
             }
 
         }
 
-        .activity-image {
-            width: $activity-size;
-            height: $activity-size;
-            background-size: auto 100%;
-            background-position: center;
-            @include transition(all 0.3s ease-in-out);
-        }
-
-        .activity-date {
-            width: $activity-size;
-            height: $activity-size;
-            background-size: 100%;
-            background-color: $primary;
-            color: lighten($light, $color-offset-default);
-
-            .activity-date-day {
-                text-align: center;
-                font-size: 8em;
-                line-height: .5em;
-                font-weight: 400;
-                font-family: 'Bilbo';
-                margin-top: .2em;
-                margin-bottom: .1em;
-            }
-
-            .activity-date-month {
-                text-align: center;
-                font-size: 3em;
-                font-weight: 300;
-                font-family: 'Bilbo';
-            }
-
-        }
-
-        &:hover {
-            text-decoration: none;
-            @include shadow(0 .1em .2em rgba(0,0,0,.8));
-
-            .activity-image {
-                background-size: auto 140%;
-            }
-        }
-
-        &.activity-tile {
-            $activity-size: 30em;
-            
-            width: 30%;
-            height: $activity-size;
-            
-            .activity-image {
-                width: 100%;
-                height: 20em;
-                background-size: 100%;
-            }
-
-        }
-
+        
     }
 
     [class^="row"] ~ [class^="row"] {
-        margin-top: $space-default;
-    }
-
-    // TODO: Maybe improve the activities list HTML structure
-    .activities-list-item ~ * {
         margin-top: $space-default;
     }
 
