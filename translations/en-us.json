@@ -12,14 +12,32 @@
             "title": "Freetime"
         },
         "activity": {
+            "reservationNeeded": "Reservation needed!",
+            "multilingual": "The event is international and is conducted in several languages.",
             "daysUntilDate": "Takes place in <span>{days}</span> days.",
             "additionalInformation": "Additional Information",
             "activityIn": "{brand} in {city}",
-            "addresses": "Address of the event",
+            "addresses": "Location of the event",
             "description": "Description",
             "promoter": "Promoter",
             "indoor": "According to the promoter, this event takes place in a building.",
-            "outdoor": "According to the promoter, this event takes place open air."
+            "outdoor": "According to the promoter, this event takes place open air.",
+            "moreThenOneAddress": "The event takes place at several locations at the same time.",
+            "moreThenOnePromoters": "This event will be done by more than one organizer.",
+            "moreThenOneCosts": "Please note that several options are available for attending this event.",
+            "suitabilities": {
+                "label": "Suitable for:",
+                "children": "Children",
+                "adults": "Adults",
+                "families": "Families",
+                "pensioner": "Pensioner"
+            },
+            "costs": {
+                "label": "Eintritt",
+                "free": "Admission is free.",
+                "admission": "Entrance price from <strong>{price}</strong>. No ticket needed.",
+                "ticket": "Admission via ticket <strong>({price})</strong> possible."
+            }
         },
         "navigation": {
             "home": {
@@ -59,6 +77,10 @@
             "title": "What do you want?",
             "information": "You are looking for an idea for your free time? How about ...",
             "submit": "Search Now"
+        },
+        "searchResults": {
+            "showAllFilters": "Show all filter options",
+            "hideAllFilters": "Hide all filter options"
         },
         "categories": {
             "*": {
@@ -119,6 +141,10 @@
             },
             "sport": {
                 "title": "Sports",
+                "description": ""
+            },
+            "technology": {
+                "title": "Technology",
                 "description": ""
             },
             "others": {

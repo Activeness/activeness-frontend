@@ -9,7 +9,7 @@
     }
 
     .card-body {
-        padding: $space-default;
+        padding: 0 $space-default;
     }
 
 }
@@ -17,7 +17,15 @@
 .section-light {
 
     .card {
-        background-color: rgba(lighten($light, $color-offset-default), .5);
+        background-color: rgba(lighten($light, $color-offset-default), 0);
+        border: 0;
+        padding: 0;
+
+        .card-title {
+            color: lighten($text-color-default, 100%);
+            background: $color-default;
+            padding: $space-default / 2 $space-default;
+        }
         
         & ~ .card {
             margin-top: $space-default;

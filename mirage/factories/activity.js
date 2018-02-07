@@ -20,11 +20,10 @@ export default Factory.extend({
         return faker.lorem.sentence();
     },
     description() {
-        let text = faker.lorem.lines(40);
-        return text;
+        return faker.lorem.lines(40);
     },
     img() {
-        return faker.image.nightlife();
+        return faker.image.sports();
     },
     action() {
       return faker.random.boolean();
@@ -37,5 +36,13 @@ export default Factory.extend({
     },
     reservation() {
         return faker.random.boolean();
-    }
+    }/*,
+
+
+    afterCreate(activity, server) {
+        activity.update({ 
+            categories: server.createList('category', 5)
+        });
+    }*/
+
 });

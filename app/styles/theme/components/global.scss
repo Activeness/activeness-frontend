@@ -14,3 +14,17 @@ body {
 	background: $body-bg;
   color: $text-color-default;
 }
+
+
+//
+// List
+
+ul {
+  list-style-type: none;
+  padding-left: $space-default / 2;
+
+  li ~ li {
+    margin-top: $space-default / 2;
+  }
+
+}

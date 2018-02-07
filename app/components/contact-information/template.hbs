@@ -1,0 +1,37 @@
+{{#if (eq contact.type 'email')}}
+    <a class="contact-email" href="mailto:{{contact.value}}" title="{{contact.value}}">
+        {{fa-icon 'envelope-square'}}
+    </a>
+{{/if}}
+
+{{#if (eq contact.type 'tel')}}
+    <a class="contact-tel" href="tel:{{contact.value}}" title="{{contact.value}}">
+        {{fa-icon 'phone-square'}}
+    </a>
+{{/if}}
+
+{{#if (eq contact.type 'facebook')}}
+    <a class="contact-facebook" href="{{contact.value}}" target="_blank" title="{{contact.value}}">
+        {{fa-icon 'facebook-square'}}
+    </a>
+{{/if}}
+
+{{#if (eq contact.type 'xing')}}
+    <a class="contact-xing" href="{{contact.value}}" target="_blank" title="{{contact.value}}">
+        {{fa-icon 'xing-square'}}
+    </a>
+{{/if}}
+
+{{#if (eq contact.type 'twitter')}}
+    <a class="contact-twitter" href="{{contact.value}}" target="_blank" title="{{contact.value}}">
+        {{fa-icon 'twitter-square'}}
+    </a>
+{{/if}}
+
+{{#if (eq contact.type 'linkedin')}}
+    <a class="contact-linkedin" href="{{contact.value}}" target="_blank" title="{{contact.value}}">
+        {{fa-icon 'linkedin-square'}}
+    </a>
+{{/if}}
+
+{{yield}}

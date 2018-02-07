@@ -1,0 +1,13 @@
+
+//
+// Alerts
+
+.alert {
+
+    &.alert-info {
+        background-color: rgba($primary, .1);
+        color: darken($primary, $color-offset-default * 1);
+        border: 0;
+    }
+
+}

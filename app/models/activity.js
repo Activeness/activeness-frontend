@@ -4,12 +4,12 @@ export default DS.Model.extend({
     version: DS.attr('number'),
     active: DS.attr('boolean'),
     categories: DS.hasMany('category', { async: true }),        // Categories
-    promoters: DS.hasMany('promoter', { async: true }),         // Promoters
+    promoters: DS.hasMany('promoter', { async: true, inverse: null }),  // Promoters
     date: DS.attr('date'),                                      // When
     title: DS.attr('string'),                                   // Title
     description: DS.attr('string'),                             // Description
     img: DS.attr('string'),                                     // Image of the activity
-    addresses: DS.hasMany('address', { async: true }),          // Where
+    addresses: DS.hasMany('address', { async: true, inverse: null }),          // Where
     places: DS.hasMany('place', { async: true }),               // Indoor, Outdoor
     action: DS.attr('boolean'),
     sport: DS.attr('boolean'),

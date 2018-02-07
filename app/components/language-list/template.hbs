@@ -1,0 +1,15 @@
+{{#if (gt languages.length 1)}}
+    <div class="alert alert-info">{{t 'app.activity.multilingual'}}</div>
+{{/if}}
+{{#unless languages.isPending}}
+    <ul>
+        <li>
+            {{#each languages as |language|}}
+                <span title="{{language.isoLanguageName}}">
+                    {{world-flag language.code1 32}}
+                </span>
+            {{/each}}
+        </li>
+    </ul>
+{{/unless}}
+{{yield}}

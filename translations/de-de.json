@@ -12,6 +12,8 @@
             "title": "Freizeit"
         },
         "activity": {
+            "reservationNeeded": "Reservierung benötigt!",
+            "multilingual": "Die Veranstaltung ist international und wird in mehreren Sprachen durchgeführt.",
             "daysUntilDate": "Findet in <span>{days}</span> Tagen statt.",
             "additionalInformation": "Zusätzliche Informationen",
             "activityIn": "{brand} in {city}",
@@ -19,7 +21,23 @@
             "description": "Beschreibung",
             "promoter": "Veranstalter",
             "indoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung in einem Gebäude statt.",
-            "outdoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung unter freiem Himmel statt."
+            "outdoor": "Laut Angabe des Veranstalters, findet diese Veranstaltung unter freiem Himmel statt.",
+            "moreThenOneAddress": "Diese Veranstaltung findet an mehreren Standorten gleichzeitig statt.",
+            "moreThenOnePromoters": "Diese Veranstaltung wird von mehr als einem Organisator durchgeführt.",
+            "moreThenOneCosts": "Bitte beacten Sie, dass mehrere Möglichkeiten bereit stehen, diese Veranstaltung zu besuchen.",
+            "suitabilities": {
+                "label": "Geeignet für:",
+                "children": "Kinder",
+                "adults": "Erwachsene",
+                "families": "Familien",
+                "pensioner": "Rentner"
+            },
+            "costs": {
+                "label": "Eintritt",
+                "free": "Der Eintritt ist frei.",
+                "admission": "Eintritspreis ab <strong>{price}</strong>. Es wird kein Ticket benötoigt.",
+                "ticket": "Eintritt über Ticket <strong>({price})</strong> möglich."
+            }
         },
         "navigation": {
             "home": {
@@ -59,6 +77,10 @@
             "title": "Worauf hast du Lust?",
             "information": "Du suchst eine Idee für deine Freizeit? Wie wäre es mit ...",
             "submit": "Jetzt Suchen"
+        },
+        "searchResults": {
+            "showAllFilters": "Alle Filter anzeigen",
+            "hideAllFilters": "Alle Filter ausblenden"
         },
         "categories": {
             "*": {
@@ -119,6 +141,10 @@
             },
             "sport": {
                 "title": "Sport",
+                "description": ""
+            },
+            "technology": {
+                "title": "Technologie",
                 "description": ""
             },
             "others": {

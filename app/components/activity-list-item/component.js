@@ -1,11 +1,14 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 
     router: service(),
     // intl: service(),
 
+    classNames: ['activities-list-item'],
+    
     /**
      * Defines the activity item
      *
@@ -14,6 +17,14 @@ export default Component.extend({
      */
     activity: null,
 
+    /**
+     * Defines whether the listed activity items displayed as a list or as tiles
+     *
+     * @property {boolean} showAsList
+     * @default null
+     */
+    showAsList: false,
+    
     /**
      * Defines all component action methods
      *

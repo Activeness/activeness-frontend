@@ -1,0 +1,32 @@
+
+//
+// Address
+
+address {
+
+    .contact-information {
+
+        .contact {
+            display: inline-block;
+
+            & ~ .contact {
+                margin-left: $space-default / 2;
+            }
+
+            [class^="contact-"] {
+                
+                .fa {
+                    font-size: 3em;
+
+                    & ~ .fa {
+                        margin-left: $space-default / 2;
+                    }
+                }
+
+            }
+
+        }
+    
+    }
+
+}

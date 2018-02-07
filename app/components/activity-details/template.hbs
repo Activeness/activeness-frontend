@@ -15,17 +15,15 @@
                             {{format-date activity.date day='2-digit' month='long' year="numeric"}} - {{format-time activity.date hour='2-digit' minute='2-digit'}}
                         </div>
                     </div>
-                    <div class="activity-categories">
-                        {{#if activity.categories.isPending}}
-                            {{t 'app.rest.loading.categories'}}
-                        {{else}}
+                    {{#if activity.categories}}
+                        <div class="activity-categories">
                             {{#each activity.categories as |category|}}
                                 <a class="btn btn-primary" {{action 'searchByCategory' category}}>
                                     {{t category.title}}
                                 </a>
                             {{/each}}
-                        {{/if}}
-                    </div>
+                        </div>
+                    {{/if}}
                 </div>
                 <div class="col-md-12 col-lg-4">
                     <div class="activity-header-aditional-information">
@@ -57,21 +55,30 @@
                 <div class="col">
                     
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.addresses'}}</h4>
                             {{#if activity.addresses.isPending}}
                                 {{t 'app.rest.loading.addresses'}}
                             {{else}}
-                                {{#each activity.addresses as |address|}}
-                                    {{address-formatter address=address}}
-                                {{/each}}
+                                {{#if (gt activity.addresses.length 1)}}
+                                    <p class="alert alert-info">{{t 'app.activity.moreThenOneAddress'}}</p>
+                                    <div class="row">
+                                        {{#each activity.addresses as |address|}}
+                                            <div class="col-md-6">{{address-formatter address=address}}</div>
+                                        {{/each}}
+                                    </div>
+                                {{else}}
+                                    {{#each activity.addresses as |address|}}
+                                        {{address-formatter address=address}}
+                                    {{/each}}
+                                {{/if}}
                             {{/if}}
                         </div>
                     </div>
 
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.description'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.description'}}</h4>
                             <p><strong>{{activity.title}}</strong></p>
                             <p>{{activity.description}}</p>
                         </div>
@@ -81,22 +88,68 @@
                 <div class="col-md-4">
                     
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.additionalInformation'}}</h4>
+                            
+                            {{#unless activity.suitabilities.isPending}}
+                                <ul>
+                                    <li><strong>{{t 'app.activity.suitabilities.label'}}</strong></li>
+                                    {{#each activity.suitabilities as |suitability|}}
+                                        <li>
+                                            {{fa-icon 'user'}}
+                                            {{suitability-information suitability=suitability}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/unless}}
+                            
                             {{#unless activity.places.isPending}}
-                                {{#each activity.places as |place|}}
-                                    {{place-information place=place}}
-                                {{/each}}
+                                <ul>
+                                    {{#each activity.places as |place|}}
+                                        <li>
+                                            {{fa-icon 'info-circle'}}
+                                            {{place-information place=place}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/unless}}
+
+                            {{language-list languages=activity.languages}}
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.costs.label'}}</h4>
+                        <div class="card-body">
+                            {{#if activity.reservation}}
+                                <p class="alert alert-info">{{t 'app.activity.reservationNeeded'}}</p>
+                            {{/if}}
+                            {{#unless activity.costs.isPending}}
+                                {{#if (gt activity.costs.length 1)}}
+                                    <p class="alert alert-info">{{t 'app.activity.moreThenOneCosts'}}</p>
+                                {{/if}}
+                                <ul>
+                                    {{#each activity.costs as |cost|}}
+                                        <li>
+                                            {{fa-icon 'check'}}
+                                            {{costs-information cost=cost}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
                             {{/unless}}
                         </div>
                     </div>
 
                     <div class="card">
+                        <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
                         <div class="card-body">
-                            <h4 class="card-title">{{t 'app.activity.promoter'}}</h4>
                             {{#if activity.promoters.isPending}}
                                 {{t 'app.rest.loading.promoter'}}
                             {{else}}
+                                {{#if (gt activity.promoters.length 1)}}
+                                    <p class="alert alert-info">{{t 'app.activity.moreThenOnePromoters'}}</p>
+                                {{/if}}
                                 {{#each activity.promoters as |promoter|}}
                                     {{address-formatter address=promoter}}
                                 {{/each}}
