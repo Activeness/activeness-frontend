@@ -34,7 +34,7 @@
       <div class="col-md-3">
         ...
       </div>
-      <div class="col activities-list-items {{if showAsList 'tiles'}}">
+      <div class="col activities-list-items {{if showAsList 'tiles d-flex'}}">
         {{#each activities as |activity|}}
           {{activity-list-item activity=activity showAsList=showAsList}}
         {{/each}}
@@ -44,7 +44,7 @@
   {{else}}
 
     <div class="row">
-      <div class="col activities-list-items {{if showAsList 'tiles'}}">
+      <div class="col activities-list-items {{if showAsList 'tiles d-flex'}}">
         {{#each activities as |activity|}}
           {{activity-list-item activity=activity showAsList=showAsList}}
         {{/each}}
