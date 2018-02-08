@@ -3,25 +3,6 @@
 // Activity - List Item
 
 .activities-list {
-
-    .activities-list-items:not(.flex-row) {
-
-        &.tiles {
-
-            .activities-list-item {
-                width: 30%;
-            }
-        }
-
-        .activities-list-item {
-            
-            & ~ .activities-list-item {
-                margin-top: $space-default;
-            }
-
-        }
-
-    }
     
     .activities-list-item {
         
@@ -101,28 +82,51 @@
                 }
             }
 
-            &.activity-tile {
-                $activity-size: 30em;
-                height: $activity-size;
-                
-                .activity-date {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    display: inline-block;
-                }
+        }
 
-                .activity-image {
-                    width: 100%;
-                    height: $activity-size;
-                    background-size: 100%;
-                }
+        
+    }
 
+    .activities-list-items {
+
+        .activities-list-item {
+            
+            & ~ .activities-list-item {
+                margin-top: $space-default;
             }
 
         }
 
-        
+        &.tiles {
+
+            .activities-list-item {
+                width: 30%;
+                margin-top: 0;
+                
+                .activity-tile {
+                    $activity-size: 30em;
+                    height: $activity-size;
+                    
+                    .activity-date {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: inline-block;
+                    }
+                    
+                    .activity-image {
+                        width: 100%;
+                        height: $activity-size / 2;
+                        background-size: 100%;
+                    }
+                    
+                }
+                
+            }
+
+
+        }
+
     }
 
     [class^="row"] ~ [class^="row"] {
