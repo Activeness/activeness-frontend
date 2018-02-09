@@ -15,40 +15,32 @@
         </button>
       {{/if}}
 
-      {{#if showAsList}}
-        <button class="btn btn-primary" {{action 'showAsList' false}}>
-          {{fa-icon 'list'}}
-        </button>
-      {{else}}
-        <button class="btn btn-primary" {{action 'showAsList' true}}>
-          {{fa-icon 'columns'}}
-        </button>
-      {{/if}}
-
     </div>
   </div>
 
   {{#if filters}}
-    
+
     <div class="row">
       <div class="col-md-3">
         ...
       </div>
-      <div class="col activities-list-items {{if showAsList 'tiles d-flex'}}">
+      <div class="col activities-list-items">
+
         {{#each activities as |activity|}}
-          {{activity-list-item activity=activity showAsList=showAsList}}
+          {{activity-list-item activity=activity}}
         {{/each}}
+
       </div>
     </div>
 
   {{else}}
 
-    <div class="row">
-      <div class="col activities-list-items {{if showAsList 'tiles d-flex'}}">
-        {{#each activities as |activity|}}
-          {{activity-list-item activity=activity showAsList=showAsList}}
-        {{/each}}
-      </div>
+    <div class="activities-list-items">
+
+      {{#each activities as |activity|}}
+        {{activity-list-item activity=activity}}
+      {{/each}}
+
     </div>
 
   {{/if}}

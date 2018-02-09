@@ -1,8 +1,8 @@
 export default function(server) {
 
   // List of activities
-  let activities = server.createList('activity', 3);
-  
+  let activities = server.createList('activity', 5);
+
   for (let i=0; i < activities.length; i++) {
     activities[i].update({
       categories: server.createList('category', 1 + Math.round(Math.random() * 5)),
@@ -14,5 +14,5 @@ export default function(server) {
       languages: server.createList('language', 1 + Math.round(Math.random() * 5))
     });
   }
-  
+
 }
