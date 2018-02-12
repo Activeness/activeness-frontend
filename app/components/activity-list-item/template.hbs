@@ -19,6 +19,7 @@
         </div>
         <div class="activity-organizer">
             {{format-date activity.date}}
+            {{format-date activity.date weekday='long' day='2-digit' month='long' year="numeric"}}
             {{#if activity.organizer}} / {{activity.organizer}}{{/if}}
         </div>
         <div class="activity-categories">

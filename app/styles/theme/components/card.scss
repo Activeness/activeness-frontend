@@ -5,11 +5,11 @@
 .card {
 
     .card-title {
-        font-size: 1.4em;
+        font-size: 1.6em;
     }
 
     .card-body {
-        padding: 0 $space-default;
+        padding: $space-default;
     }
 
 }
@@ -17,15 +17,8 @@
 .section-light {
 
     .card {
-        background-color: rgba(lighten($light, $color-offset-default), 0);
+        background-color: rgba(lighten($light, $color-offset-default), .2);
         border: 0;
-        padding: 0;
-
-        .card-title {
-            color: lighten($text-color-default, 100%);
-            background: $color-default;
-            padding: $space-default / 2 $space-default;
-        }
         
         & ~ .card {
             margin-top: $space-default;

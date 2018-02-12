@@ -80,7 +80,20 @@
         },
         "searchResults": {
             "showAllFilters": "Alle Filter anzeigen",
-            "hideAllFilters": "Alle Filter ausblenden"
+            "hideAllFilters": "Alle Filter ausblenden",
+            "filter": {
+                "when": {
+                    "title": "Wann?",
+                    "from": "Von",
+                    "to": "Bis"
+                },
+                "categories": {
+                    "title": "Kategorien"
+                },
+                "city": {
+                    "title": "Ort"
+                }
+            }
         },
         "categories": {
             "*": {

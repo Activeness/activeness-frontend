@@ -27,6 +27,14 @@ export default Component.extend({
     filters: false,
 
     /**
+     * Defines the FROM date for the filter section
+     *
+     * @property {date} fromDate
+     * @default Date.now()
+     */
+    fromDate: Date.now(),
+
+    /**
      * Defines all component action methods
      *
      * @property {object} actions
@@ -35,6 +43,14 @@ export default Component.extend({
 
         toggleFilters(toggle) {
             this.set('filters', toggle);
+        },
+
+        updateFromDate() {
+            debugger;
+        },
+
+        updateToDate() {
+            debugger;
         }
 
     }

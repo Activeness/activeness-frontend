@@ -80,7 +80,20 @@
         },
         "searchResults": {
             "showAllFilters": "Show all filter options",
-            "hideAllFilters": "Hide all filter options"
+            "hideAllFilters": "Hide all filter options",
+            "filter": {
+                "when": {
+                    "title": "When?",
+                    "from": "From",
+                    "to": "To"
+                },
+                "categories": {
+                    "title": "Categories"
+                },
+                "city": {
+                    "title": "City"
+                }
+            }
         },
         "categories": {
             "*": {
