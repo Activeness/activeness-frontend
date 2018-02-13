@@ -1,7 +1,9 @@
 import Component from '@ember/component';
-// import { inject as service } from '@ember/service';
+import { inject as service } from '@ember/service';
 
 export default Component.extend({
+
+    intl: service(),
 
     /**
      * Defines the css classes for the component ember-view element
@@ -24,15 +26,31 @@ export default Component.extend({
      * @property {Ember.computed} filters
      * @default null
      */
-    filters: false,
+    filters: true,
 
     /**
      * Defines the FROM date for the filter section
      *
      * @property {date} fromDate
-     * @default Date.now()
+     * @default null
      */
     fromDate: Date.now(),
+
+    /**
+     * Defines the TO date for the filter section
+     *
+     * @property {date} toDate
+     * @default null
+     */
+    toDate: Date.now(),
+
+    /**
+     * Defines the min date for the filter section
+     *
+     * @property {date} minDate
+     * @default Date.now()
+     */
+    minDate: Date.now(),
 
     /**
      * Defines all component action methods
@@ -46,11 +64,15 @@ export default Component.extend({
         },
 
         updateFromDate() {
-            debugger;
+
         },
 
         updateToDate() {
-            debugger;
+
+        },
+
+        updateDateRange() {
+
         }
 
     }

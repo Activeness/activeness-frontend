@@ -22,7 +22,7 @@
 
     <div class="row">
       <div class="col-md-3">
-        
+
         <div class="searchFilters form">
 
           <div class="card">
@@ -30,10 +30,16 @@
               <h5 class="card-title">
                 {{t 'app.searchResults.filter.when.title'}}
               </h5>
-              {{date-picker action=(action 'updateFromDate') class="form-controll"}}
+              {{date-range-picker
+                label='Optional label'
+                start="20150101"
+                end="20151231"
+                locale="de"
+                applyAction=(action "updateDateRange")
+              }}
             </div>
           </div>
-          
+
         </div>
 
       </div>
