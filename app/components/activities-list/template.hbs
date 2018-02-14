@@ -30,13 +30,7 @@
               <h5 class="card-title">
                 {{t 'app.searchResults.filter.when.title'}}
               </h5>
-              {{date-range-picker
-                label='Optional label'
-                start="20150101"
-                end="20151231"
-                locale="de"
-                applyAction=(action "updateDateRange")
-              }}
+              {{date-time-picker options=true action=(action 'updateDateTime')}}
             </div>
           </div>
 

@@ -52,6 +52,8 @@ export default Component.extend({
      */
     minDate: Date.now(),
 
+    dateTimePickerOptions: null,
+
     /**
      * Defines all component action methods
      *
@@ -71,7 +73,7 @@ export default Component.extend({
 
         },
 
-        updateDateRange() {
+        updateDateTime() {
 
         }
 
