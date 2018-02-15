@@ -70,7 +70,12 @@ export default Component.extend({
         }
         
         // e.g. 02/01/2018
-        return month+"/"+day+"/"+year;
+        let today = month+"/"+day+"/"+year;
+        // if (!this.get('fromDate')) {
+        //     this.set('fromDate', today);
+        // }
+
+        return today;
     }),
 
     dateTimePickerOptions: null,
