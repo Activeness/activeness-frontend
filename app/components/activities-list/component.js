@@ -70,16 +70,7 @@ export default Component.extend({
         
         // e.g. 02/20/2018
         let today = month+"/"+day+"/"+year;
-
-        // if (!this.get('fromDate')) {
-        //     // "Tue Feb 27 2018 00:00:00 GMT+0100 (CET)"
-        //     this.set('fromDate', new Date(today));
-        // }
-        // if (!this.get('toDate')) {
-        //     // "Tue Feb 27 2018 00:00:00 GMT+0100 (CET)"
-        //     this.set('toDate', new Date(today));
-        // }
-
+        
         return today;
     }),
 

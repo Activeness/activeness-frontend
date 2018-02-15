@@ -87,7 +87,10 @@
     }
 
     .activities-list-items {
-        margin-top: $space-default;
+        
+        &:not(.col) {
+            margin-top: $space-default;
+        }
 
         .activities-list-item {
 
@@ -96,37 +99,7 @@
             }
 
         }
-        /*
-        &.tiles {
-
-            .activities-list-item {
-                width: 30%;
-                margin-top: 0;
-
-                .activity-tile {
-                    $activity-size: 30em;
-                    height: $activity-size;
-
-                    .activity-date {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: inline-block;
-                    }
-
-                    .activity-image {
-                        width: 100%;
-                        height: $activity-size / 2;
-                        background-size: 100%;
-                    }
-
-                }
-
-            }
-
-        }
-        */
-
+        
     }
 
     [class^="row"] ~ [class^="row"] {
