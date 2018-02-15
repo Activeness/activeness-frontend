@@ -30,12 +30,15 @@
               <h5 class="card-title">
                 {{t 'app.searchResults.filter.when.title'}}
               </h5>
-              <div>{{t 'app.searchResults.filter.when.from'}}</div>
+
+              <div>{{t 'app.searchResults.filter.when.from' htmlSafe=true date=(format-date fromDate day='2-digit' month='long' year="numeric" weekday='long')}}</div>
               {{bootstrap-datepicker startDate=today value=fromDate readonly="readonly" autoclose=true class="form-control btn"}}
+              
               {{#if fromDate}}
-                <div>{{t 'app.searchResults.filter.when.to'}}</div>
-                {{bootstrap-datepicker startDate=fromDate value=toDate readonly="readonly" autoclose=true class="form-control btn"}}
+                <div>{{t 'app.searchResults.filter.when.to' htmlSafe=true date=(format-date toDate day='2-digit' month='long' year="numeric" weekday='long')}}</div>
+                {{bootstrap-datepicker startDate=toDate value=toDate readonly="readonly" autoclose=true class="form-control btn"}}
               {{/if}}
+
             </div>
           </div>
 

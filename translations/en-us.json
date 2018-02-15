@@ -84,8 +84,8 @@
             "filter": {
                 "when": {
                     "title": "When?",
-                    "from": "From",
-                    "to": "To"
+                    "from": "From <strong>{date}</strong>",
+                    "to": "To <strong>{date}</strong>"
                 },
                 "categories": {
                     "title": "Categories"

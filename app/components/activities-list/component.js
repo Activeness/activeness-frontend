@@ -59,7 +59,6 @@ export default Component.extend({
         month = (month + 1).toString();
         
         let day = now.getDate().toString();
-        
         let year = now.getFullYear();
         
         if (month.length === 1) {
@@ -69,10 +68,16 @@ export default Component.extend({
             day = "0" + day;
         }
         
-        // e.g. 02/01/2018
+        // e.g. 02/20/2018
         let today = month+"/"+day+"/"+year;
+
         // if (!this.get('fromDate')) {
-        //     this.set('fromDate', today);
+        //     // "Tue Feb 27 2018 00:00:00 GMT+0100 (CET)"
+        //     this.set('fromDate', new Date(today));
+        // }
+        // if (!this.get('toDate')) {
+        //     // "Tue Feb 27 2018 00:00:00 GMT+0100 (CET)"
+        //     this.set('toDate', new Date(today));
         // }
 
         return today;
