@@ -30,7 +30,7 @@
               <h5 class="card-title">
                 {{t 'app.searchResults.filter.when.title'}}
               </h5>
-              {{date-time-picker options=true action=(action 'updateDateTime')}}
+              {{bootstrap-datepicker-inline startDate=today value=fromDate readonly="readonly"}}
             </div>
           </div>
 

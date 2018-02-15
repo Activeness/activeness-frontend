@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 
@@ -23,8 +24,8 @@ export default Component.extend({
     /**
      * Defines whether the search result filters are visible or not
      *
-     * @property {Ember.computed} filters
-     * @default null
+     * @property {boolean} filters
+     * @default true
      */
     filters: true,
 
@@ -34,7 +35,7 @@ export default Component.extend({
      * @property {date} fromDate
      * @default null
      */
-    fromDate: Date.now(),
+    fromDate: null,
 
     /**
      * Defines the TO date for the filter section
@@ -42,15 +43,35 @@ export default Component.extend({
      * @property {date} toDate
      * @default null
      */
-    toDate: Date.now(),
+    toDate: null,
 
     /**
      * Defines the min date for the filter section
      *
-     * @property {date} minDate
-     * @default Date.now()
+     * @property {Ember.computed} today
+     * @default null
      */
-    minDate: Date.now(),
+    today: computed('intl', function() {
+        
+        let now = new Date();
+
+        let month = now.getMonth();
+        month = (month + 1).toString();
+        
+        let day = now.getDate().toString();
+        
+        let year = now.getFullYear();
+        
+        if (month.length === 1) {
+            month = "0" + month;
+        }
+        if (day.length === 1) {
+            day = "0" + day;
+        }
+        
+        // e.g. 02/01/2018
+        return month+"/"+day+"/"+year;
+    }),
 
     dateTimePickerOptions: null,
 
@@ -63,18 +84,6 @@ export default Component.extend({
 
         toggleFilters(toggle) {
             this.set('filters', toggle);
-        },
-
-        updateFromDate() {
-
-        },
-
-        updateToDate() {
-
-        },
-
-        updateDateTime() {
-
         }
 
     }
