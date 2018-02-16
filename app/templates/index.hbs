@@ -6,7 +6,12 @@
 
 <section class="section-light">
     <div class="container">
-        {{activities-list activities=model.activities}}
+        {{activities-list 
+            filtersToggle=false
+            filters=false
+            activities=model.activities
+            categories=model.categories
+        }}
         {{outlet}}
     </div>
 </section>

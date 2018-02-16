@@ -87,6 +87,9 @@
                     "from": "Von <strong>{date}</strong>",
                     "to": "Bis <strong>{date}</strong>"
                 },
+                "where": {
+                    "title": "Wo?"
+                },
                 "categories": {
                     "title": "Kategorien"
                 },

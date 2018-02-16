@@ -87,6 +87,9 @@
                     "from": "From <strong>{date}</strong>",
                     "to": "To <strong>{date}</strong>"
                 },
+                "where": {
+                    "title": "Where?"
+                },
                 "categories": {
                     "title": "Categories"
                 },

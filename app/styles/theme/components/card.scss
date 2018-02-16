@@ -17,8 +17,9 @@
 .section-light {
 
     .card {
-        background-color: rgba(lighten($light, $color-offset-default), .2);
+        background-color: rgba(lighten($light, $color-offset-default * 5), .5);
         border: 0;
+        border-radius: 0;
         
         & ~ .card {
             margin-top: $space-default;

@@ -2,21 +2,23 @@
   {{t 'app.rest.loading.activities'}}
 {{else}}
 
-  <div class="row">
-    <div class="col">
+  {{#if filtersToggle}}
+    <div class="row">
+      <div class="col">
 
-      {{#if filters}}
-        <button class="btn btn-primary" {{action 'toggleFilters' false}}>
-          {{t 'app.searchResults.hideAllFilters'}}
-        </button>
-      {{else}}
-        <button class="btn btn-primary" {{action 'toggleFilters' true}}>
-          {{t 'app.searchResults.showAllFilters'}}
-        </button>
-      {{/if}}
+        {{#if filters}}
+          <button class="btn btn-primary" {{action 'toggleFilters' false}}>
+            {{t 'app.searchResults.hideAllFilters'}}
+          </button>
+        {{else}}
+          <button class="btn btn-primary" {{action 'toggleFilters' true}}>
+            {{t 'app.searchResults.showAllFilters'}}
+          </button>
+        {{/if}}
 
+      </div>
     </div>
-  </div>
+  {{/if}}
 
   {{#if filters}}
 
@@ -32,12 +34,36 @@
               </h5>
 
               <div>{{t 'app.searchResults.filter.when.from' htmlSafe=true date=(format-date fromDate day='2-digit' month='long' year="numeric" weekday='long')}}</div>
-              {{bootstrap-datepicker startDate=today value=fromDate readonly="readonly" autoclose=true class="form-control btn"}}
+              {{bootstrap-datepicker startDate=today value=fromDate autoclose=true class="form-control"}}
               
               {{#if fromDate}}
                 <div>{{t 'app.searchResults.filter.when.to' htmlSafe=true date=(format-date toDate day='2-digit' month='long' year="numeric" weekday='long')}}</div>
-                {{bootstrap-datepicker startDate=toDate value=toDate readonly="readonly" autoclose=true class="form-control btn"}}
+                {{bootstrap-datepicker startDate=toDate value=toDate autoclose=true class="form-control"}}
               {{/if}}
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{t 'app.searchResults.filter.where.title'}}
+              </h5>
+              
+              {{input value=city class="form-control"}}
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{t 'app.searchResults.filter.categories.title'}}
+              </h5>
+
+              {{#each filterCategories as |category|}}
+                {{t category.title}}
+              {{/each}}
 
             </div>
           </div>

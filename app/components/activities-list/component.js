@@ -22,12 +22,38 @@ export default Component.extend({
     activities: null,
 
     /**
+     * Defines whether the search result filters toggle are visible or not
+     *
+     * @property {boolean} filtersToggle
+     * @default false
+     */
+    filtersToggle: false,
+
+    /**
      * Defines whether the search result filters are visible or not
      *
      * @property {boolean} filters
      * @default true
      */
     filters: true,
+
+    /**
+     * Defines the filter property for city
+     *
+     * @property {string} city
+     * @default null
+     */
+    city: null,
+
+    /**
+     * Defines the list of all available categories with 
+     *
+     * @property {Ember.computed} categories
+     * @default null
+     */
+    filterCategories: computed('categories', function() {
+        return this.get('categories');
+    }),
 
     /**
      * Defines the FROM date for the filter section
@@ -70,7 +96,7 @@ export default Component.extend({
         
         // e.g. 02/20/2018
         let today = month+"/"+day+"/"+year;
-        
+
         return today;
     }),
 
