@@ -1,0 +1,17 @@
+
+//
+// Datepicker
+
+.datepicker {
+    padding: $space-default;
+    font-weight: 100;
+    @include shadow();
+
+    .day.disabled {
+        color: darken($text-color-default, 20%);
+    }
+
+    .day:not(.disabled) {
+        color: darken($text-color-default, 100%);
+    }
+}
