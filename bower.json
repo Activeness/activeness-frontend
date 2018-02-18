@@ -1,7 +1,0 @@
-{
-  "name": "activeness-frontend",
-  "dependencies": {
-    "pikaday": "^1.6.1",
-    "moment": "^2.20.1"
-  }
-}

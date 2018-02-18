@@ -1,5 +1,5 @@
 export default function(server) {
-
+  
   // List of activities
   let activities = server.createList('activity', 5);
 
@@ -14,5 +14,5 @@ export default function(server) {
       languages: server.createList('language', 1 + Math.round(Math.random() * 5))
     });
   }
-
+  
 }

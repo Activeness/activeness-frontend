@@ -20,7 +20,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* Useing `s.bat` (Windows) or `s.sh` (Linux) to start the `ember serve` script
+* `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
@@ -32,6 +32,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember test`
 * `ember test --server`
+
+### Linting
+
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
 ### Building
 

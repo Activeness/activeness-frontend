@@ -37,11 +37,13 @@ export default Component.extend({
      * @default null
      */
     localizedCostKey: computed('cost', function() {
+        /*
         this.set('price', this.get('intl').formatNumber(this.get('cost.price'), {
             style: 'currency',
             currency: this.get('cost.currency')
         }));
         return 'app.activity.costs.' + this.get('cost.type');
+        */
     })
 
 });

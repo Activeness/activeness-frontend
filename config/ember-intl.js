@@ -3,7 +3,7 @@
 module.exports = function(/* env */) {
   return {
     /**
-    * The locales that are application supports.
+    * The locales that our application supports.
     *
     * This is optional and is automatically set if project stores translations
     * where ember-intl is able to look them up (<project root>/translations/).
@@ -26,7 +26,7 @@ module.exports = function(/* env */) {
     * @type {String?}
     * @default "null"
     */
-    baseLocale: 'de-de',
+    baseLocale: null,
 
     /**
     * autoPolyfill, when true will automatically inject the IntlJS polyfill
