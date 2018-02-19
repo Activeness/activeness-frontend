@@ -20,12 +20,12 @@
 
     .simple-search-title {
         font-size: 5em;
-        // text-transform: uppercase;
         line-height: 1em;
         font-weight: $text-weight-default;
         margin: 0;
         text-shadow: .02em .02em .03em #000;
         font-family: $font-family-primary;
+        color: lighten($text-color-default, 100%);
         mix-blend-mode: luminosity;
 
         @include media-breakpoint-down(md) {
@@ -35,7 +35,7 @@
 
     .simple-search-information {
         font-size: 2em;
-        // text-transform: uppercase;
+        color: lighten($text-color-default, 100%);
         font-weight: $text-weight-default;
         text-shadow: .02em .02em .03em #000;
         margin: 0 0 1em .2em;
@@ -51,6 +51,7 @@
         padding: $space-default;
         border-color: $color-primary;
         border-radius: 0;
+        color: lighten($text-color-default, 100%);
     }
 
     .show > .simple-search-categories {
@@ -84,9 +85,11 @@
 
         .btn {
             font-weight: $text-weight-default;
+            color: lighten($text-color-default, 100%);
             
             &:hover {
                 background-color: rgba($color-primary, 1);
+                color: lighten($text-color-default, 100%);
             }
         }
 
