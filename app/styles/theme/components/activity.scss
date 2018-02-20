@@ -38,6 +38,7 @@
                 padding: 0 $space-default / 2; 
                 background-color: rgba(darken($color-default, 100%), .6);
                 text-shadow: .1em .1em #000;
+                color: lighten($text-color-default, 100%);
             }
         }
         
@@ -48,13 +49,15 @@
             font-size: 1.7em;
             text-shadow: .1em .1em #000;
             margin-bottom: $space-default * 2;
+            color: lighten($text-color-default, 100%);
         }
 
         .activity-categories {
             display: inline-block;
             padding: $space-default $space-default; 
             background-color: rgba(darken($color-default, 100%), .6);
-            
+            color: lighten($text-color-default, 100%);
+
             @include media-breakpoint-down(lg) {
                 margin-bottom: $space-default;
             }
@@ -64,6 +67,7 @@
             float: right;
             text-align: right;
             margin-top: 23em;
+            color: lighten($text-color-default, 100%);
 
             @include media-breakpoint-down(md) {
                 float: none;
